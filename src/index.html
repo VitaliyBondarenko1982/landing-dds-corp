@@ -17,7 +17,12 @@
             <img class="header__logo-image" src="images/dds-logo.svg" alt="dds-logo">
           </a>
           <nav class="header__nav nav">
-            <ul class="nav__list">
+            <ul class="nav__list"
+              data-aos="zoom-in-right"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
+              data-aos-delay="300"
+            >
               <li class="nav__item">
                 <a href="#top" class="nav__link nav__link--active">
                   Main
@@ -51,7 +56,13 @@
           </nav>
         </div>
         <div class="header__bottom">
-          <h1 class="header__title"><span>Professional</span> IT services, training and consulting</h1>
+          <h1 class="header__title"
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600"
+            data-aos-delay="300"
+          >
+          <span>Professional</span> IT services, training and consulting</h1>
           <div class="header__side">
             <img class="header__side-image" src="images/building-black-white.png" alt="building-black-white">
             <div class="header__vacancies button-block">
@@ -60,7 +71,10 @@
             </div>
           </div>
           <div class="header__main">
-            <div class="header__video">
+            <div class="header__video"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+            >
               <video class="header__video-frame" id="video-header" width="100%" height="100%" autoplay>
                 <source src="images/videos/video.mp4" type="video/mp4">
               </video>
@@ -332,10 +346,10 @@
       </div>
     </footer>
     <script type="text/javascript" src="scripts/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-    <script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script> -->
+    <!-- <script>
       gsap.to(".header__title", {duration: 1, x: 0, opacity: 1});
-    </script>
+    </script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
