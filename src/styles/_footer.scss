@@ -41,6 +41,13 @@
     display: block;
     @include text($dark-grey, 16px, 20px);
     margin-bottom: 16px;
+    transition: color 500ms ease-in-out,
+      transform 500ms ease-in-out;
+
+    &:hover {
+      color: $main-blue;
+      transform: scale(1.05);
+    }
   }
 
   &__copyright {
