@@ -1,0 +1,44 @@
+@import "utils";
+
+.product {
+  width: 240px;
+  padding-right: 40px;
+
+  &__image {
+    width: 91px;
+    height: 90px;
+    background-image: url(../images/rectangle-services.svg);
+    display: flex;
+    margin-bottom: 51px;
+  }
+
+  &__icon {
+    display: block;
+    margin: auto;
+  }
+
+  &__title {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include text($main-blue, 35px, 50px);
+    margin-bottom: 27px;
+  }
+
+  &__description {
+    @include text($dark-grey, 16px, 36px);
+    font-weight: 500;
+  }
+}
+
+@keyframes product-card {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,21 @@
+@import "utils";
+
+.nav {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 808px;
+  }
+
+  &__link {
+    @include text($dark-grey, 14px, 17px);
+    font-weight: bold;
+    text-transform: uppercase;
+    &--active,
+    &:hover,
+    &:active {
+      color: $main-blue;
+    }
+  }
+}

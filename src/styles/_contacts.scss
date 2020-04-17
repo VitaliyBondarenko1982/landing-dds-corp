@@ -1,0 +1,13 @@
+.contacts {
+  &__link {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

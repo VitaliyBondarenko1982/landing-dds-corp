@@ -4,3 +4,22 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin text($color, $font-size, $line-height) {
+  color: $color;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin line {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: $light-grey;
+}
+
+@mixin transition ($property) {
+  transition: $property 400ms ease-in-out;
+}

@@ -5,8 +5,342 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DDS Corp</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__top">
+          <a class="header__logo">
+            <img class="header__logo-image" src="images/dds-logo.svg" alt="dds-logo">
+          </a>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#top" class="nav__link nav__link--active">
+                  Main
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#product" class="nav__link">
+                  Products
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#partners" class="nav__link">
+                  Our clients
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#partners" class="nav__link">
+                  Partners
+                </a>
+              </li><li class="nav__item">
+                <a href="#footer" class="nav__link">
+                  Career
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#footer" class="nav__link">
+                  Contact us
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__bottom">
+          <h1 class="header__title"><span>Professional</span> IT services, training and consulting</h1>
+          <div class="header__side">
+            <img class="header__side-image" src="../images/building-black-white.png" alt="building-black-white">
+            <div class="header__vacancies button-block">
+              <img class="button-block__image" src="../images/watch-vacancies.png" alt="vacancies">
+              <a href="#" class="button-block__link">Watch vacancies</a>
+            </div>
+          </div>
+          <div class="header__main">
+            <div class="header__video">
+              <video class="header__video-frame" id="video-header" width="100%" height="100%" autoplay>
+                <source src="images/videos/video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="header__description">
+              <div class="header__text">We are an Information Technology Services and Solutions Company</div>
+            </div>
+            <div class="header__partners" id="partners">
+              <div class="header__logos logos">
+                <div class="logos__item">
+                  <img class="logos__icon" src="../images/jpm-icon.svg" alt="jp-morgan">
+                </div>
+                <div class="logos__logo">
+                  <img class="logos__icon" src="../images/ca-icon.svg" alt="credit-agricole">
+                </div>
+                <div class="logos__logo">
+                  <img class="logos__icon" src="../images/anz-icon.svg" alt="anz">
+                </div>
+                <div class="logos__logo">
+                  <img class="logos__icon" src="../images/bnp-icon.svg" alt="bnp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="products" id="product">
+      <div class="products__container container">
+        <div class="products__image"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-duration="1000"
+          data-aos-delay="0"
+        ></div>
+        <ul class="products__list">
+          <li class="products__item product"
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600"
+          >
+            <div class="product__image">
+              <img class="product__icon" src="../images/it-services-icon.svg" alt="ie-services">
+            </div>
+            <div class="product__title">IT services</div>
+            <p class="product__description">
+              Our network technologies and solutions have helped defend U.S. through war and peace for years.
+            </p>
+          </li>
+          <li class="products__item product"
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600"
+            data-aos-delay="500"
+          >
+            <div class="product__image">
+              <img class="product__icon" src="../images/training-icon.svg" alt="training-icon">
+            </div>
+            <div class="product__title">Training</div>
+            <p class="product__description">
+              Today, we’ve assembled a global infrastructure of IT professionals, facilities, resources,
+              and processes tailored to the network-centric requirements of 21st century defense missions.
+            </p>
+          </li>
+          <li class="products__item product"
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600"
+            data-aos-delay="1000"
+          >
+            <div class="product__image">
+              <img class="product__icon" src="../images/consulting-icon.svg" alt="consulting">
+            </div>
+            <div class="product__title">Consulting</div>
+            <p class="product__description">
+              We deliver via training centers, private facilities, and the Internet, enabling our customers
+              to choose when, where, and how they want to receive training programs and learning services.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="leader">
+      <div class="leader__container container">
+        <div class="leader__text"
+          data-aos="fade-right"
+          data-aos-offset="100"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+        >
+          <h2 class="leader__title"><span>DDS</span> is the worldwide leader</h2>
+          <p class="leader__description">
+            For over 10 years, we have been developing technology solutions for government and financial organizations.
+            Our developments help to build a strong state and bring a stable profit.
+          </p>
+          <p class="leader__description">
+            Our information and security experts are ready to integrate with your team, providing truly complete IT solutions.
+            Our strength is our “Cradle to Grave” approach towards satisfying customer network and information requirements:
+            Initial Concept, Data Network Engineering, Data Services & Storage Planning, Final Installation, Operation, and Maintenance.
+          </p>
+        </div>
+        <div class="leader__video"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
+          <p class="leader__video-text"
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="1000"
+            data-aos-duration="600"
+            data-aos-offset="0"
+          >
+            Years <br> of experience
+          </p>
+            <svg class="leader__svg" width="100%" height="100%">
+              <mask id="maskLayer">
+                <rect width="100%" height="100%" fill="#fff"></rect>
+                <svg width="478" height="442" viewBox="0 0 478 442" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M57.6605 71.9717H1V1H156.003V441H58.6605V72.9717V71.9717H57.6605ZM379.657 351.654V90.3459C379.657 84.3799 378.044 79.7272 374.648 76.5816C371.266 73.4495 366.289 71.9717 359.9 71.9717H334.196C327.808 71.9717 322.83 73.4495 319.449 76.5816C316.053 79.7272 314.439 84.3799 314.439 90.3459V351.654C314.439 357.62 316.053 362.273 319.449 365.418C322.83 368.551 327.808 370.028 334.196 370.028H359.9C366.289 370.028 371.266 368.551 374.648 365.418C378.044 362.273 379.657 357.62 379.657 351.654ZM477 76.4465V364.858C477 390.383 469.765 409.354 455.456 421.964C441.122 434.596 419.52 441 390.467 441H304.324C275.038 441 253.261 434.596 238.812 421.962C224.388 409.35 217.096 390.381 217.096 364.858V76.4465C217.096 51.1588 224.386 32.3638 238.808 19.8674C253.258 7.34724 275.037 1 304.324 1H390.467C419.521 1 441.125 7.34653 455.459 19.8648C469.767 32.3605 477 51.1564 477 76.4465Z" stroke="#3C71E9" stroke-opacity="0.3" stroke-width="2"/>
+                </svg>
+              </mask>
+
+              <svg id="masked" width="100%" height="100%">
+                <rect x="0" y="0"  width="100%" height="100%" fill="#fff"></rect>
+                <rect x="241px" y="0"  width="50%" height="100%" fill="#eff3fd"></rect>
+              </svg>
+
+            </svg>
+          <video class="leader__video-frame" id="video-leader">
+            <source src="images/videos/video.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="leader__one">
+          <div class="leader__blue-square"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+          ></div>
+          <div class="leader__blue-rectangle"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-duration="1000"
+            data-aos-delay="0"
+          ></div>
+          <div class="leader__grey-triangle"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+          ></div>
+          <div class="leader__grey-square"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-duration="1000"
+            data-aos-delay="1600"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about__container container">
+        <div class="about__rectangle"></div>
+        <div class="about__video"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
+          <div class="about__video-triangle"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          ></div>
+          <div class="about__video-blue-square"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+          ></div>
+          <div class="about__video-grey-square"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-duration="1000"
+            data-aos-delay="1400"
+          ></div>
+          <video class="about__video-frame" id="video-about" width="100%" height="100%" autoplay>
+            <source src="images/videos/video.mp4" type="video/mp4">
+          </video>
+          <div class="about__mission"
+            data-aos="mission"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600"
+            data-aos-delay="600"
+          ></div>
+          <div class="about__mission-full"
+            data-aos="mission-full"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600"
+            data-aos-delay="600"
+          ></div>
+        </div>
+        <div class="about__text"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+        >
+          <h2 class="about__title"><span>About</span> company</h2>
+          <div class="about__description">
+            <p class="about__text-column">
+              At DDS Inc our mission is providing critical computer services support and IT solutions
+              to globally deployed government agencies. We are dedicated to building long-term relationships
+              with customers through quality training and support.
+            </p>
+            <p class="about__text-column">
+              DDS provides stability and experience through our collective commercial and technical military backgrounds.
+              From computer networking services to IT Security to training, Deployable Data Solutions will provide
+              industry leading service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer" id="footer">
+      <div class="footer__container container">
+        <div class="footer__top">
+          <div class="footer__contact-us button-block">
+            <img class="button-block__image" src="../images/contact-image.png" alt="contact">
+            <a href="#" class="button-block__link">Contact us</a>
+          </div>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <h3 class="footer__item-title">Navigation</h3>
+              <a class="footer__item-link" href="#">Products</a>
+              <a class="footer__item-link" href="#">Our clients</a>
+              <a class="footer__item-link" href="#">Partners</a>
+            </li>
+            <li class="footer__item">
+              <h3 class="footer__item-title">Vacancies</h3>
+              <a class="footer__item-link" href="#">Investment Analyst</a>
+              <a class="footer__item-link" href="#">Technical Writer</a>
+              <a class="footer__item-link" href="#">Tech Lead Java</a>
+            </li>
+            <li class="footer__item contacts">
+              <h3 class="footer__item-title">Contacts</h3>
+              <a class="footer__item-link contacts__link" href="#">
+                +1 305-949-1320
+                <img class="contacts__icon" src="../images/phone-icon.svg" alt="">
+              </a>
+              <a class="footer__item-link contacts__link" href="#">
+                info@dds-corp.com
+                <img class="contacts__icon" src="../images/mail-icon.svg" alt="">
+              </a>
+              <a class="footer__item-link contacts__link" href="#">
+                Sunny Isles Beach, FL. US
+                <img class="contacts__icon" src="../images/address-icon.svg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__copyright">© 2020 DDS Inc. All rights reserved</div>
+      </div>
+    </footer>
     <script type="text/javascript" src="scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script>
+      gsap.to(".header__title", {duration: 1, x: 0, opacity: 1});
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 100,
+      });
+    </script>
   </body>
 </html>

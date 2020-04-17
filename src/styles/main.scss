@@ -1,7 +1,45 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "container";
+@import "nav";
+@import "logos";
+@import "products";
+@import "product";
+@import "button-block";
+@import "leader";
+@import "about";
+@import "footer";
+@import "contacts";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: $c-gray;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+ul,
+li,
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }

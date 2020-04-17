@@ -1,0 +1,51 @@
+.footer {
+  &__top {
+    display: flex;
+    border-bottom: 1px solid $lightest-grey;
+    position: relative;
+
+    &:before {
+      @include line;
+      left: 0;
+      z-index: -1;
+      opacity: 0.5;
+      box-shadow: 600px 0 0 $light-grey,
+        840px 0 0 $light-grey,
+        1080px 0 0 $light-grey,
+        1320px 0 0 $light-grey,
+        1440px 0 0 $light-grey;
+    }
+  }
+
+  &__contact-us {
+    margin-right: 240px;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 84px;
+  }
+
+  &__item {
+    width: 240px;
+  }
+
+  &__item-title {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include text($main-blue,35px, 60px);
+  }
+
+  &__item-link {
+    display: block;
+    @include text($dark-grey, 16px, 20px);
+    margin-bottom: 16px;
+  }
+
+  &__copyright {
+    text-align: center;
+    @include text($dark-grey, 16px, 90px);
+
+  }
+}
