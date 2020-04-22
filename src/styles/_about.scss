@@ -1,71 +1,123 @@
 .about {
   &__container {
+    position: relative;
     padding: 75px 25px 25px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__text {
+    margin-bottom: 68px;
+    transition: opacity 800ms ease-in-out;
+  }
+
+  &__title {
+    font-family: "Teko", sans-serif;
+    @include text($dark-grey, 45px, 50px);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+
+    & span {
+      color: $main-blue;
+    }
+  }
+
+  &__text-column {
+    @include text($dark-grey, 14px, 30px);
+    font-weight: 500;
+
+    &:first-of-type {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__video {
+    position: relative;
+  }
+
+  &__mission-mobile,
+  &__mission-mobile-full {
+    position: absolute;
+    width: 320px;
+    top: 50%;
+    left: -25px;
+  }
+
+  &__mission-mobile {
+    z-index: 1;
+  }
+
+  &__mission-mobile-full {
+    z-index: -1;
+  }
+
+  &__mission,
+  &__mission-full {
+    display: none;
   }
 }
 
-@media (min-width: 1440px) {
+[data-aos="mission-mobile"],
+[data-aos="mission-mobile-full"] {
+  opacity: 0;
+  transform: translate(-100%, -50%);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+@media (min-width: 375px) {
   .about {
-    &__container {
-      position: relative;
-      padding-right: 120px;
-      display: flex;
-      border-bottom: 1px solid $lightest-grey;
-
-      &:before {
-        @include line;
-        left: 0;
-        z-index: -1;
-        opacity: 0.5;
-        box-shadow: 120px 0 0 $light-grey,
-          360px 0 0 $light-grey,
-          600px 0 0 $light-grey,
-          840px 0 0 $light-grey,
-          1080px 0 0 $light-grey,
-          1320px 0 0 $light-grey,
-          1440px 0 0 $light-grey;
-      }
+    &__mission-mobile,
+    &__mission-mobile-full {
+      width: 375px;
     }
+  }
+}
 
-    &__rectangle {
-      width: 360px;
-      height: 1024px;
-      background-color: $lightest-grey;
-      margin-right: 480px;
-      z-index: -2;
+@media (min-width: 768px) {
+  .about {
+    &__mission-mobile,
+    &__mission-mobile-full {
+      display: none;
     }
 
     &__video {
-      position: absolute;
-      top: 277px;
-      left: 120px;
-      width: 481px;
       height: 481px;
-      transition: opacity 1000ms ease-in-out;
+      width: 481px;
+      margin: auto;
+    }
+
+    &__video-frame {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__mission,
+    &__mission-full {
+      display: block;
+      position: absolute;
+      width: 127px;
+      height: 568px;
+      top: 50%;
+      left: 50%;
+      transition: all 1000ms ease-in-out;
     }
 
     &__mission {
-      position: absolute;
-      width: 127px;
-      height: 568px;
       background-image: url(../images/mission-stroke.svg);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50% -50%);
       z-index: 1;
-      transition: all 1000ms ease-in-out;
+
     }
 
     &__mission-full {
-      position: absolute;
-      width: 127px;
-      height: 568px;
       background-image: url(../images/mission-full.svg);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50% -50%);
       z-index: -1;
-      transition: all 1000ms ease-in-out;
     }
 
     &__video-triangle {
@@ -100,32 +152,9 @@
       transition: opacity 800ms ease-in-out;
     }
 
-    &__video-frame {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
     &__text {
-      margin-top: 231px;
-      opacity: 0;
-      transition: opacity 800ms ease-in-out 500ms;
-
-      &--visible {
-        opacity: 1;
-      }
-    }
-
-    &__title {
-      font-family: "Teko", sans-serif;
-      @include text($dark-grey, 69px, 80px);
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 52px;
-
-      & span {
-        color: $main-blue;
-      }
+      margin: auto;
+      margin-bottom: 150px;
     }
 
     &__description {
@@ -139,16 +168,83 @@
       font-weight: 500;
     }
   }
+}
 
-  [data-aos="mission"],
-  [data-aos="mission-full"] {
-    opacity: 0;
-    transform: translate(calc(-50% - 70px), -50%);
-    transition-property: transform, opacity;
-
-    &.aos-animate {
-      opacity: 1;
-      transform: translate(-50%, -50%);
+@media (min-width: 1080px) {
+  .about {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 100%;
+      background-color: $lightest-grey;
+      top: 0;
+      left: 0;
+      z-index: -2;
     }
+
+    &__container {
+      flex-direction: row;
+      border-bottom: 1px solid $lightest-grey;
+    }
+
+    &__title {
+      font-size: 69px;
+      line-height: 80px;
+      margin-bottom: 52px;
+    }
+
+    &__video-blue-square {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .about {
+    &:before {
+      width: 360px;
+    }
+
+    &__container {
+      padding: 220px 0 220px 120px;
+
+      &:before {
+        @include line;
+        left: 0;
+        z-index: -1;
+        opacity: 0.5;
+        box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+      }
+    }
+
+    &__video {
+      margin: 0;
+      margin-top: 60px;
+      margin-right: 240px;
+    }
+
+    &__video-blue-square {
+      display: block;
+    }
+  }
+}
+
+[data-aos="mission"],
+[data-aos="mission-full"] {
+  opacity: 0;
+  transform: translate(calc(-50% - 70px), -50%);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }

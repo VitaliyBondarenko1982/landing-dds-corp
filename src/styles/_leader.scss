@@ -236,7 +236,7 @@
 @media (min-width: 1440px) {
   .leader {
     &__container {
-      margin-left: 120px;
+      padding-left: 120px;
 
       &:before {
         @include line;
@@ -257,6 +257,10 @@
       width: 500px;
       margin-right: 219px;
       margin-bottom: 204px;
+    }
+
+    &__ten {
+      margin-left: 0;
     }
 
     &__one {
