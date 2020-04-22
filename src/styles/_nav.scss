@@ -1,11 +1,64 @@
 @import "utils";
 
 .nav {
+  display: block;
 
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    width: 808px;
+  &__toggle {
+    position: relative;
+    border: none;
+    background-color: $main-blue;
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &--closed &__list {
+    display: none;
+  }
+
+  &--closed &__toggle::before,
+  &--closed &__toggle::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 2px;
+    background-color: $white;
+    box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
+  }
+
+  &--opened &__list {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  &--opened &__toggle {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 8px;
+      transform: none;
+      width: 35px;
+      height: 2px;
+      background-color: $white;
+      transition: transform 500ms ease;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 
   &__link {
@@ -16,6 +69,32 @@
     &:hover,
     &:active {
       color: $main-blue;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    &--opened &__toggle,
+    &--closed &__toggle {
+      display: none;
+    }
+
+    &--opened &__list,
+    &--closed &__list {
+      display: flex;
+      justify-content: space-between;
+      position: static;
+      width: 550px;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .nav {
+    &--opened &__list,
+    &--closed &__list {
+      width: 808px;
     }
   }
 }

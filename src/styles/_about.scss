@@ -1,146 +1,154 @@
 .about {
   &__container {
-    position: relative;
-    padding-right: 120px;
-    display: flex;
-    border-bottom: 1px solid $lightest-grey;
-
-    &:before {
-      @include line;
-      left: 0;
-      z-index: -1;
-      opacity: 0.5;
-      box-shadow: 120px 0 0 $light-grey,
-        360px 0 0 $light-grey,
-        600px 0 0 $light-grey,
-        840px 0 0 $light-grey,
-        1080px 0 0 $light-grey,
-        1320px 0 0 $light-grey,
-        1440px 0 0 $light-grey;
-    }
-  }
-
-  &__rectangle {
-    width: 360px;
-    height: 1024px;
-    background-color: $lightest-grey;
-    margin-right: 480px;
-    z-index: -2;
-  }
-
-  &__video {
-    position: absolute;
-    top: 277px;
-    left: 120px;
-    width: 481px;
-    height: 481px;
-    transition: opacity 1000ms ease-in-out;
-  }
-
-  &__mission {
-    position: absolute;
-    width: 127px;
-    height: 568px;
-    background-image: url(../images/mission-stroke.svg);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% -50%);
-    z-index: 1;
-    transition: all 1000ms ease-in-out;
-  }
-
-  &__mission-full {
-    position: absolute;
-    width: 127px;
-    height: 568px;
-    background-image: url(../images/mission-full.svg);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% -50%);
-    z-index: -1;
-    transition: all 1000ms ease-in-out;
-  }
-
-  &__video-triangle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 91px;
-    height: 91px;
-    background-image: url(../images/grey-triangle-about.svg);
-    transition: opacity 800ms ease-in-out;
-  }
-
-  &__video-blue-square {
-    position: absolute;
-    width: 91px;
-    height: 91px;
-    top: 0;
-    right: -91px;
-    background-color: $main-blue;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 800ms ease-in-out;
-  }
-
-  &__video-grey-square {
-    position: absolute;
-    width: 91px;
-    height: 91px;
-    top: -91px;
-    right: 0;
-    background-color: $lightest-grey;
-    transition: opacity 800ms ease-in-out;
-  }
-
-  &__video-frame {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__text {
-    margin-top: 231px;
-    opacity: 0;
-    transition: opacity 800ms ease-in-out 500ms;
-
-    &--visible {
-      opacity: 1;
-    }
-  }
-
-  &__title {
-    font-family: "Teko", sans-serif;
-    @include text($dark-grey, 69px, 80px);
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 52px;
-
-    & span {
-      color: $main-blue;
-    }
-  }
-
-  &__description {
-    display: flex;
-  }
-
-  &__text-column {
-    width: 240px;
-    padding-right: 40px;
-    @include text($dark-grey, 16px, 36px);
-    font-weight: 500;
+    padding: 75px 25px 25px;
   }
 }
 
-[data-aos="mission"],
-[data-aos="mission-full"] {
-  opacity: 0;
-  transform: translate(calc(-50% - 70px), -50%);
-  transition-property: transform, opacity;
+@media (min-width: 1440px) {
+  .about {
+    &__container {
+      position: relative;
+      padding-right: 120px;
+      display: flex;
+      border-bottom: 1px solid $lightest-grey;
 
-  &.aos-animate {
-    opacity: 1;
-    transform: translate(-50%, -50%);
+      &:before {
+        @include line;
+        left: 0;
+        z-index: -1;
+        opacity: 0.5;
+        box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+      }
+    }
+
+    &__rectangle {
+      width: 360px;
+      height: 1024px;
+      background-color: $lightest-grey;
+      margin-right: 480px;
+      z-index: -2;
+    }
+
+    &__video {
+      position: absolute;
+      top: 277px;
+      left: 120px;
+      width: 481px;
+      height: 481px;
+      transition: opacity 1000ms ease-in-out;
+    }
+
+    &__mission {
+      position: absolute;
+      width: 127px;
+      height: 568px;
+      background-image: url(../images/mission-stroke.svg);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% -50%);
+      z-index: 1;
+      transition: all 1000ms ease-in-out;
+    }
+
+    &__mission-full {
+      position: absolute;
+      width: 127px;
+      height: 568px;
+      background-image: url(../images/mission-full.svg);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% -50%);
+      z-index: -1;
+      transition: all 1000ms ease-in-out;
+    }
+
+    &__video-triangle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 91px;
+      height: 91px;
+      background-image: url(../images/grey-triangle-about.svg);
+      transition: opacity 800ms ease-in-out;
+    }
+
+    &__video-blue-square {
+      position: absolute;
+      width: 91px;
+      height: 91px;
+      top: 0;
+      right: -91px;
+      background-color: $main-blue;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 800ms ease-in-out;
+    }
+
+    &__video-grey-square {
+      position: absolute;
+      width: 91px;
+      height: 91px;
+      top: -91px;
+      right: 0;
+      background-color: $lightest-grey;
+      transition: opacity 800ms ease-in-out;
+    }
+
+    &__video-frame {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__text {
+      margin-top: 231px;
+      opacity: 0;
+      transition: opacity 800ms ease-in-out 500ms;
+
+      &--visible {
+        opacity: 1;
+      }
+    }
+
+    &__title {
+      font-family: "Teko", sans-serif;
+      @include text($dark-grey, 69px, 80px);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 52px;
+
+      & span {
+        color: $main-blue;
+      }
+    }
+
+    &__description {
+      display: flex;
+    }
+
+    &__text-column {
+      width: 240px;
+      padding-right: 40px;
+      @include text($dark-grey, 16px, 36px);
+      font-weight: 500;
+    }
+  }
+
+  [data-aos="mission"],
+  [data-aos="mission-full"] {
+    opacity: 0;
+    transform: translate(calc(-50% - 70px), -50%);
+    transition-property: transform, opacity;
+
+    &.aos-animate {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
   }
 }

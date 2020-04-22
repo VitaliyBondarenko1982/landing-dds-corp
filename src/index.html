@@ -9,14 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
+
   <body>
     <header class="header">
       <div class="header__container container">
         <div class="header__top">
           <a class="header__logo">
-            <img class="header__logo-image" src="images/dds-logo.svg" alt="dds-logo">
+            <svg class="header__logo-image" >
+              <use href="images/sprite.svg#logo-icon"></use>
+            </svg>
           </a>
-          <nav class="header__nav nav">
+          <nav class="header__nav nav nav--closed">
+            <button type="button" class="nav__toggle">
+              <span class="visually-hidden">Open menu</span>
+            </button>
             <ul class="nav__list"
               data-aos="zoom-in-right"
               data-aos-easing="ease-in-sine"
@@ -57,12 +63,9 @@
         </div>
         <div class="header__bottom">
           <h1 class="header__title"
-            data-aos="fade-right"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="600"
-            data-aos-delay="300"
           >
-          <span>Professional</span> IT services, training and consulting</h1>
+            <span>Professional</span> IT services, training and consulting
+          </h1>
           <div class="header__side">
             <img class="header__side-image" src="images/building-black-white.png" alt="building-black-white">
             <div class="header__vacancies button-block">
@@ -85,17 +88,26 @@
             <div class="header__partners" id="partners">
               <div class="header__logos logos">
                 <div class="logos__item">
-                  <img class="logos__icon" src="images/jpm-icon.svg" alt="jp-morgan">
+                  <svg class="logos__icon logos__icon--jp-morgan">
+                    <use href="images/sprite.svg#jp-morgan"></use>
+                  </svg>
                 </div>
-                <div class="logos__logo">
-                  <img class="logos__icon" src="images/ca-icon.svg" alt="credit-agricole">
+                <div class="logos__item">
+                  <svg class="logos__icon logos__icon--credit-agricole">
+                    <use href="images/sprite.svg#credit-agricole"></use>
+                  </svg>
                 </div>
-                <div class="logos__logo">
-                  <img class="logos__icon" src="images/anz-icon.svg" alt="anz">
+                <div class="logos__item">
+                  <svg class="logos__icon logos__icon--bnp">
+                    <use href="images/sprite.svg#bnp"></use>
+                  </svg>
                 </div>
-                <div class="logos__logo">
-                  <img class="logos__icon" src="images/bnp-icon.svg" alt="bnp">
+                <div class="logos__item">
+                  <svg class="logos__icon logos__icon--anz">
+                    <use href="images/sprite.svg#anz"></use>
+                  </svg>
                 </div>
+
               </div>
             </div>
           </div>
@@ -103,7 +115,7 @@
       </div>
     </header>
 
-    <section class="products" id="product">
+    <!-- <section class="products" id="product">
       <div class="products__container container">
         <div class="products__image"
           data-aos="fade-zoom-in"
@@ -157,7 +169,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <section class="leader">
       <div class="leader__container container">
@@ -178,13 +190,13 @@
             Initial Concept, Data Network Engineering, Data Services & Storage Planning, Final Installation, Operation, and Maintenance.
           </p>
         </div>
-        <div class="leader__video"
+        <div class="leader__ten"
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
           data-aos-duration="1000"
           data-aos-delay="300"
         >
-          <p class="leader__video-text"
+          <p class="leader__ten-text"
             data-aos="fade-right"
             data-aos-easing="ease-in-sine"
             data-aos-delay="1000"
@@ -193,23 +205,12 @@
           >
             Years <br> of experience
           </p>
-            <svg class="leader__svg" width="100%" height="100%">
-              <mask id="maskLayer">
-                <rect width="100%" height="100%" fill="#fff"></rect>
-                <svg width="478" height="442" viewBox="0 0 478 442" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M57.6605 71.9717H1V1H156.003V441H58.6605V72.9717V71.9717H57.6605ZM379.657 351.654V90.3459C379.657 84.3799 378.044 79.7272 374.648 76.5816C371.266 73.4495 366.289 71.9717 359.9 71.9717H334.196C327.808 71.9717 322.83 73.4495 319.449 76.5816C316.053 79.7272 314.439 84.3799 314.439 90.3459V351.654C314.439 357.62 316.053 362.273 319.449 365.418C322.83 368.551 327.808 370.028 334.196 370.028H359.9C366.289 370.028 371.266 368.551 374.648 365.418C378.044 362.273 379.657 357.62 379.657 351.654ZM477 76.4465V364.858C477 390.383 469.765 409.354 455.456 421.964C441.122 434.596 419.52 441 390.467 441H304.324C275.038 441 253.261 434.596 238.812 421.962C224.388 409.35 217.096 390.381 217.096 364.858V76.4465C217.096 51.1588 224.386 32.3638 238.808 19.8674C253.258 7.34724 275.037 1 304.324 1H390.467C419.521 1 441.125 7.34653 455.459 19.8648C469.767 32.3605 477 51.1564 477 76.4465Z" stroke="#3C71E9" stroke-opacity="0.3" stroke-width="2"/>
-                </svg>
-              </mask>
-
-              <svg id="masked" width="100%" height="100%">
-                <rect x="0" y="0"  width="100%" height="100%" fill="#fff"></rect>
-                <rect x="241px" y="0"  width="50%" height="100%" fill="#eff3fd"></rect>
-              </svg>
-
-            </svg>
-          <video class="leader__video-frame" id="video-leader">
-            <source src="images/videos/video.mp4" type="video/mp4">
-          </video>
+          <svg class="leader__shadow-1">
+            <use href="images/sprite.svg#ten-shadow-1"></use>
+          </svg>
+          <svg class="leader__shadow-2">
+            <use href="images/sprite.svg#ten-shadow-2"></use>
+          </svg>
         </div>
         <div class="leader__one">
           <div class="leader__blue-square"
@@ -305,7 +306,8 @@
         </div>
       </div>
     </section>
-    <footer class="footer" id="footer">
+
+    <!-- <footer class="footer" id="footer">
       <div class="footer__container container">
         <div class="footer__top">
           <div class="footer__contact-us button-block">
@@ -344,12 +346,10 @@
         </div>
         <div class="footer__copyright">© 2020 DDS Inc. All rights reserved</div>
       </div>
-    </footer>
+    </footer> -->
+
+    <script type="text/javascript" src="scripts/menu.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script> -->
-    <!-- <script>
-      gsap.to(".header__title", {duration: 1, x: 0, opacity: 1});
-    </script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({

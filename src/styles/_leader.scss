@@ -1,39 +1,35 @@
 @import "utils";
 
 .leader {
-  &__container {
-    padding-left: 120px;
-    display: flex;
-    position: relative;
+  position: relative;
 
-    &:before {
-      @include line;
-      left: 0;
-      z-index: -3;
-      opacity: 0.5;
-      box-shadow: 120px 0 0 $light-grey,
-        360px 0 0 $light-grey,
-        600px 0 0 $light-grey,
-        840px 0 0 $light-grey,
-        1080px 0 0 $light-grey,
-        1440px 0 0 $light-grey;
-    }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 219px;
+    bottom: 0;
+    left: 0;
+    z-index: -3;
+    background-color: $lightest-grey;
+  }
+
+  &__container {
+    position: relative;
+    padding: 75px 25px;
   }
 
   &__text {
-    margin-top: 219px;
-    width: 500px;
-    margin-right: 219px;
-    margin-bottom: 204px;
+    margin-bottom: 68px;
     transition: all 1000ms ease-in-out;
   }
 
   &__title {
     font-family: "Teko", sans-serif;
-    @include text($dark-grey, 69px, 80px);
+    @include text($dark-grey, 45px, 50px);
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 41px;
+    margin-bottom: 28px;
 
     & span {
       color: $main-blue;
@@ -41,54 +37,27 @@
   }
 
   &__description {
-    @include text($dark-grey, 16px, 36px);
+    @include text($dark-grey, 14px, 30px);
     font-weight: 500;
 
     &:first-of-type {
-      margin-bottom: 40px;
+      margin-bottom: 28px;
     }
   }
 
-  &__video {
+  &__ten {
     position: relative;
-    width: 479px;
-    height: 502px;
-    margin-top: 293px;
-
-    &:before {
-      content: "";
-      width: 478px;
-      height: 442px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-image: url(../images/video-shadow-1.svg);
-      z-index: 0;
-    }
+    width: 270px;
+    height: 300px;
+    background-image: url(../images/ten-image.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
   }
 
-  &__svg {
+  &__ten-text {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -1px;
-    left: -1px;
-    z-index: 1;
-  }
-
-  &__video-frame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 477px;
-    height: 501px;
-    object-fit: cover;
-  }
-
-  &__video-text {
-    position: absolute;
-    top: 285px;
+    top: 120px;
     left: 0;
     width: 184px;
     @include text($main-blue, 35px, 50px);
@@ -98,64 +67,200 @@
     z-index: 2;
   }
 
-  &__one {
+  &__shadow-1 {
     position: absolute;
-    width: 361px;
-    height: 1024px;
-    top: 0;
-    right: 0;
-    z-index: -2;
-    background-color: $lightest-grey;
-
-    &--visible:before {
-      opacity: 1;
-    }
-
-    &--visible:after {
-      opacity: 1;
-    }
+    top: -12px;
+    left: 0;
+    z-index: -1;
+    width: 270px;
+    height: 300px;
   }
 
-  &__grey-triangle {
-    position: absolute;
-    top: 0;
-    left: -91px;
-    width: 91px;
-    height: 91px;
-    background-image: url(../images/grey-triangle-leader.svg);
-    transition: opacity 500ms ease-in-out;
-  }
-
-  &__grey-square {
-    position: absolute;
-    top: 91px;
-    left: -91px;
-    width: 91px;
-    height: 91px;
-    background-color: $lightest-grey;
-    transition: opacity 500ms ease-in-out;
-  }
-
-  &__blue-square {
+  &__shadow-2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $main-blue;
-    width: 91px;
-    height: 91px;
+    z-index: -2;
+    width: 270px;
+    height: 300px;
   }
 
-  &__blue-rectangle {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: $main-blue;
-    width: 182px;
-    height: 91px;
-    z-index: 1;
+  &__grey-triangle,
+  &__grey-square,
+  &__blue-square,
+  &__blue-rectangle,
+  &__one {
+    display: none;
   }
 }
 
-#masked {
-  mask: url("#maskLayer");
+@media (min-width: 375px) {
+  .leader {
+    &__ten {
+      width: 325px;
+    }
+
+    &__ten-text {
+      top: 182px;
+    }
+
+    &__shadow-1 {
+      width: 325px;
+      top: 14px;
+    }
+
+    &__shadow-2 {
+      width: 325px;
+      top: 28px;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .leader {
+
+    &:after {
+      display: none;
+    }
+
+    &__container {
+      padding-left: 60px;
+      display: flex;
+      position: relative;
+    }
+
+    &__text {
+      margin-top: 100px;
+      width: 460px;
+      margin-right: 100px;
+      margin-bottom: 100px;
+    }
+
+    &__title {
+      font-size: 69px;
+      line-height: 80px;
+      margin-bottom: 41px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 36px;
+
+      &:first-of-type {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__ten {
+      position: relative;
+      width: 530px;
+      height: 442px;
+      margin-top: 293px;
+    }
+
+    &__shadow-1 {
+      width: 478px;
+      height: 442px;
+      top: 30px;
+    }
+
+    &__shadow-2 {
+      width: 478px;
+      height: 442px;
+      top: 60px;
+    }
+
+    &__ten-text {
+      top: 285px;
+    }
+
+    &__grey-triangle,
+    &__grey-square,
+    &__blue-square,
+    &__blue-rectangle,
+    &__one {
+      display: block;
+    }
+
+    &__one {
+      position: absolute;
+      width: 200px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: $lightest-grey;
+      z-index: -3;
+    }
+
+    &__grey-triangle {
+      position: absolute;
+      top: 0;
+      left: -91px;
+      width: 91px;
+      height: 91px;
+      background-image: url(../images/grey-triangle-leader.svg);
+      transition: opacity 500ms ease-in-out;
+    }
+
+    &__grey-square {
+      position: absolute;
+      top: 91px;
+      left: -91px;
+      width: 91px;
+      height: 91px;
+      background-color: $lightest-grey;
+      transition: opacity 500ms ease-in-out;
+    }
+
+    &__blue-square {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $main-blue;
+      width: 91px;
+      height: 91px;
+    }
+
+    &__blue-rectangle {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $main-blue;
+      width: 182px;
+      height: 91px;
+      z-index: 1;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .leader {
+    &__container {
+      margin-left: 120px;
+
+      &:before {
+        @include line;
+        left: 0;
+        z-index: -3;
+        opacity: 0.5;
+        box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+      }
+    }
+
+    &__text {
+      margin-top: 219px;
+      width: 500px;
+      margin-right: 219px;
+      margin-bottom: 204px;
+    }
+
+    &__one {
+      width: 361px;
+    }
+  }
 }
