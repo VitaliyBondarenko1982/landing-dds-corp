@@ -5,6 +5,15 @@
 
   &__container {
     position: relative;
+
+    &:before {
+      @include line;
+      left: 50%;
+      z-index: 1;
+      opacity: 0.5;
+      box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
+    }
   }
 
   &__title {
@@ -39,6 +48,8 @@
 
   &__logo {
     display: block;
+    position: relative;
+    z-index: 1;
   }
 
   &__logo-image {
@@ -105,6 +116,11 @@
   &__partners {
     padding: 0 25px;
   }
+
+  &__vacancies {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -146,6 +162,19 @@
   .header {
     &__top {
       padding: 34px 60px;
+    }
+
+    &__container {
+
+      &:before {
+        left: 0;
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
     }
 
     &__video {
@@ -238,10 +267,6 @@
       position: relative;
 
       &:before {
-        @include line;
-        left: 0;
-        z-index: -1;
-        opacity: 0.5;
         box-shadow: 120px 0 0 $light-grey,
           360px 0 0 $light-grey,
           600px 0 0 $light-grey,
@@ -259,7 +284,7 @@
       &:before {
         @include line;
         left: 0;
-        z-index: -1;
+        z-index: 1;
         opacity: 0.5;
         box-shadow: 120px 0 0 $light-grey,
           360px 0 0 $light-grey,

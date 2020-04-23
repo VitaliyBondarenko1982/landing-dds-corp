@@ -7,58 +7,12 @@
     position: relative;
     border: none;
     background-color: $main-blue;
-    width: 47px;
-    height: 47px;
+    width: 46px;
+    height: 46px;
     cursor: pointer;
     outline: none;
-  }
-
-  &--closed &__list {
-    display: none;
-  }
-
-  &--closed &__toggle::before,
-  &--closed &__toggle::after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25px;
-    height: 2px;
-    background-color: $white;
-    box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
-  }
-
-  &--opened &__list {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-
-  &--opened &__toggle {
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 20px;
-      left: 8px;
-      transform: none;
-      width: 35px;
-      height: 2px;
-      background-color: $white;
-      transition: transform 500ms ease;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
+    display: flex;
+    z-index: 1;
   }
 
   &__link {
@@ -69,6 +23,70 @@
     &:hover,
     &:active {
       color: $main-blue;
+    }
+  }
+
+  &--closed &__icon {
+    margin: auto;
+
+    & path:first-child {
+      transition: opacity 500ms ease;
+    }
+
+    & path:nth-child(2) {
+      position: relative;
+      transition: transform 500ms ease;
+    }
+
+    & path:nth-child(3) {
+      transition: transform 500ms ease;
+    }
+  }
+
+  &--closed &__list {
+    display: none;
+  }
+
+  &--opened &__list {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $main-blue;
+    height: 100vh;
+    width: 100%;
+    padding: 100px 25px;
+    opacity: 0;
+    animation: menu 1000ms ease;
+
+    & .nav__item {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    & .nav__link {
+      color: $white;
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  &--opened &__icon {
+    margin: auto;
+
+    & path:first-child {
+      opacity: 0;
+      transition: opacity 500ms ease;
+    }
+
+    & path:nth-child(2) {
+      transform: translate(8px, -1px) rotate(45deg);
+      transition: transform 500ms ease;
+    }
+
+    & path:nth-child(3) {
+      transform: translate(-9px, 8px) rotate(-45deg);
+      transition: transform 500ms ease;
     }
   }
 }
@@ -86,6 +104,28 @@
       justify-content: space-between;
       position: static;
       width: 550px;
+      background-color: transparent;
+      height: 82px;
+      padding: 0;
+
+      & .nav__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+      }
+
+      & .nav__link {
+        color: $dark-grey;
+        display: block;
+        padding: 5px 0;
+        @include text($dark-grey, 14px, 17px);
+
+        &--active,
+        &:hover,
+        &:active {
+          color: $main-blue;
+        }
+      }
     }
   }
 }
@@ -96,5 +136,15 @@
     &--closed &__list {
       width: 808px;
     }
+  }
+}
+
+@keyframes menu {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

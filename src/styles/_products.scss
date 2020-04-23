@@ -6,6 +6,16 @@
 
   &__container {
     padding: 75px 25px 194px;
+    position: relative;
+
+    &:before {
+      @include line;
+      left: 50%;
+      z-index: -1;
+      opacity: 0.5;
+      box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
+    }
   }
 
   &__image {
@@ -104,6 +114,16 @@
     &__container {
       padding: 0 60px 0 0;
       display: flex;
+
+      &:before {
+        left: 0;
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
     }
 
     &__list {
@@ -132,10 +152,6 @@
       position: relative;
 
       &:before {
-        @include line;
-        left: 0;
-        z-index: -1;
-        opacity: 0.5;
         box-shadow: 120px 0 0 $light-grey,
           360px 0 0 $light-grey,
           600px 0 0 $light-grey,
