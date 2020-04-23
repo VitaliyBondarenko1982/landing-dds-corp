@@ -1,6 +1,125 @@
 .products {
+  background-image: url(../images/building-mobile.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
   &__container {
-    padding: 0 25px;
+    padding: 75px 25px 194px;
+  }
+
+  &__image {
+    display: none;
+  }
+
+  .slick-slider {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+
+    & li {
+      position: relative;
+      display: flex;
+      width: 80px;
+      height: 80px;
+      background-color: $lightest-grey;
+      transition: background-color 500ms ease;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        width: 0;
+        height: 0;
+        border-top: 15px solid #fff;
+        border-left: 15px solid transparent;
+      }
+
+      & svg {
+        margin: auto;
+        padding: 0;
+      }
+
+      & svg path {
+        stroke: #3c71e9;
+        transition: stroke 500ms ease;
+      }
+    }
+
+    & .slick-active {
+      background-color: $main-blue;
+
+      & svg path {
+        stroke: white;
+        transition: stroke 500ms ease;
+      }
+    }
+
+    & button {
+      opacity: 0;
+      font-size: 0;
+      padding: 0;
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    display: none !important;
+  }
+}
+
+@media (min-width: 375px) {
+  .products {
+    &__dots {
+      & li {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .products {
+    &__container {
+      padding: 75px 25px;
+    }
+
+    &__list {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .products {
+    background-image: none;
+
+    &__container {
+      padding: 0 60px 0 0;
+      display: flex;
+    }
+
+    &__list {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    &__image {
+      display: block;
+      width: 360px;
+      background-image: url(../images/building.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
+      margin-right: 60px;
+    }
   }
 }
 
@@ -28,15 +147,12 @@
     }
 
     &__image {
-      width: 360px;
       height: 933px;
-      background-image: url(../images/building.png);
-      background-repeat: no-repeat;
-      background-position: bottom;
+      margin-right: 0;
+      background-size: none;
     }
 
     &__list {
-      display: flex;
       padding: 190px 0 0 240px;
     }
   }

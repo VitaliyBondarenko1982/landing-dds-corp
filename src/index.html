@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   </head>
 
   <body>
@@ -115,7 +116,7 @@
       </div>
     </header>
 
-    <!-- <section class="products" id="product">
+    <section class="products" id="product">
       <div class="products__container container">
         <div class="products__image"
           data-aos="fade-zoom-in"
@@ -169,7 +170,7 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
 
     <section class="leader">
       <div class="leader__container container">
@@ -334,32 +335,41 @@
             <a href="#" class="button-block__link">Contact us</a>
           </div>
           <ul class="footer__list">
-            <li class="footer__item">
+            <li class="footer__item footer__item-nav">
+              <button type="button" class="footer__item-button footer__item-button-nav"><span class="visually-hidden">Open menu</span></button>
               <h3 class="footer__item-title">Navigation</h3>
-              <a class="footer__item-link" href="#">Products</a>
-              <a class="footer__item-link" href="#">Our clients</a>
-              <a class="footer__item-link" href="#">Partners</a>
+              <div class="footer__item-links footer__item-nav-links">
+                <a class="footer__item-link" href="#">Products</a>
+                <a class="footer__item-link" href="#">Our clients</a>
+                <a class="footer__item-link" href="#">Partners</a>
+              </div>
             </li>
-            <li class="footer__item">
+            <li class="footer__item footer__item-vac">
+              <button type="button" class="footer__item-button footer__item-button-vac"><span class="visually-hidden">Open menu</span></button>
               <h3 class="footer__item-title">Vacancies</h3>
-              <a class="footer__item-link" href="#">Investment Analyst</a>
-              <a class="footer__item-link" href="#">Technical Writer</a>
-              <a class="footer__item-link" href="#">Tech Lead Java</a>
+              <div class="footer__item-links footer__item-vac-links">
+                <a class="footer__item-link" href="#">Investment Analyst</a>
+                <a class="footer__item-link" href="#">Technical Writer</a>
+                <a class="footer__item-link" href="#">Tech Lead Java</a>
+              </div>
             </li>
-            <li class="footer__item contacts">
+            <li class="footer__item footer__item-cont contacts">
+              <button type="button" class="footer__item-button footer__item-button-cont"><span class="visually-hidden">Open menu</span></button>
               <h3 class="footer__item-title">Contacts</h3>
-              <a class="footer__item-link contacts__link" href="#">
-                +1 305-949-1320
-                <img class="contacts__icon" src="images/phone-icon.svg" alt="phone-icon">
-              </a>
-              <a class="footer__item-link contacts__link" href="#">
-                info@dds-corp.com
-                <img class="contacts__icon" src="images/mail-icon.svg" alt="mail-icon">
-              </a>
-              <a class="footer__item-link contacts__link" href="#">
-                Sunny Isles Beach, FL. US
-                <img class="contacts__icon" src="images/address-icon.svg" alt="address-icon">
-              </a>
+              <div class="footer__item-links footer__item-cont-links">
+                <a class="footer__item-link contacts__link" href="#">
+                  +1 305-949-1320
+                  <img class="contacts__icon" src="images/phone-icon.svg" alt="phone-icon">
+                </a>
+                <a class="footer__item-link contacts__link" href="#">
+                  info@dds-corp.com
+                  <img class="contacts__icon" src="images/mail-icon.svg" alt="mail-icon">
+                </a>
+                <a class="footer__item-link contacts__link" href="#">
+                  Sunny Isles Beach, FL. US
+                  <img class="contacts__icon" src="images/address-icon.svg" alt="address-icon">
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -368,12 +378,36 @@
     </footer>
 
     <script type="text/javascript" src="scripts/menu.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/footer.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
       AOS.init({
         offset: 100,
       });
     </script>
+    <script>
+      $('.products__list').slick({
+        responsive: [
+          {
+            breakpoint: 9999,
+            settings: "unslick",
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              dots: true,
+              infinite: true,
+              speed: 300,
+              slidesToShow: 1,
+              dotsClass: 'products__dots',
+            }
+          }
+        ]
+      });
+    </script>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

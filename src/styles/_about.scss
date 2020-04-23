@@ -4,6 +4,7 @@
     padding: 75px 25px 25px;
     display: flex;
     flex-direction: column-reverse;
+    border-bottom: 1px solid $lightest-grey;
   }
 
   &__text {
@@ -81,6 +82,11 @@
 
 @media (min-width: 768px) {
   .about {
+    &__container {
+      padding-bottom: 75px;
+
+    }
+
     &__mission-mobile,
     &__mission-mobile-full {
       display: none;
