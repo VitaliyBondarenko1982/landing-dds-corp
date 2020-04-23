@@ -2,54 +2,25 @@
 
 .header {
   font-family: Montserrat, sans-serif;
+  position: relative;
 
   &__container {
-    position: relative;
-
-    &:before {
-      @include line;
-      left: 50%;
-      z-index: 1;
-      opacity: 0.5;
-      box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
-        calc(-100vw / 2 + 25px) 0 0 $light-grey;
-    }
-  }
-
-  &__title {
-    position: absolute;
-    top: 50vh;
-    max-width: 400px;
-    transform: translateY(-50%);
-    font-family: "Teko", sans-serif;
-    @include text($white, 45px, 50px);
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0 25px;
-    z-index: 1;
-
-    & span {
-      color: $main-blue;
-    }
-  }
-
-  &__top {
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     z-index: 2;
     padding: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.1);
   }
 
   &__logo {
     display: block;
     position: relative;
-    z-index: 1;
+    z-index: 4;
   }
 
   &__logo-image {
@@ -57,83 +28,28 @@
     height: 40px;
     fill: #fff;
   }
-
-  &__bottom {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  &__side-image {
-    display: none;
-  }
-
-  &__video {
-    width: 100%;
-    height: 100vh;
-  }
-
-  &__video-frame {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__description {
-    position: relative;
-    padding: 40px 25px;
-    margin-bottom: 75px;
-
-    &:after {
-      content: "";
-      position: absolute;
-      width: 91px;
-      height: 182px;
-      background-color: $lightest-grey;
-      top: 0;
-      left: 0;
-    }
-  }
-
-  &__text {
-    position: relative;
-    padding: 0 50px;
-    font-size: 16px;
-    line-height: 36px;
-    color: $dark-grey;
-    z-index: 1;
-
-    &:before {
-      content: "";
-      top: 18px;
-      left: 0;
-      position: absolute;
-      width: 40px;
-      height: 2px;
-      background-color: $main-blue;
-    }
-  }
-
-  &__partners {
-    padding: 0 25px;
-  }
-
-  &__vacancies {
-    position: relative;
-    z-index: 1;
-  }
 }
 
 @media (min-width: 768px) {
   .header {
-    &__top {
-      position: sticky;
-      background-color: #fff;
-      top: 0;
-    }
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 5;
+    border-bottom: 1px solid $lightest-grey;
 
-    &__title {
-      top: calc(100vh - 200px);
+    &__container {
+      position: static;
       transform: none;
+
+      &:before {
+        @include line;
+        left: 50%;
+        z-index: -1;
+        opacity: 0.5;
+        box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+          calc(-100vw / 2 + 25px) 0 0 $light-grey;
+      }
     }
 
     &__logo-image {
@@ -141,30 +57,13 @@
       height: 58px;
       fill: $main-blue;
     }
-
-    &__video {
-      height: calc(100vh - 132px);
-    }
-
-    &__description {
-      padding: 60px 180px;
-    }
-
-    &__vacancies {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
   }
 }
 
 @media (min-width: 1080px) {
   .header {
-    &__top {
-      padding: 34px 60px;
-    }
-
     &__container {
+      padding: 34px 60px;
 
       &:before {
         left: 0;
@@ -176,87 +75,6 @@
           1080px 0 0 $light-grey;
       }
     }
-
-    &__video {
-      position: relative;
-      width: 720px;
-      height: 531px;
-
-      &:after {
-        content: "";
-        position: absolute;
-        width: 91px;
-        height: 91px;
-        background-image: url(../images/grey-triangle.svg);
-        bottom: 0;
-        left: 0;
-      }
-    }
-
-    &__bottom {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-    }
-
-    &__title {
-      @include text($dark-grey, 69px, 80px);
-      max-width: 512px;
-      z-index: 1;
-      top: 108px;
-      left: 120px;
-      text-align: left;
-      padding: 0;
-
-      & span {
-        color: $main-blue;
-      }
-    }
-
-    &__side {
-      position: relative;
-      width: 360px;
-      height: 892px;
-    }
-
-    &__side-image {
-      display: block;
-      opacity: 0.1;
-      object-position: bottom;
-    }
-
-    &__description {
-      border-bottom: 1px solid $lightest-grey;
-      padding: 98px 130px;
-      margin-bottom: 0;
-    }
-
-    &__text {
-      font-size: 18px;
-    }
-
-    &__vacancies {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      right: 0;
-
-      &:before {
-        content: "";
-        position: absolute;
-        width: 91px;
-        height: 91px;
-        background-color: $main-blue;
-        top: -91px;
-        right: 0;
-        opacity: 0.85;
-      }
-    }
-
-    &__partners {
-      padding: 27px 0 26px;
-      position: relative;
-    }
   }
 }
 
@@ -265,27 +83,10 @@
 
     &__container {
       position: relative;
-
-      &:before {
-        box-shadow: 120px 0 0 $light-grey,
-          360px 0 0 $light-grey,
-          600px 0 0 $light-grey,
-          840px 0 0 $light-grey,
-          1080px 0 0 $light-grey,
-          1320px 0 0 $light-grey,
-          1440px 0 0 $light-grey;
-      }
-    }
-
-    &__top {
-      max-width: 1440px;
+      left: 0;
       padding: 34px 120px;
 
       &:before {
-        @include line;
-        left: 0;
-        z-index: 1;
-        opacity: 0.5;
         box-shadow: 120px 0 0 $light-grey,
           360px 0 0 $light-grey,
           600px 0 0 $light-grey,
@@ -294,41 +95,6 @@
           1320px 0 0 $light-grey,
           1440px 0 0 $light-grey;
       }
-    }
-
-    &__vacancies {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    &__main {
-      width: 1079px;
-    }
-
-    &__video {
-      width: 1079px;
-
-      &:before {
-        @include line;
-        z-index: 1;
-        left: 240px;
-        opacity: 0.1;
-        box-shadow: 240px 0 0 $light-grey,
-          480px 0 0 $light-grey,
-          720px 0 0 $light-grey;
-      }
-    }
-
-    &__description {
-      position: relative;
-      padding: 98px 240px;
-    }
-
-    &__partners {
-      padding: 27px 120px 26px 240px ;
-      position: relative;
     }
   }
 }

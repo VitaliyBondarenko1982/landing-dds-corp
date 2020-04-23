@@ -14,110 +14,112 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <div class="header__top">
-          <a class="header__logo">
-            <svg class="header__logo-image" >
-              <use href="images/sprite.svg#logo-icon"></use>
+        <a class="header__logo">
+        <svg class="header__logo-image" >
+          <use href="images/sprite.svg#logo-icon"></use>
+        </svg>
+        </a>
+        <nav class="header__nav nav nav--closed">
+          <button type="button" class="nav__toggle">
+            <span class="visually-hidden">Open menu</span>
+            <svg class="nav__icon" width="26" height="26" viewBox="0 0 25 25" fill="#000" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.125 12.5H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3.125 6.25H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3.125 18.75H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          </a>
-          <nav class="header__nav nav nav--closed">
-            <button type="button" class="nav__toggle">
-              <span class="visually-hidden">Open menu</span>
-              <svg class="nav__icon" width="26" height="26" viewBox="0 0 25 25" fill="#000" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.125 12.5H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M3.125 6.25H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M3.125 18.75H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#top" class="nav__link nav__link--active">
-                  Main
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="#product" class="nav__link">
-                  Products
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="#partners" class="nav__link">
-                  Our clients
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="#partners" class="nav__link">
-                  Partners
-                </a>
-              </li><li class="nav__item">
-                <a href="#footer" class="nav__link">
-                  Career
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="#footer" class="nav__link">
-                  Contact us
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="header__bottom">
-          <h1 class="header__title"
-            data-aos="fade-right"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="600"
-          >
-            <span>Professional</span> IT services, training and consulting
-          </h1>
-          <div class="header__side">
-            <img class="header__side-image" src="images/building-black-white.png" alt="building-black-white">
-            <div class="header__vacancies button-block">
-              <img class="button-block__image" src="images/watch-vacancies.png" alt="vacancies">
-              <a href="#" class="button-block__link">Watch vacancies</a>
-            </div>
-          </div>
-          <div class="header__main">
-            <div class="header__video"
-              data-aos="fade-zoom-in"
-              data-aos-easing="ease-in-back"
-            >
-              <video class="header__video-frame" id="video-header" width="100%" height="100%" autoplay>
-                <source src="images/videos/video.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="header__description">
-              <div class="header__text">We are an Information Technology Services and Solutions Company</div>
-            </div>
-            <div class="header__partners" id="partners">
-              <div class="header__logos logos">
-                <div class="logos__item">
-                  <svg class="logos__icon logos__icon--jp-morgan">
-                    <use href="images/sprite.svg#jp-morgan"></use>
-                  </svg>
-                </div>
-                <div class="logos__item">
-                  <svg class="logos__icon logos__icon--credit-agricole">
-                    <use href="images/sprite.svg#credit-agricole"></use>
-                  </svg>
-                </div>
-                <div class="logos__item">
-                  <svg class="logos__icon logos__icon--bnp">
-                    <use href="images/sprite.svg#bnp"></use>
-                  </svg>
-                </div>
-                <div class="logos__item">
-                  <svg class="logos__icon logos__icon--anz">
-                    <use href="images/sprite.svg#anz"></use>
-                  </svg>
-                </div>
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#top" class="nav__link nav__link--active">
+                Main
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#product" class="nav__link">
+                Products
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#partners" class="nav__link">
+                Our clients
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#partners" class="nav__link">
+                Partners
+              </a>
+            </li><li class="nav__item">
+              <a href="#footer" class="nav__link">
+                Career
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#footer" class="nav__link">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+    <section class="promo">
+      <div class="promo__container container">
+        <h1 class="promo__title"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+        >
+          <span>Professional</span> IT services, training and consulting
+        </h1>
+        <div class="promo__side">
+          <img class="promo__side-image" src="images/building-black-white.png" alt="building-black-white">
+          <div class="promo__vacancies button-block">
+            <img class="button-block__image" src="images/watch-vacancies.png" alt="vacancies">
+            <a href="#" class="button-block__link">Watch vacancies</a>
+          </div>
+        </div>
+        <div class="promo__main">
+          <div class="promo__video"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+          >
+            <div class="promo__video-gradient"></div>
+            <video class="promo__video-frame" id="video-promo" width="100%" height="100%" autoplay>
+              <source src="images/videos/video.mp4" type="video/mp4">
+            </video>
+            <a class="promo__video-button" href="#promo-description"></a>
+          </div>
+          <div class="promo__description" id="promo-description">
+            <div class="promo__text">We are an Information Technology Services and Solutions Company</div>
+          </div>
+          <div class="promo__partners" id="partners">
+            <div class="promo__logos logos">
+              <div class="logos__item">
+                <svg class="logos__icon logos__icon--jp-morgan">
+                  <use href="images/sprite.svg#jp-morgan"></use>
+                </svg>
+              </div>
+              <div class="logos__item">
+                <svg class="logos__icon logos__icon--credit-agricole">
+                  <use href="images/sprite.svg#credit-agricole"></use>
+                </svg>
+              </div>
+              <div class="logos__item">
+                <svg class="logos__icon logos__icon--bnp">
+                  <use href="images/sprite.svg#bnp"></use>
+                </svg>
+              </div>
+              <div class="logos__item">
+                <svg class="logos__icon logos__icon--anz">
+                  <use href="images/sprite.svg#anz"></use>
+                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
     <section class="products" id="product">
       <div class="products__container container">

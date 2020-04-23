@@ -44,6 +44,13 @@
 
   &__video {
     position: relative;
+
+    &:before {
+      @include line;
+      left: 50%;
+      z-index: 1;
+      opacity: 0.2;
+    }
   }
 
   &__mission-mobile,
@@ -51,7 +58,7 @@
     position: absolute;
     width: 320px;
     top: 50%;
-    left: -25px;
+    left: 50%;
   }
 
   &__mission-mobile {
@@ -76,7 +83,7 @@
 
   &.aos-animate {
     opacity: 1;
-    transform: translate(0, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -191,7 +198,9 @@
     &__container {
       position: relative;
       flex-direction: row;
+      justify-content: flex-start;
       border-bottom: 1px solid $lightest-grey;
+      padding-left: 60px;
 
       &:after {
         content: "";
@@ -213,6 +222,10 @@
           1020px 0 0 $light-grey,
           1080px 0 0 $light-grey;
       }
+    }
+
+    &__video {
+      margin-left: 0;
     }
 
     &__title {
@@ -252,6 +265,10 @@
       margin: 0;
       margin-top: 60px;
       margin-right: 240px;
+    }
+
+    &__text {
+      margin-left: 0;
     }
 
     &__video-blue-square {

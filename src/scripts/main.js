@@ -1,11 +1,12 @@
 /* eslint-disable max-len */
 'use strict';
 
-const videoHeader = document.querySelector('#video-header');
+const videoHeader = document.querySelector('#video-promo');
 const videoAbout = document.querySelector('#video-about');
 
 function enableAutoplay(element) {
   element.autoplay = true;
+  element.loop = true;
   element.volume = 0;
   element.play();
 }

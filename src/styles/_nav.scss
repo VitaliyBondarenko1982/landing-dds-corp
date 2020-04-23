@@ -12,7 +12,7 @@
     cursor: pointer;
     outline: none;
     display: flex;
-    z-index: 1;
+    z-index: 4;
   }
 
   &__link {
@@ -56,8 +56,8 @@
     height: 100vh;
     width: 100%;
     padding: 100px 25px;
-    opacity: 0;
-    animation: menu 1000ms ease;
+    animation: menuIn 1000ms ease;
+    z-index: 3;
 
     & .nav__item {
       text-align: center;
@@ -139,12 +139,14 @@
   }
 }
 
-@keyframes menu {
+@keyframes menuIn {
   from {
     opacity: 0;
+    transform: translateX(-100%);
   }
 
   to {
     opacity: 1;
+    transform: translateX(0);
   }
 }

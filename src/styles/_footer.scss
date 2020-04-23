@@ -1,12 +1,6 @@
 .footer {
   &__container {
     padding: 61px 25px 0;
-  }
-
-  &__top {
-    display: flex;
-    flex-direction: column-reverse;
-    border-bottom: 1px solid $lightest-grey;
     position: relative;
 
     &:before {
@@ -14,9 +8,15 @@
       left: 50%;
       z-index: -1;
       opacity: 0.5;
-      box-shadow: calc(100vw / 2) 0 0 $light-grey,
-        calc(-100vw / 2) 0 0 $light-grey;
+      box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
     }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column-reverse;
+    border-bottom: 1px solid $lightest-grey;
   }
 
   &__contact-us {
@@ -75,6 +75,11 @@
     right: 0;
     outline: none;
     cursor: pointer;
+    transition: background-color 500ms ease;
+
+    &:hover {
+      background-color: $light-grey;
+    }
 
     &:before {
       content: "";
@@ -107,6 +112,9 @@
   }
 
   &__copyright {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
     text-align: center;
     @include text($dark-grey, 14px, 70px);
   }
@@ -150,12 +158,9 @@
   .footer {
     &__container {
       padding: 0;
-    }
-
-    &__top {
-      flex-direction: row;
 
       &:before {
+        left: 0;
         box-shadow: 60px 0 0 $light-grey,
           300px 0 0 $light-grey,
           540px 0 0 $light-grey,
@@ -163,6 +168,10 @@
           1020px 0 0 $light-grey,
           1080px 0 0 $light-grey;
       }
+    }
+
+    &__top {
+      flex-direction: row;
     }
 
     &__item {
@@ -188,17 +197,21 @@
 
 @media (min-width: 1440px) {
   .footer {
-    &__top {
-      position: relative;
-      min-height: 360px;
-
+    &__container {
       &:before {
-        box-shadow: 600px 0 0 $light-grey,
+        box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
           840px 0 0 $light-grey,
           1080px 0 0 $light-grey,
           1320px 0 0 $light-grey,
           1440px 0 0 $light-grey;
       }
+    }
+
+    &__top {
+      position: relative;
+      min-height: 360px;
     }
 
     &__contact-us {

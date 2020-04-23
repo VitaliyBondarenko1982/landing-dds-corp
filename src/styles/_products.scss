@@ -133,6 +133,8 @@
 
     &__image {
       display: block;
+      position: sticky;
+      top: 132px;
       width: 360px;
       background-image: url(../images/building.png);
       background-repeat: no-repeat;
