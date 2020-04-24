@@ -45,22 +45,5 @@
 @media (min-width: 1440px) {
   .button-block {
     height: 361px;
-
-    &__link {
-      display: block;
-      text-align: center;
-      @include text($white, 14px, 70px);
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      width: 100%;
-      background-color: $main-blue;
-      @include transition(all);
-
-      &:hover {
-        background-color: $hover-blue;
-        color: $dark-grey;
-      }
-    }
   }
 }
