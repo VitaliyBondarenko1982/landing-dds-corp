@@ -30,16 +30,15 @@
     margin: auto;
 
     & path:first-child {
-      transition: opacity 500ms ease;
+      transition: opacity 700ms ease;
     }
 
     & path:nth-child(2) {
-      position: relative;
-      transition: transform 500ms ease;
+      transition: transform 700ms ease;
     }
 
     & path:nth-child(3) {
-      transition: transform 500ms ease;
+      transition: transform 700ms ease;
     }
   }
 
@@ -56,7 +55,6 @@
     height: 100vh;
     width: 100%;
     padding: 100px 25px;
-    animation: menuIn 1000ms ease;
     z-index: 3;
 
     & .nav__item {
@@ -76,17 +74,17 @@
 
     & path:first-child {
       opacity: 0;
-      transition: opacity 500ms ease;
+      transition: opacity 700ms ease;
     }
 
     & path:nth-child(2) {
       transform: translate(8px, -1px) rotate(45deg);
-      transition: transform 500ms ease;
+      transition: transform 700ms ease;
     }
 
     & path:nth-child(3) {
       transform: translate(-9px, 8px) rotate(-45deg);
-      transition: transform 500ms ease;
+      transition: transform 700ms ease;
     }
   }
 }
@@ -148,5 +146,17 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes menuOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
   }
 }

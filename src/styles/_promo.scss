@@ -17,8 +17,10 @@
   &__title {
     position: absolute;
     top: 50vh;
+    left: 50%;
+    width: 100%;
     max-width: 400px;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     font-family: "Teko", sans-serif;
     @include text($white, 45px, 50px);
     font-weight: 600;
@@ -77,7 +79,13 @@
     height: 24px;
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
-    z-index: 5;
+    transition: all 500ms ease;
+    z-index: 1;
+
+    &:hover {
+      border-bottom-color: $main-blue;
+      border-right-color: $main-blue;
+    }
   }
 
   &__description {
@@ -128,12 +136,16 @@
 
 @media (min-width: 768px) {
   .promo {
+    margin-top: 132px;
     &__title {
+      text-align: left;
       top: calc(100vh - 350px);
+      left: 0;
       transform: none;
     }
 
     &__video {
+
       height: calc(100vh - 132px);
     }
 
@@ -160,6 +172,7 @@
   .promo {
     &__container {
       flex-direction: row;
+      width: 1080px;
 
       &:before {
         left: 0;
@@ -174,7 +187,8 @@
 
     &__video {
       position: relative;
-      width: 720px;
+      width: 100%;
+      max-width: 720px;
       height: 531px;
 
       &:after {
@@ -202,7 +216,6 @@
       z-index: 1;
       top: 108px;
       left: 120px;
-      text-align: left;
       padding: 0;
 
       & span {
@@ -299,7 +312,7 @@
     }
 
     &__video {
-      width: 1079px;
+      max-width: 1079px;
 
       &:before {
         @include line;

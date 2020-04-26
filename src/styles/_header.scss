@@ -32,8 +32,10 @@
 
 @media (min-width: 768px) {
   .header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     background-color: #fff;
     z-index: 5;
 
@@ -41,6 +43,7 @@
       position: static;
       transform: none;
       border-bottom: 1px solid $lightest-grey;
+      padding: 25px 0;
 
       &:before {
         @include line;
@@ -63,6 +66,8 @@
 @media (min-width: 1080px) {
   .header {
     &__container {
+      position: relative;
+      left: 0;
       padding: 34px 60px;
 
       &:before {
@@ -75,6 +80,14 @@
           1080px 0 0 $light-grey;
       }
     }
+
+    &__logo {
+      transition: opacity 500ms ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }
 
@@ -82,8 +95,6 @@
   .header {
 
     &__container {
-      position: relative;
-      left: 0;
       padding: 34px 120px;
 
       &:before {

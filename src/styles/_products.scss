@@ -97,12 +97,21 @@
 
 @media (min-width: 768px) {
   .products {
+    background-image: url(../images/building-tablet.png);
+    background-size: auto;
+
     &__container {
-      padding: 75px 25px;
+      padding: 75px 25px 150px;
     }
 
     &__list {
       display: flex;
+    }
+
+    &__item {
+      &:nth-child(2) {
+        order: -1;
+      }
     }
   }
 }
@@ -112,7 +121,7 @@
     background-image: none;
 
     &__container {
-      padding: 0 60px 0 0;
+      padding: 0;
       display: flex;
 
       &:before {
@@ -131,11 +140,15 @@
       margin-bottom: 60px;
     }
 
+    &__item {
+      &:nth-child(2) {
+        order: 0;
+      }
+    }
+
     &__image {
       display: block;
-      position: sticky;
-      top: 132px;
-      width: 360px;
+      width: 240px;
       background-image: url(../images/building.png);
       background-repeat: no-repeat;
       background-position: bottom;

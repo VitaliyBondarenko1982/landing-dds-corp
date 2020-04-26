@@ -2,6 +2,10 @@
   &__link {
     position: relative;
     padding-left: 30px;
+
+    &:hover:last-of-type {
+      color: $dark-grey;
+    }
   }
 
   &__icon {

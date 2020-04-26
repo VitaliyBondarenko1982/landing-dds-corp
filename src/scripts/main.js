@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 'use strict';
 
+// move video
 const videoHeader = document.querySelector('#video-promo');
 const videoAbout = document.querySelector('#video-about');
 
@@ -14,6 +15,23 @@ function enableAutoplay(element) {
 enableAutoplay(videoHeader);
 enableAutoplay(videoAbout);
 
+// scroll window
+// const building = document.querySelector('.building');
+// const header = document.querySelector('.header');
+
+// const headerHeight = header.clientHeight;
+
+// window.onscroll = () => {
+//   const rect = building.getBoundingClientRect();
+
+//   if (rect.top === headerHeight - 1) {
+//     building.style.opacity = '0.2';
+//   } else {
+//     building.style.opacity = '1';
+//   }
+// };
+
+// icons in products slider
 if (window.innerWidth <= 767) {
   const dots = document.querySelectorAll('.products__dots li');
 

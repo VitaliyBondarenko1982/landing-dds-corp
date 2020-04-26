@@ -19,11 +19,6 @@
     border-bottom: 1px solid $lightest-grey;
   }
 
-  &__contact-us {
-    max-width: 450px;
-    margin: auto;
-  }
-
   &__item {
     position: relative;
     margin-bottom: 37px;
@@ -61,7 +56,6 @@
 
     &:hover {
       color: $main-blue;
-      transform: scale(1.05);
     }
   }
 
@@ -132,7 +126,7 @@
     }
 
     &__item-title {
-      margin: 30px;
+      margin-bottom: 30px;
     }
 
     &__item &__item-links {

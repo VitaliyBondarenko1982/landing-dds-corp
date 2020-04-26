@@ -25,17 +25,17 @@
     <meta content="image/png" property="og:image:type" />
     <title>DDS Corp</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
     <header class="header">
       <div class="header__container container">
-        <a class="header__logo">
+        <a href="#" class="header__logo">
         <svg class="header__logo-image" >
           <use href="images/sprite.svg#logo-icon"></use>
         </svg>
@@ -43,11 +43,13 @@
         <nav class="header__nav nav nav--closed">
           <button type="button" class="nav__toggle">
             <span class="visually-hidden">Open menu</span>
-            <svg class="nav__icon" width="26" height="26" viewBox="0 0 25 25" fill="#000" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.125 12.5H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3.125 6.25H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3.125 18.75H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <div class="nav__icon">
+              <svg  width="26" height="26" viewBox="0 0 25 25" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.125 12.5H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.125 6.25H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.125 18.75H21.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
           </button>
           <ul class="nav__list">
             <li class="nav__item">
@@ -87,9 +89,6 @@
     <section class="promo">
       <div class="promo__container container">
         <h1 class="promo__title"
-          data-aos="fade-right"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="600"
         >
           <span>Professional</span> IT services, training and consulting
         </h1>
@@ -141,6 +140,13 @@
         </div>
       </div>
     </section>
+
+    <!-- <div class="building">
+      <div class="building__container">
+        <div class="building__image"
+        ></div>
+      </div>
+    </div> -->
 
     <section class="products" id="product">
       <div class="products__container container">
@@ -383,11 +389,11 @@
               <button type="button" class="footer__item-button footer__item-button-cont"><span class="visually-hidden">Open menu</span></button>
               <h3 class="footer__item-title">Contacts</h3>
               <div class="footer__item-links footer__item-cont-links">
-                <a class="footer__item-link contacts__link" href="#">
+                <a class="footer__item-link contacts__link" href="tel: +13059491320">
                   +1 305-949-1320
                   <img class="contacts__icon" src="images/phone-icon.svg" alt="phone-icon">
                 </a>
-                <a class="footer__item-link contacts__link" href="#">
+                <a class="footer__item-link contacts__link" href="malito: info@dds-corp.com">
                   info@dds-corp.com
                   <img class="contacts__icon" src="images/mail-icon.svg" alt="mail-icon">
                 </a>
@@ -419,7 +425,7 @@
         responsive: [
           {
             breakpoint: 9999,
-            settings: "unslick",
+            settings: 'unslick',
           },
           {
             breakpoint: 767,
