@@ -28,6 +28,7 @@
     text-align: center;
     padding: 0 25px;
     z-index: 1;
+    animation: titlePromoMobile 1200ms ease-in-out;
 
     & span {
       color: $main-blue;
@@ -136,17 +137,33 @@
 
 @media (min-width: 768px) {
   .promo {
-    margin-top: 132px;
+    margin-top: 115px;
+
+    &__container {
+      &:before {
+        box-shadow: 384px 0 0 $light-grey,
+          -384px 0 0 $light-grey;
+      }
+    }
+
     &__title {
       text-align: left;
       top: calc(100vh - 350px);
       left: 0;
       transform: none;
+      animation: titlePromo 1200ms ease-in-out;
     }
 
     &__video {
-
       height: calc(100vh - 132px);
+      animation: videoPromo 2000ms ease-in-out;
+    }
+
+    &__video-gradient {
+      &:before {
+        box-shadow: 384px 0 0 $light-grey,
+          -384px 0 0 $light-grey;
+      }
     }
 
     &__description {
@@ -170,6 +187,7 @@
 
 @media (min-width: 1080px) {
   .promo {
+    margin-top: 132px;
     &__container {
       flex-direction: row;
       width: 1080px;
@@ -334,5 +352,38 @@
       padding: 27px 120px 26px 240px ;
       position: relative;
     }
+  }
+}
+
+@keyframes videoPromo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes titlePromo {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes titlePromoMobile {
+  from {
+    transform: translate(calc(-50% - 200px), -50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
   }
 }

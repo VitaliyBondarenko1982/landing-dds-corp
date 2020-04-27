@@ -20,6 +20,12 @@
 
   &__image {
     display: none;
+    // opacity: 0;
+    transition: opacity 800ms ease;
+
+    &--visible {
+      opacity: 1;
+    }
   }
 
   .slick-slider {
@@ -102,6 +108,11 @@
 
     &__container {
       padding: 75px 25px 150px;
+
+      &:before {
+        box-shadow: 384px 0 0 $light-grey,
+          -384px 0 0 $light-grey;
+      }
     }
 
     &__list {
@@ -161,9 +172,8 @@
 @media (min-width: 1440px) {
   .products {
     &__container {
-      padding-right: 120px;
+      padding: 190px 120px 160px 600px;
       display: flex;
-
       position: relative;
 
       &:before {
@@ -178,13 +188,12 @@
     }
 
     &__image {
-      height: 933px;
-      margin-right: 0;
-      background-size: none;
+      display: none;
     }
 
     &__list {
-      padding: 190px 0 0 240px;
+      margin-top: 0;
+      margin-left: 0;
     }
   }
 }

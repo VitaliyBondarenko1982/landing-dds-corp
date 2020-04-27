@@ -26,6 +26,14 @@
   .product {
     width: 239px;
     padding-right: 30px;
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: all 800ms ease-in-out;
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     &__image {
       width: 90px;

@@ -50,8 +50,8 @@
         left: 50%;
         z-index: -1;
         opacity: 0.5;
-        box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
-          calc(-100vw / 2 + 25px) 0 0 $light-grey;
+        box-shadow: 384px 0 0 $light-grey,
+          -384px 0 0 $light-grey;
       }
     }
 

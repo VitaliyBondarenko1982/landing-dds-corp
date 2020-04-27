@@ -116,6 +116,13 @@
 
 @media (min-width: 768px) {
   .footer {
+    &__container {
+      &:before {
+        box-shadow: 384px 0 0 $light-grey,
+          -384px 0 0 $light-grey;
+      }
+    }
+
     &__list {
       display: flex;
     }
