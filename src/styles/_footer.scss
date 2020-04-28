@@ -1,7 +1,7 @@
 .footer {
   &__container {
-    padding: 61px 25px 0;
     position: relative;
+    padding: 61px 25px 0;
 
     &:before {
       @include line;
@@ -32,17 +32,17 @@
   }
 
   &__item &__item-links {
+    margin-top: 0;
     height: 0;
     opacity: 0;
-    margin-top: 0;
     transition: all 500ms ease;
   }
 
   &__item-nav &__item-nav-links--visible,
   &__item-vac &__item-vac-links--visible,
   &__item-cont &__item-cont-links--visible {
-    height: 165px;
     margin-top: 45px;
+    height: 165px;
     opacity: 1;
     transition: all 500ms ease;
   }
@@ -61,12 +61,12 @@
 
   &__item-button {
     position: absolute;
+    top: 0;
+    right: 0;
     width: 46px;
     height: 46px;
     background-color: $lightest-grey;
     border: none;
-    top: 0;
-    right: 0;
     outline: none;
     cursor: pointer;
     transition: background-color 500ms ease;
@@ -78,22 +78,22 @@
     &:before {
       content: "";
       position: absolute;
+      top: 50%;
+      left: 50%;
       width: 18px;
       height: 2px;
       background-color: $main-blue;
-      top: 50%;
-      left: 50%;
       transform: translate(-50%, -50%);
     }
 
     &:after {
       content: "";
       position: absolute;
+      top: 50%;
+      left: 50%;
       width: 2px;
       height: 18px;
       background-color: $main-blue;
-      top: 50%;
-      left: 50%;
       transform: translate(-50%, -50%) rotate(0);
       transition: transform 500ms ease;
     }
@@ -177,13 +177,14 @@
 
     &__item {
       margin-bottom: 0;
+      width: 240px;
     }
 
     &__contact-us {
+      margin: 0;
+      margin-right: 60px;
       width: 240px;
       height: 240px;
-      margin: 0;
-      margin-right: 120px;
 
       & .button-block__image {
         height: calc(100% - 70px);
@@ -233,14 +234,10 @@
       margin-top: 84px;
     }
 
-    &__item {
-      width: 240px;
-    }
-
     &__item-title {
-      line-height: 60px;
       margin: 0;
       margin-bottom: 36px;
+      line-height: 60px;
     }
 
     &__item-link {

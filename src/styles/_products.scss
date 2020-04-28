@@ -5,8 +5,8 @@
   background-size: contain;
 
   &__container {
-    padding: 75px 25px 194px;
     position: relative;
+    padding: 75px 25px 194px;
 
     &:before {
       @include line;
@@ -15,16 +15,6 @@
       opacity: 0.5;
       box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
         calc(-100vw / 2 + 25px) 0 0 $light-grey;
-    }
-  }
-
-  &__image {
-    display: none;
-    // opacity: 0;
-    transition: opacity 800ms ease;
-
-    &--visible {
-      opacity: 1;
     }
   }
 
@@ -40,7 +30,6 @@
 
     & li {
       position: relative;
-      display: flex;
       width: 80px;
       height: 80px;
       background-color: $lightest-grey;
@@ -58,8 +47,11 @@
       }
 
       & svg {
-        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
         padding: 0;
+        transform: translate(-50%, -50%);
       }
 
       & svg path {
@@ -132,8 +124,7 @@
     background-image: none;
 
     &__container {
-      padding: 0;
-      display: flex;
+      padding: 60px 60px 60px 300px;
 
       &:before {
         left: 0;
@@ -156,16 +147,6 @@
         order: 0;
       }
     }
-
-    &__image {
-      display: block;
-      width: 240px;
-      background-image: url(../images/building.png);
-      background-repeat: no-repeat;
-      background-position: bottom;
-      background-size: cover;
-      margin-right: 60px;
-    }
   }
 }
 
@@ -173,7 +154,6 @@
   .products {
     &__container {
       padding: 190px 120px 160px 600px;
-      display: flex;
       position: relative;
 
       &:before {
@@ -185,10 +165,6 @@
           1320px 0 0 $light-grey,
           1440px 0 0 $light-grey;
       }
-    }
-
-    &__image {
-      display: none;
     }
 
     &__list {

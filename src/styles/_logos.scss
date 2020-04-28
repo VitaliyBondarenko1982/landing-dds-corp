@@ -1,10 +1,10 @@
 @import "utils";
 
 .logos {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;
   margin-bottom: 75px;
 
   &__item {
@@ -14,15 +14,15 @@
   &__icon {
 
     &--jp-morgan {
+      margin-bottom: 25px;
       width: 109px;
       height: 23px;
-      margin-bottom: 25px;
     }
 
     &--credit-agricole {
+      margin-bottom: 25px;
       width: 116px;
       height: 23px;
-      margin-bottom: 25px;
     }
 
     &--bnp {
@@ -45,18 +45,18 @@
 
 @media (min-width: 1080px) {
   .logos {
+    position: relative;
     display: flex;
+    justify-content: space-between;
     width: 700px;
     margin: auto;
-    justify-content: space-between;
-    position: relative;
     margin-bottom: 0;
 
     &__item {
+      position: relative;
       width: auto;
       display: flex;
       align-items: center;
-      position: relative;
       min-height: 37px;
     }
 

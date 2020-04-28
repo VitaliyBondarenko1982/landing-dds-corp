@@ -136,9 +136,7 @@
       </div>
     </section>
 
-    <section class="building">
-      <img src="./images/building.png" class="building__image" alt="building"></img>
-    </section>
+    <div class="building"></div>
 
     <section class="products" id="product">
       <div class="products__container container">
@@ -220,10 +218,13 @@
           <video class="about__video-frame" id="video-about" width="100%" height="100%" autoplay>
             <source src="images/videos/video.mp4" type="video/mp4">
           </video>
-          <div class="about__mission"></div>
-          <div class="about__mission-full"></div>
-          <svg
-            class="about__mission-mobile">
+          <svg class="about__mission">
+            <use href="images/sprite.svg#mission"></use>
+          </svg>
+          <svg class="about__mission-full">
+            <use href="images/sprite.svg#mission-full"></use>
+          </svg>
+          <svg class="about__mission-mobile">
             <use href="images/sprite.svg#mission-mobile"></use>
           </svg>
           <svg class="about__mission-mobile-full">
@@ -322,7 +323,5 @@
       });
     </script>
     <script type="text/javascript" src="scripts/main.js"></script>
-    <script type="text/javascript" src="scripts/menu.js"></script>
-    <script type="text/javascript" src="scripts/footer.js"></script>
   </body>
 </html>

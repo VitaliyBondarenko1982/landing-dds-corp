@@ -18,16 +18,16 @@
     position: absolute;
     top: 50vh;
     left: 50%;
+    z-index: 1;
     width: 100%;
     max-width: 400px;
-    transform: translate(-50%, -50%);
+    padding: 0 25px;
     font-family: "Teko", sans-serif;
     @include text($white, 45px, 50px);
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    padding: 0 25px;
-    z-index: 1;
+    transform: translate(-50%, -50%);
     animation: titlePromoMobile 1200ms ease-in-out;
 
     & span {
@@ -49,10 +49,10 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, rgba(16, 13, 24, 0) 0%, #100d18 100%);
-    z-index: 0;
 
     &:before {
       @include line;
@@ -71,17 +71,17 @@
   }
 
   &__video-button {
-    display: block;
     position: absolute;
     bottom: 50px;
     left: 50%;
+    z-index: 1;
+    display: block;
     transform: translateX(-50%) rotate(45deg);
     width: 24px;
     height: 24px;
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
     transition: all 500ms ease;
-    z-index: 1;
 
     &:hover {
       border-bottom-color: $main-blue;
@@ -97,17 +97,17 @@
 
   &__text {
     position: relative;
+    z-index: 1;
     padding-left: 50px;
     font-size: 16px;
     line-height: 36px;
     color: $dark-grey;
-    z-index: 1;
 
     &:before {
       content: "";
+      position: absolute;
       top: 18px;
       left: 0;
-      position: absolute;
       width: 40px;
       height: 2px;
       background-color: $main-blue;
@@ -116,12 +116,12 @@
     &:after {
       content: "";
       position: absolute;
-      width: 91px;
-      height: 182px;
-      background-color: $lightest-grey;
       top: -40px;
       left: 0;
       z-index: -1;
+      width: 91px;
+      height: 182px;
+      background-color: $lightest-grey;
     }
   }
 
@@ -147,9 +147,9 @@
     }
 
     &__title {
-      text-align: left;
       top: calc(100vh - 350px);
       left: 0;
+      text-align: left;
       transform: none;
       animation: titlePromo 1200ms ease-in-out;
     }
@@ -212,11 +212,12 @@
       &:after {
         content: "";
         position: absolute;
-        width: 91px;
-        height: 91px;
-        background-image: url(../images/grey-triangle.svg);
         bottom: 0;
         left: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 91px solid $dark-grey;
+        border-right: 91px solid transparent;
       }
     }
 
@@ -229,11 +230,11 @@
     }
 
     &__title {
-      @include text($dark-grey, 69px, 80px);
-      max-width: 512px;
-      z-index: 1;
       top: 108px;
       left: 120px;
+      z-index: 1;
+      @include text($dark-grey, 69px, 80px);
+      max-width: 512px;
       padding: 0;
 
       & span {
@@ -261,11 +262,11 @@
       &:after {
         content: "";
         position: absolute;
+        top: 0;
+        left: 0;
         width: 91px;
         height: 182px;
         background-color: $lightest-grey;
-        top: 0;
-        left: 0;
       }
     }
 
@@ -279,18 +280,18 @@
 
     &__vacancies {
       position: absolute;
-      width: 100%;
       bottom: 0;
       right: 0;
+      width: 100%;
 
       &:before {
         content: "";
         position: absolute;
+        top: -91px;
+        right: 0;
         width: 91px;
         height: 91px;
         background-color: $main-blue;
-        top: -91px;
-        right: 0;
         opacity: 0.85;
       }
     }

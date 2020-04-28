@@ -8,19 +8,19 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
     z-index: 2;
-    padding: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 25px;
+    transform: translateX(-50%);
   }
 
   &__logo {
-    display: block;
     position: relative;
     z-index: 4;
+    display: block;
   }
 
   &__logo-image {
@@ -36,14 +36,14 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
     z-index: 5;
+    background-color: #fff;
 
     &__container {
       position: static;
+      padding: 25px 0;
       transform: none;
       border-bottom: 1px solid $lightest-grey;
-      padding: 25px 0;
 
       &:before {
         @include line;

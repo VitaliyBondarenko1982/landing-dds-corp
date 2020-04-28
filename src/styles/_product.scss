@@ -4,12 +4,11 @@
   outline: none;
 
   &__title {
+    margin-bottom: 27px;
     font-family: "Teko", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     @include text($main-blue, 35px, 50px);
-    margin-bottom: 27px;
-
   }
 
   &__description {
@@ -36,11 +35,11 @@
     }
 
     &__image {
+      display: flex;
+      margin-bottom: 51px;
       width: 90px;
       height: 90px;
       background-image: url(../images/rectangle-services.svg);
-      display: flex;
-      margin-bottom: 51px;
     }
 
     &__icon {
@@ -61,11 +60,11 @@
   .product {
 
     &__image {
+      display: flex;
+      margin-bottom: 51px;
       width: 91px;
       height: 90px;
       background-image: url(../images/rectangle-services.svg);
-      display: flex;
-      margin-bottom: 51px;
     }
 
     &__icon {
@@ -74,11 +73,11 @@
     }
 
     &__title {
+      margin-bottom: 27px;
       font-family: "Teko", sans-serif;
       font-weight: 600;
       text-transform: uppercase;
       @include text($main-blue, 35px, 50px);
-      margin-bottom: 27px;
     }
 
     &__description {
