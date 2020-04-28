@@ -1,12 +1,12 @@
 .products {
-  background-image: url(../images/building-mobile.png);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-
   &__container {
     position: relative;
     padding: 75px 25px 194px;
+    background-image: url(../images/building-tablet.png);
+    background-position: bottom;
+    background-position-x: -10px;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     &:before {
       @include line;
@@ -95,9 +95,6 @@
 
 @media (min-width: 768px) {
   .products {
-    background-image: url(../images/building-tablet.png);
-    background-size: auto;
-
     &__container {
       padding: 75px 25px 150px;
 
@@ -109,6 +106,7 @@
 
     &__list {
       display: flex;
+      justify-content: space-around;
     }
 
     &__item {
@@ -121,9 +119,8 @@
 
 @media (min-width: 1080px) {
   .products {
-    background-image: none;
-
     &__container {
+      background-image: none;
       padding: 60px 60px 60px 300px;
 
       &:before {

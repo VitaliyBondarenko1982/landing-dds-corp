@@ -190,7 +190,6 @@
     margin-top: 132px;
     &__container {
       flex-direction: row;
-      width: 1080px;
 
       &:before {
         left: 0;
@@ -305,9 +304,7 @@
 
 @media (min-width: 1440px) {
   .promo {
-
     &__container {
-
       &:before {
         box-shadow: 120px 0 0 $light-grey,
           360px 0 0 $light-grey,
@@ -324,10 +321,6 @@
       bottom: 0;
       left: 0;
       z-index: 1;
-    }
-
-    &__main {
-      width: 1079px;
     }
 
     &__video {

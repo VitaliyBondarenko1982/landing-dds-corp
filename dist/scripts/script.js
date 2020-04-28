@@ -1,80 +1,6 @@
-/* eslint-disable max-len */
 'use strict';
 
-// menu
-
-const ESC_KEYCODE = 27;
-const ENTER_KEYCODE = 13;
-
-const navMain = document.querySelector('.nav');
-const navToggle = document.querySelector('.nav__toggle');
-const navList = document.querySelector('.nav__list');
-const burgerMiddle = document.querySelector('.nav__icon path:first-child');
-const burgerTop = document.querySelector('.nav__icon path:nth-child(2)');
-const burgerBottom = document.querySelector('.nav__icon path:nth-child(3)');
-
-const onToggleEscPress = function(evt) {
-  if (evt.keyCode === ESC_KEYCODE) {
-    closeMenu();
-  }
-};
-
-const openMenu = function() {
-  navMain.classList.remove('nav--closed');
-  navMain.classList.add('nav--opened');
-  navList.style.animation = 'menuIn 1000ms ease';
-  burgerMiddle.style.opacity = '0';
-  burgerTop.style.transform = 'translate(8px, -1px) rotate(45deg)';
-  burgerBottom.style.transform = 'translate(-9px, 8px) rotate(-45deg)';
-  document.addEventListener('keydown', onToggleEscPress);
-};
-
-const closeMenu = function() {
-  navList.style.animation = 'menuOut 1000ms ease';
-  burgerMiddle.style.opacity = '1';
-  burgerTop.style.transform = 'none';
-  burgerBottom.style.transform = 'none';
-
-  setTimeout(() => {
-    navMain.classList.add('nav--closed');
-    navMain.classList.remove('nav--opened');
-  }, 800);
-
-  document.removeEventListener('keydown', onToggleEscPress);
-};
-
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('nav--closed')) {
-    openMenu();
-  } else {
-    closeMenu();
-  }
-});
-
-navToggle.addEventListener('keydown', function(evt) {
-  if (evt.keyCode === ENTER_KEYCODE
-    && navMain.classList.contains('nav--closed')) {
-    closeMenu();
-  } else {
-    openMenu();
-  }
-});
-
-// move video
-const videoHeader = document.querySelector('#video-promo');
-const videoAbout = document.querySelector('#video-about');
-
-function enableAutoplay(element) {
-  element.autoplay = true;
-  element.loop = true;
-  element.volume = 0;
-  element.play();
-}
-
-enableAutoplay(videoHeader);
-enableAutoplay(videoAbout);
-
-// scroll
+/* eslint-disable max-len */
 
 const header = document.querySelector('.header');
 const products = document.querySelector('.products__list');
@@ -94,11 +20,14 @@ const leaderGreyTriangle = document.querySelector('.leader__grey-triangle');
 
 const aboutVideo = document.querySelector('.about__video');
 const aboutVideoTriangle = document.querySelector('.about__video-triangle');
-const aboutVideoBlueSquare = document.querySelector('.about__video-blue-square');
-const aboutVideoGreySquare = document.querySelector('.about__video-grey-square');
+const aboutVideoBlueSquare = document
+  .querySelector('.about__video-blue-square');
+const aboutVideoGreySquare = document
+  .querySelector('.about__video-grey-square');
 const aboutText = document.querySelector('.about__text');
 const aboutMissionMobile = document.querySelector('.about__mission-mobile');
-const aboutMissionMobileFull = document.querySelector('.about__mission-mobile-full');
+const aboutMissionMobileFull = document
+  .querySelector('.about__mission-mobile-full');
 const aboutMission = document.querySelector('.about__mission');
 const aboutMissionFull = document.querySelector('.about__mission-full');
 
@@ -229,7 +158,7 @@ window.onscroll = function() {
   };
 };
 
-// footer slider
+/* eslint-disable strict */
 
 const navButton = document.querySelector('.footer__item-button-nav');
 const vacButton = document.querySelector('.footer__item-button-vac');
@@ -260,6 +189,23 @@ if (window.innerWidth >= 768) {
   vacLinks.classList.remove('footer__item-vac-links--visible');
   contLinks.classList.remove('footer__item-cont-links--visible');
 }
+
+/* eslint-disable max-len */
+/* eslint-disable strict */
+
+// move video
+const videoHeader = document.querySelector('#video-promo');
+const videoAbout = document.querySelector('#video-about');
+
+function enableAutoplay(element) {
+  element.autoplay = true;
+  element.loop = true;
+  element.volume = 0;
+  element.play();
+}
+
+enableAutoplay(videoHeader);
+enableAutoplay(videoAbout);
 
 // icons in products slider
 if (window.innerWidth <= 767) {
@@ -315,3 +261,62 @@ if (window.innerWidth <= 767) {
     </svg>
   `);
 }
+
+/* eslint-disable strict */
+
+const ESC_KEYCODE = 27;
+const ENTER_KEYCODE = 13;
+
+const navMain = document.querySelector('.nav');
+const navToggle = document.querySelector('.nav__toggle');
+const navList = document.querySelector('.nav__list');
+const burgerMiddle = document.querySelector('.nav__icon path:first-child');
+const burgerTop = document.querySelector('.nav__icon path:nth-child(2)');
+const burgerBottom = document.querySelector('.nav__icon path:nth-child(3)');
+
+const onToggleEscPress = function(evt) {
+  if (evt.keyCode === ESC_KEYCODE) {
+    closeMenu();
+  }
+};
+
+const openMenu = function() {
+  navMain.classList.remove('nav--closed');
+  navMain.classList.add('nav--opened');
+  navList.style.animation = 'menuIn 1000ms ease';
+  burgerMiddle.style.opacity = '0';
+  burgerTop.style.transform = 'translate(8px, -1px) rotate(45deg)';
+  burgerBottom.style.transform = 'translate(-9px, 8px) rotate(-45deg)';
+  document.addEventListener('keydown', onToggleEscPress);
+};
+
+const closeMenu = function() {
+  navList.style.animation = 'menuOut 1000ms ease';
+  burgerMiddle.style.opacity = '1';
+  burgerTop.style.transform = 'none';
+  burgerBottom.style.transform = 'none';
+
+  setTimeout(() => {
+    navMain.classList.add('nav--closed');
+    navMain.classList.remove('nav--opened');
+  }, 800);
+
+  document.removeEventListener('keydown', onToggleEscPress);
+};
+
+navToggle.addEventListener('click', function() {
+  if (navMain.classList.contains('nav--closed')) {
+    openMenu();
+  } else {
+    closeMenu();
+  }
+});
+
+navToggle.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === ENTER_KEYCODE
+    && navMain.classList.contains('nav--closed')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
