@@ -1,5 +1,3 @@
-@import "utils";
-
 .product {
   outline: none;
 
@@ -39,7 +37,7 @@
       margin-bottom: 51px;
       width: 90px;
       height: 90px;
-      background-image: url(../images/rectangle-services.svg);
+      background-image: url(../../images/products/rectangle-services.svg);
     }
 
     &__icon {
@@ -58,15 +56,6 @@
 
 @media (min-width: 1440px) {
   .product {
-
-    &__image {
-      display: flex;
-      margin-bottom: 51px;
-      width: 91px;
-      height: 90px;
-      background-image: url(../images/rectangle-services.svg);
-    }
-
     &__icon {
       display: block;
       margin: auto;

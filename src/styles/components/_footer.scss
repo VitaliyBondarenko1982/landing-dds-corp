@@ -125,6 +125,7 @@
 
     &__list {
       display: flex;
+      justify-content: space-around;
     }
 
     &__item {
@@ -230,7 +231,6 @@
     }
 
     &__list {
-      display: flex;
       margin-top: 84px;
     }
 
