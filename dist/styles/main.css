@@ -775,7 +775,7 @@ input[type="radio"].visually-hidden {
 .products__container {
   position: relative;
   padding: 75px 25px 194px;
-  background-image: url(../images/building-tablet.png);
+  background-image: url(../images/products/building-tablet.png);
   background-position: bottom;
   background-position-x: -10px;
   background-repeat: no-repeat;
