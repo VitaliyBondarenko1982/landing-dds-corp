@@ -12,8 +12,7 @@
 
 .header {
   font-family: Montserrat, sans-serif;
-  position: relative;
-}
+  position: relative; }
   .header__container {
     position: absolute;
     top: 0;
