@@ -1,0 +1,88 @@
+.product {
+  outline: none;
+
+  &__title {
+    margin-bottom: 27px;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include text($main-blue, 35px, 50px);
+  }
+
+  &__description {
+    @include text($dark-grey, 14px, 30px);
+    font-weight: 500;
+  }
+
+  &__image {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .product {
+    width: 239px;
+    padding-right: 30px;
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: all 800ms ease-in-out;
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &__image {
+      display: flex;
+      margin-bottom: 51px;
+      width: 90px;
+      height: 90px;
+      background-image: url('/src/images/products/rectangle-services.svg');
+    }
+
+    &__icon {
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .product {
+    width: 240px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .product {
+    &__icon {
+      display: block;
+      margin: auto;
+    }
+
+    &__title {
+      margin-bottom: 27px;
+      font-family: "Teko", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      @include text($main-blue, 35px, 50px);
+    }
+
+    &__description {
+      @include text($dark-grey, 16px, 36px);
+      font-weight: 500;
+    }
+  }
+
+  @keyframes product-card {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

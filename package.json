@@ -1,97 +1,30 @@
 {
-  "name": "gulp-boilerplate",
+  "name": "gulp-config",
   "version": "1.0.0",
-  "description": "Frontend boilerplate based on gulp",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "gulp build",
-    "lint": "stylelint src/**/*.scss && eslint src/**/*.js && htmllint --rc ./node_modules/@mate-academy/htmllint-config/.htmllintrc src/*.html",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "publish": "npm run deploy",
-    "start": "gulp",
-    "test": "npm run lint"
-  },
-  "keywords": [],
-  "author": "Mate Academy",
-  "license": "GPL-3.0",
-  "devDependencies": {
-    "@mate-academy/browsersync-config": "*",
-    "@mate-academy/eslint-config": "*",
-    "@mate-academy/htmllint-config": "*",
-    "@mate-academy/stylelint-config": "*",
-    "babel-eslint": "^10.1.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babelify": "^10.0.0",
-    "browser-sync": "^2.26.3",
-    "browserify": "^16.5.1",
-    "colors": "^1.3.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-node": "^9.0.1",
-    "gh-pages": "2.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean": "^0.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^5.0.0",
-    "gulp-htmllint": "0.0.16",
-    "gulp-replace-path": "^0.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-stylelint": "^9.0.0",
-    "htmllint": "^0.7.3",
-    "htmllint-cli": "0.0.7",
-    "husky": "^2.2.0",
-    "lint-staged": "^8.1.6",
-    "stylelint": "^10.0.1",
-    "stylelint-config-recommended-scss": "^3.3.0",
-    "stylelint-scss": "^3.6.1",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "lint-staged": {
-    "linters": {
-      "*.scss": [
-        "stylelint",
-        "git add"
-      ],
-      "*.js": [
-        "eslint",
-        "git add"
-      ],
-      "*.html": [
-        "htmllint --rc  ./node_modules/@mate-academy/htmllint-config/.htmllintrc",
-        "git add"
-      ]
-    },
-    "ignore": [
-      "**/dist/**",
-      "**/lib/**",
-      "**/backstop_data/**",
-      "**/report/**"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "post-commit": "git update-index --again",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "browserslist": [
-    "last 2 versions"
-  ],
   "dependencies": {
-    "gsap": "^3.2.6"
+    "del": "^5.1.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-uglify": "^3.0.2"
   },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015"
-          ]
-        }
-      ]
-    ]
-  }
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.8.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }

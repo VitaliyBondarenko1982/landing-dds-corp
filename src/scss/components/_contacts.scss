@@ -1,0 +1,17 @@
+.contacts {
+  &__link {
+    position: relative;
+    padding-left: 30px;
+
+    &:hover:last-of-type {
+      color: $dark-grey;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

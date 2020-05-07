@@ -1,0 +1,91 @@
+.logos {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 75px;
+
+  &__item {
+    width: 50%;
+  }
+
+  &__icon {
+
+    &--jp-morgan {
+      margin-bottom: 25px;
+      width: 109px;
+      height: 23px;
+    }
+
+    &--credit-agricole {
+      margin-bottom: 25px;
+      width: 116px;
+      height: 23px;
+    }
+
+    &--bnp {
+      width: 125px;
+      height: 26px;
+    }
+
+    &--anz {
+      width: 85px;
+      height: 26px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .logos {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .logos {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: auto;
+    margin-bottom: 0;
+
+    &__item {
+      position: relative;
+      width: auto;
+      display: flex;
+      align-items: center;
+      min-height: 37px;
+    }
+
+    &__icon {
+      margin-bottom: 0;
+
+      &--jp-morgan {
+        width: 131px;
+        height: 28px;
+      }
+
+      &--credit-agricole {
+        width: 139px;
+        height: 28px;
+      }
+
+      &--bnp {
+        width: 164px;
+        height: 34px;
+      }
+
+      &--anz {
+        width: 102px;
+        height: 31px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .logos {
+    width: 720px;
+  }
+}

@@ -1,0 +1,353 @@
+.leader {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 219px;
+    background-color: $lightest-grey;
+  }
+
+  &__container {
+    position: relative;
+    padding: 75px 25px;
+
+    &:before {
+      @include line;
+      left: 50%;
+      z-index: -3;
+      opacity: 0.5;
+      box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
+    }
+  }
+
+  &__text {
+    margin-bottom: 68px;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    transform: translateX(-70px);
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    font-family: "Teko", sans-serif;
+    @include text($dark-grey, 45px, 50px);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    & span {
+      color: $main-blue;
+    }
+  }
+
+  &__description {
+    @include text($dark-grey, 14px, 30px);
+    font-weight: 500;
+
+    &:first-of-type {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__shadow-1 {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    z-index: -1;
+    width: 270px;
+    height: 300px;
+    opacity: 0;
+    transition: opacity 800ms ease-in-out 1500ms;
+  }
+
+  &__shadow-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 270px;
+    height: 300px;
+    opacity: 0;
+    transition: opacity 800ms ease-in-out 2000ms;
+  }
+
+  &__ten {
+    position: relative;
+    width: 270px;
+    height: 300px;
+    margin: auto;
+    background-image: url('/src/images/leader/ten-image.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 1500ms ease-in-out;
+
+    &--visible {
+      opacity: 1;
+
+      & .leader__shadow-1,
+      & .leader__shadow-2 {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__ten-text {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    z-index: 2;
+    width: 184px;
+    @include text($main-blue, 35px, 50px);
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 800ms ease-in-out;
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__grey-triangle,
+  &__grey-square,
+  &__blue-square,
+  &__blue-rectangle,
+  &__one {
+    display: none;
+  }
+}
+
+@media (min-width: 375px) {
+  .leader {
+    &__ten {
+      width: 325px;
+    }
+
+    &__ten-text {
+      top: 182px;
+    }
+
+    &__shadow-1 {
+      width: 325px;
+      top: 14px;
+    }
+
+    &__shadow-2 {
+      width: 325px;
+      top: 28px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .leader {
+    &__container {
+      &:before {
+        box-shadow: 384px 0 0 $light-grey,
+          -384px 0 0 $light-grey;
+      }
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .leader {
+    &:after {
+      display: none;
+    }
+
+    &__container {
+      padding-left: 60px;
+      display: flex;
+      position: relative;
+
+      &:before {
+        left: 0;
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
+    }
+
+    &__text {
+      width: 460px;
+      margin-top: 100px;
+      margin-right: 100px;
+      margin-bottom: 100px;
+    }
+
+    &__title {
+      margin-bottom: 41px;
+      font-size: 69px;
+      line-height: 80px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 36px;
+
+      &:first-of-type {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__ten {
+      position: relative;
+      margin-top: 293px;
+      width: 530px;
+      height: 442px;
+    }
+
+    &__shadow-1 {
+      width: 478px;
+      height: 442px;
+      top: 30px;
+    }
+
+    &__shadow-2 {
+      width: 478px;
+      height: 442px;
+      top: 60px;
+    }
+
+    &__ten-text {
+      top: 285px;
+    }
+
+    &__grey-triangle,
+    &__grey-square,
+    &__blue-square,
+    &__blue-rectangle,
+    &__one {
+      display: block;
+    }
+
+    &__one {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -3;
+      width: 200px;
+      height: 100%;
+      background-color: $lightest-grey;
+      opacity: 0;
+      transition: opacity 1000ms ease-in-out;
+
+      &--visible {
+        opacity: 1;
+      }
+    }
+
+    &__grey-triangle {
+      position: absolute;
+      top: 0;
+      left: -91px;
+      width: 0;
+      height: 0;
+      border-bottom: 91px solid $dark-grey;
+      border-left: 91px solid transparent;
+      opacity: 0;
+      transition: opacity 1000ms ease-in-out;
+
+      &--visible {
+        opacity: 1;
+      }
+    }
+
+    &__grey-square {
+      position: absolute;
+      top: 91px;
+      left: -91px;
+      width: 91px;
+      height: 91px;
+      background-color: $lightest-grey;
+      opacity: 0;
+      transition: opacity 1000ms ease-in-out;
+
+      &--visible {
+        opacity: 1;
+      }
+    }
+
+    &__blue-square {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 91px;
+      height: 91px;
+      background-color: $main-blue;
+      opacity: 0;
+      transition: opacity 1000ms ease-in-out;
+
+      &--visible {
+        opacity: 1;
+      }
+    }
+
+    &__blue-rectangle {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      width: 182px;
+      height: 91px;
+      background-color: $main-blue;
+      opacity: 0;
+      transition: opacity 1000ms ease-in-out;
+
+      &--visible {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .leader {
+    &__container {
+      padding-left: 120px;
+
+      &:before {
+        @include line;
+        box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+      }
+    }
+
+    &__text {
+      margin-top: 219px;
+      margin-right: 219px;
+      margin-bottom: 204px;
+      width: 500px;
+    }
+
+    &__ten {
+      margin-left: 0;
+    }
+
+    &__one {
+      width: 361px;
+    }
+  }
+}

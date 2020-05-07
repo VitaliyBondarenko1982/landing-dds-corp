@@ -1,0 +1,118 @@
+
+.header {
+  font-family: Montserrat, sans-serif;
+  position: relative;
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 25px;
+    transform: translateX(-50%);
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 4;
+    display: block;
+  }
+
+  &__logo-image {
+    width: 66px;
+    height: 40px;
+    fill: #fff;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #fff;
+
+    &__container {
+      position: static;
+      padding: 25px 0;
+      transform: none;
+      border-bottom: 1px solid $lightest-grey;
+
+      &:before {
+        @include line;
+        left: 50%;
+        z-index: -1;
+        opacity: 0.5;
+        box-shadow: calc(100vw / 2) 0 0 $light-grey,
+          calc(100vw / 2) 0 0 $light-grey;
+      }
+    }
+
+    &__logo-image {
+      width: 94px;
+      height: 58px;
+      fill: $main-blue;
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .header {
+    &__container {
+      padding: 25px;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .header {
+    &__container {
+      position: relative;
+      left: 0;
+      padding: 34px 60px;
+
+      &:before {
+        left: 0;
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
+    }
+
+    &__logo {
+      transition: opacity 500ms ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+
+    &__container {
+      padding: 34px 120px;
+
+      &:before {
+        box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+      }
+    }
+  }
+}

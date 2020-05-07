@@ -1,0 +1,172 @@
+.products {
+  &__container {
+    position: relative;
+    padding: 75px 25px 194px;
+    background-image: url('/src/images/products/building-tablet.png');
+    background-position: bottom;
+    background-position-x: -10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:before {
+      @include line;
+      left: 50%;
+      z-index: -1;
+      opacity: 0.5;
+      box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
+    }
+  }
+
+  .slick-slider {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+
+    & li {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      background-color: $lightest-grey;
+      transition: background-color 500ms ease;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        width: 0;
+        height: 0;
+        border-top: 15px solid #fff;
+        border-left: 15px solid transparent;
+      }
+
+      & svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      & svg path {
+        stroke: #3c71e9;
+        transition: stroke 500ms ease;
+      }
+    }
+
+    & .slick-active {
+      background-color: $main-blue;
+
+      & svg path {
+        stroke: white;
+        transition: stroke 500ms ease;
+      }
+    }
+
+    & button {
+      opacity: 0;
+      font-size: 0;
+      padding: 0;
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    display: none !important;
+  }
+}
+
+@media (min-width: 375px) {
+  .products {
+    &__dots {
+      & li {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .products {
+    &__container {
+      padding: 75px 25px 150px;
+
+      &:before {
+        box-shadow: 384px 0 0 $light-grey,
+          -384px 0 0 $light-grey;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__item {
+      &:nth-child(2) {
+        order: -1;
+      }
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .products {
+    &__container {
+      background-image: none;
+      padding: 60px 60px 60px 300px;
+
+      &:before {
+        left: 0;
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
+    }
+
+    &__list {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    &__item {
+      &:nth-child(2) {
+        order: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .products {
+    &__container {
+      padding: 190px 120px 160px 600px;
+      position: relative;
+
+      &:before {
+        box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+      }
+    }
+
+    &__list {
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+}
