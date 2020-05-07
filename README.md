@@ -1,5 +1,5 @@
-[DEMO LINK](https://vitaliybondarenko1982.github.io/landing-dds-corp/)
+[DEMO LINK](http://dds-visit.sincere.systems/)
 
 1. npm i
-2. npm start
-3. open your browser at http://localhost:8080
+2. gulp start
+3. open your browser at http://localhost:3000
