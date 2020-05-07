@@ -1,0 +1,28 @@
+<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M31.1 33.2H5.9C4.7394 33.2 3.8 32.2606 3.8 31.1V5.89999C3.8 4.73939 4.7394 3.79999 5.9 3.79999H31.1C32.2606 3.79999 33.2 4.73939 33.2 5.89999V31.1C33.2 32.2606 32.2606 33.2 31.1 33.2Z" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8 29H29V8H8V29Z" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 3.8V1" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29 3.8V1" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.2 1V3.8" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.4 1V3.8" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.6 1V3.8" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.8 1V3.8" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 36V33.2" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29 36V33.2" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.2 33.2V36" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.4 33.2V36" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.6 33.2V36" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.8 33.2V36" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33.2 8H36" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33.2 29H36" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 12.2H33.2" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 16.4H33.2" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 20.6H33.2" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 24.8H33.2" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 8H3.8" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 29H3.8" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.8 12.2H1" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.8 16.4H1" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.8 20.6H1" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.8 24.8H1" stroke="#3C71E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
