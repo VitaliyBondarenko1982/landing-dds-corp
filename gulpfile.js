@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
@@ -50,6 +52,7 @@ function watch() {
   gulp.watch('./src/scss/**/*.scss', styles)
   gulp.watch('./src/scripts/js/**/*.js', scripts)
   gulp.watch('./*.html').on('change', browserSync.reload);
+  gulp.watch('./pages/*.html').on('change', browserSync.reload);
 }
 
 gulp.task('styles', styles);
