@@ -68,3 +68,11 @@ input[type="radio"].visually-hidden {
 @import "sections/promo";
 @import "sections/leader";
 @import "sections/about";
+
+
+//pages
+@import "pages/products/banner.scss";
+@import "pages/products/photos.scss";
+@import "pages/products/description.scss";
+@import "pages/products/it.scss";
+@import "pages/products/worldwide.scss";

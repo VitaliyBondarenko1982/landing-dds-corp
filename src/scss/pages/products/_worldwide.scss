@@ -1,0 +1,102 @@
+.worldwide {
+  min-height: 596px;
+  margin: auto;
+  background: linear-gradient(270.74deg, #3C71E9 0.31%, rgba(60, 113, 233, 0.8) 99.8%), url(/src/images/pages/products/worldwide-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  &__container {
+    padding: 122px 120px 110px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (max-width: 1439px) {
+      padding: 60px;
+    }
+
+    @media (max-width: 1079px) {
+      padding: 60px 25px;
+      flex-direction: column;
+    }
+
+    position: relative;
+    &:before {
+      @include line;
+      left: 0;
+      opacity: 0.25;
+      z-index: 1;
+      box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 615px;
+    margin-right: 106px;
+
+    @media (max-width: 1439px) {
+      max-width: 480px;
+      margin: 0;
+    }
+
+    @media (max-width: 1079px) {
+      margin-bottom: 73px;
+    }
+  }
+
+  &__mark {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-image: url(/src/images/pages/products/worldwide-rectangle.svg);
+    margin-bottom: 48px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 36px;
+      height: 38px;
+      background-image: url(/src/images/pages/products/quotes.svg);
+    }
+  }
+
+  &__title {
+    font-family: 'Teko', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+    color: #fff;
+  }
+
+  &__logo {
+    width: 479px;
+    height: 295px;
+    background-image: url(/src/images/pages/products/worldwide-logo.png);
+    background-size: contain;
+
+    @media (max-width: 550px) {
+      width: 325px;
+      height: 200px;
+    }
+  }
+}
