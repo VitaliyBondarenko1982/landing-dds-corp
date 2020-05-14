@@ -115,11 +115,12 @@
     &--bankofamerica .financial-partners__icon {
       width: 168px;
       height: 43px;
-      background-image: url(/src/images/pages/partners/bankofamerica_default.svg);
+      filter: grayscale(100%);
+      transition: filter 500ms ease;
     }
 
     &--bankofamerica:hover .financial-partners__icon {
-      background-image: url(/src/images/pages/partners/bankofamerica_hover.svg);
+      filter: grayscale(0);
     }
 
     &--creditagricole .financial-partners__icon {
