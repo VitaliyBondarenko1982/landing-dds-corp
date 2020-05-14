@@ -176,6 +176,10 @@
       flex-direction: row;
     }
 
+    &__list {
+      margin-top: 30px;
+    }
+
     &__item {
       margin-bottom: 0;
       width: 240px;
@@ -189,6 +193,7 @@
 
       & .button-block__image {
         height: calc(100% - 70px);
+        margin-top: 1px;
       }
 
       & .button-block__link {

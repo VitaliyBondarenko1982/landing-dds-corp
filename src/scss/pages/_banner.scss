@@ -2,9 +2,7 @@
   margin-top: 132px;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   position: relative;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(0deg, rgba(239,243,253,1) 0%, rgba(255,255,255,1) 100%);
 
   @media (max-width: 1079px) {
@@ -29,12 +27,12 @@
   }
 
   &__container {
-    height: calc(100vh - 132px);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 0 120px;
+    padding: 13px 120px 33px;
+    z-index: 1;
 
     @media (max-width: 1439px) {
       padding: 0 60px;
@@ -54,7 +52,7 @@
       @include line;
       left: 0;
       opacity: 0.6;
-      z-index: 1;
+      z-index: -1;
       box-shadow: 120px 0 0 $light-grey,
           360px 0 0 $light-grey,
           600px 0 0 $light-grey,

@@ -109,7 +109,7 @@
     position: relative;
     width: 32px;
     height: 32px;
-    background-color: $light-grey;
+    background-color: $rect-grey;
     margin-bottom: 29px;
 
     &:before {
@@ -131,7 +131,7 @@
       transform: translate(-50%, -50%);
       width: 6px;
       height: 6px;
-      background-color: #fff;
+      background-color: $rect-grey;
       border: 3px solid $main-blue;
     }
   }

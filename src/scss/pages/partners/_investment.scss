@@ -1,0 +1,135 @@
+.investment-partners {
+  &__container {
+    padding: 216px 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      @include line;
+      left: 0;
+      opacity: 0.6;
+      z-index: -1;
+      box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+
+
+      @media (max-width: 1439px) {
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
+      @media (max-width: 1079px) {
+        left: 50%;
+        box-shadow: 384px 0 0 $light-grey,
+        -384px 0 0 $light-grey;
+      }
+
+      @media (max-width: 767px) {
+        box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  &__title {
+    font-family: 'Teko', sans-serif;
+    font-weight: 600;
+    font-size: 69px;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: $main-blue;
+
+    & span {
+     color: $dark-grey;
+    }
+  }
+
+  &__description {
+    max-width: 426px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+    color: $dark-grey;
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: calc(100% / 3);
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:nth-child(odd) {
+      background-color: $lightest-grey;
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(180deg, rgba(60, 113, 233, 0.2) 0%, #3C71E9 100%);
+    }
+
+    &--brain-capital .investment-partners__icon {
+      width: 147px;
+      height: 96px;
+      background-image: url(/src/images/pages/partners/brain_capital_default.svg);
+    }
+
+    &--brain-capital:hover .investment-partners__icon {
+      background-image: url(/src/images/pages/partners/brain_capital_hover.svg);
+    }
+
+    &--kkr .investment-partners__icon {
+      width: 142px;
+      height: 34px;
+      fill: #7685A9;
+      transition: fill 500ms ease-in-out;
+    }
+
+    &--kkr:hover .investment-partners__icon {
+      fill: #48104a;
+    }
+  }
+
+  &__amount {
+    font-family: 'Teko', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  &__number {
+    display: block;
+    font-size: 69px;
+    line-height: 75px;
+    text-align: center;
+  }
+
+  &__word {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
