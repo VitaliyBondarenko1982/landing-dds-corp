@@ -18,6 +18,12 @@
       background-position: right;
     }
 
+    @media (max-width: 940px) {
+      background: url(/src/images/pages/products/blue-layer-tablet.svg), url(/src/images/pages/products/worldwide-background-tablet.png);
+      flex-direction: column;
+      background-size: cover;
+    }
+
     position: relative;
     &:before {
       @include line;
