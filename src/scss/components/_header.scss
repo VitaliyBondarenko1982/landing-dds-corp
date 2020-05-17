@@ -69,6 +69,7 @@
 
 .header-inner .header__logo-image {
   fill: $main-blue;
+  transition: fill 500ms ease;
 }
 
 @media (min-width: 768px) {

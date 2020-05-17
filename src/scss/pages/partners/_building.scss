@@ -1,0 +1,38 @@
+.building {
+  position: absolute;
+  top: 662px;
+  left: calc((100% - 1440px) / 2);
+  width: 360px;
+  height: 726px;
+  background: url('/src/images/pages/partners/building.png');
+    transition: opacity 500ms ease-in-out;
+    z-index: -1;
+
+  @media (max-width: 1439px) {
+    left: calc((100% - 1080px) / 2);
+    width: 240px;
+  }
+
+  @media (max-width: 1079px) {
+    display: none;
+  }
+
+  &.is-sticky {
+    position: fixed;
+    z-index: -1;
+  }
+
+  .building__financial {
+    top: 662px;
+  }
+
+  .building__high-tech {
+    top: calc(662px + 726px);
+  }
+
+  .building__investment {
+    top: calc(662px + 726px + 726px);
+  }
+}
+
+

@@ -22,6 +22,18 @@
       background: url(/src/images/pages/products/blue-layer-tablet.svg), url(/src/images/pages/products/worldwide-background-tablet.png);
       flex-direction: column;
       background-size: cover;
+      padding-bottom: 400px;
+      background-position: bottom;
+    }
+
+    @media (max-width: 600px) {
+      padding-bottom: 240px;
+    }
+
+    @media (max-width: 400px) {
+      padding-top: 86px;
+      padding-bottom: 300px;
+      background-position: center;
     }
 
     position: relative;
@@ -73,6 +85,11 @@
     @media (max-width: 1079px) {
       width: 50%;
     }
+
+    @media (max-width: 940px) {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   &__mark {
@@ -122,9 +139,10 @@
       line-height: 35px;
     }
 
-    // @media (max-width: 1079px) {
-    //   font-size: 12px;
-    //   line-height: 20px;
-    // }
+    @media (max-width: 400px) {
+      font-size: 14px;
+      line-height: 30px;
+    }
+
   }
 }

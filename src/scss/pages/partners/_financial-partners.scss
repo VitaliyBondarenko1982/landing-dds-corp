@@ -1,9 +1,19 @@
 .financial-partners {
   &__container {
-    padding: 113px 120px 120px;
+    padding: 131px 120px 131px;
     position: relative;
     display: flex;
     align-items: center;
+
+    @media (max-width: 1439px) {
+      padding: 63px 60px 63px;
+    }
+
+    @media (max-width: 1079px) {
+      padding: 75px 25px 0px;
+      flex-direction: column;
+      align-items: center;
+    }
 
     &:before {
       @include line;
@@ -43,6 +53,11 @@
   &__text {
     width: 100%;
     max-width: 480px;
+
+    @media (max-width: 1079px) {
+      max-width: 100%;
+      margin-bottom: 70px;
+    }
   }
 
   &__title {
@@ -56,6 +71,17 @@
     & span {
      color: $dark-grey;
     }
+
+    @media (max-width: 1079px) {
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      text-align: left;
+      margin-bottom: 29px;
+      font-size: 35px;
+      line-height: 50px;
+    }
   }
 
   &__description {
@@ -65,6 +91,15 @@
     font-size: 16px;
     line-height: 36px;
     color: $dark-grey;
+
+    @media (max-width: 1079px) {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      text-align: left;
+    }
   }
 
   &__list {
@@ -72,6 +107,18 @@
     max-width: 720px;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 1439px) {
+      max-width: 480px;
+    }
+
+    @media (max-width: 1079px) {
+      max-width: 718px;
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+    }
   }
 
   &__item {
@@ -82,19 +129,130 @@
     align-items: center;
     cursor: pointer;
 
+    @media (max-width: 1439px) {
+      width: calc(100% / 2);
+      height: 120px;
+    }
+
+    @media (max-width: 1079px) {
+      width: calc(100% / 3);
+    }
+
+    @media (max-width: 600px) {
+      width: calc(100% / 2);
+      height: 94px;
+    }
+
     &:nth-child(odd) {
       background-color: $lightest-grey;
     }
 
     &:last-child {
       background: linear-gradient(180deg, rgba(60, 113, 233, 0.2) 0%, #3C71E9 100%);
+
+      @media (max-width: 1439px) {
+        width: 100%;
+      }
+
+      @media (max-width: 1079px) {
+        width: calc(100% / 3);
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
     }
+
+    @media (max-width: 1439px){
+      &:nth-child(3) {
+        order: 1;
+      }
+
+      &:nth-child(5) {
+        order: 2;
+      }
+
+      &:nth-child(6) {
+        order: 3;
+      }
+
+      &:nth-child(7) {
+        order: 5;
+      }
+
+      &:nth-child(8) {
+        order: 4;
+      }
+
+      &:nth-child(9) {
+        order: 6;
+      }
+    }
+
+    @media (max-width: 1079px){
+      &:nth-child(3) {
+        order: 0;
+      }
+
+      &:nth-child(5) {
+        order: 0;
+      }
+
+      &:nth-child(6) {
+        order: 0;
+      }
+
+      &:nth-child(7) {
+        order: 0;
+      }
+
+      &:nth-child(8) {
+        order: 0;
+      }
+
+      &:nth-child(9) {
+        order: 0;
+      }
+    }
+
+    @media (max-width: 600px){
+      &:nth-child(3) {
+        order: 1;
+      }
+
+      &:nth-child(5) {
+        order: 2;
+      }
+
+      &:nth-child(6) {
+        order: 3;
+      }
+
+      &:nth-child(7) {
+        order: 5;
+      }
+
+      &:nth-child(8) {
+        order: 4;
+      }
+
+      &:nth-child(9) {
+        order: 6;
+      }
+    }
+
+
 
     &--morganstanley .financial-partners__icon {
       width: 190px;
       height: 48px;
       fill: #7685A9;
       transition: fill 500ms ease-in-out;
+
+      @media (max-width: 600px) {
+        width: 137px;
+        height: 35px;
+      }
     }
 
     &--morganstanley:hover .financial-partners__icon {
@@ -106,6 +264,11 @@
       height: 80px;
       fill: #7685A9;
       transition: fill 500ms ease-in-out;
+
+      @media (max-width: 600px) {
+        width: 97px;
+        height: 64px;
+      }
     }
 
     &--deutschebank:hover .financial-partners__icon {
@@ -115,32 +278,112 @@
     &--bankofamerica .financial-partners__icon {
       width: 168px;
       height: 43px;
-      filter: grayscale(100%);
-      transition: all 500ms ease;
+
+      @media (max-width: 600px) {
+        width: 116px;
+        height: 30px;
+      }
+
+      & svg path {
+        fill: #7685A9;
+        transition: fill 500ms ease-in-out;
+      }
+
     }
 
-    &--bankofamerica:hover .financial-partners__icon {
-      filter: grayscale(0);
+    &--bankofamerica:hover .financial-partners__icon svg path {
+      fill: #0368B1;
+
+      &:nth-child(29),
+      &:nth-child(30),
+      &:nth-child(31),
+      &:nth-child(32) {
+        fill: #E21D38;
+      }
     }
 
     &--creditagricole .financial-partners__icon {
       width: 140px;
       height: 28px;
-      background-image: url(/src/images/pages/partners/creditagricole_default.svg);
+
+      @media (max-width: 600px) {
+        width: 121px;
+        height: 24px;
+      }
+
+      & svg path {
+        fill: #7685A9;
+        transition: fill 500ms ease-in-out;
+      }
     }
 
-    &--creditagricole:hover .financial-partners__icon {
-      background-image: url(/src/images/pages/partners/creditagricole_hover.svg);
+    &--creditagricole:hover .financial-partners__icon svg path {
+      fill: #000;
+
+      &:nth-child(1) {
+        fill: #10786B;
+      }
+
+      &:nth-child(2) {
+        fill: #BF0822;
+      }
+
+      &:last-child {
+        fill: #2E84B8;
+      }
     }
 
     &--bnp .financial-partners__icon {
       width: 164px;
       height: 34px;
-      background-image: url(/src/images/pages/partners/bnp_default.svg);
+
+      @media (max-width: 600px) {
+        width: 114px;
+        height: 24px;
+      }
+
+      & svg path:not(:nth-child(1)) {
+        fill: #7685A9;
+        transition: fill 500ms ease-in-out;
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+          fill: #fff;
+        }
+      }
+
+     & svg defs stop {
+        stop-color: #7685A9;
+        transition: stop-color 500ms ease-in-out;
+      }
     }
 
-    &--bnp:hover .financial-partners__icon {
-      background-image: url(/src/images/pages/partners/bnp_hover.svg);
+    &--bnp:hover .financial-partners__icon svg path:not(:nth-child(1)) {
+      fill: #000;
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        fill: #fff;
+      }
+    }
+
+
+    &--bnp:hover .financial-partners__icon svg defs stop {
+      &:nth-child(1) {
+        stop-color: #2fc79e;
+      }
+
+      &:nth-child(2) {
+        stop-color: #15965e;
+      }
+
+      &:nth-child(3) {
+        stop-color: #2fc79e;
+      }
     }
 
     &--jpmorgan .financial-partners__icon {
@@ -148,6 +391,11 @@
       height: 28px;
       fill: #7685A9;
       transition: fill 500ms ease-in-out;
+
+      @media (max-width: 600px) {
+        width: 101px;
+        height: 22px;
+      }
     }
 
     &--jpmorgan:hover .financial-partners__icon {
@@ -157,11 +405,31 @@
     &--sinsere .financial-partners__icon {
       width: 133px;
       height: 80px;
-      background-image: url(/src/images/pages/partners/sincere_default.svg);
+
+      @media (max-width: 600px) {
+        width: 101px;
+        height: 61px;
+      }
+
+      & svg path {
+        fill: #7685A9;
+        transition: fill 500ms ease-in-out;
+      }
     }
 
-    &--sinsere:hover .financial-partners__icon {
-      background-image: url(/src/images/pages/partners/sincere_hover.svg);
+    &--sinsere:hover .financial-partners__icon svg path {
+      fill: #23D599;
+
+      &:nth-child(8),
+      &:nth-child(9),
+      &:nth-child(10),
+      &:nth-child(11),
+      &:nth-child(12),
+      &:nth-child(13),
+      &:nth-child(14) {
+        fill: #182E57
+      }
+
     }
 
     &--anz .financial-partners__icon {
@@ -169,10 +437,15 @@
       height: 31px;
       fill: #7685A9;
       transition: fill 500ms ease-in-out;
+
+      @media (max-width: 600px) {
+        width: 86px;
+        height: 27px;
+      }
     }
 
     &--anz:hover .financial-partners__icon {
-      fill: #000;
+      fill: #1380bc;
     }
   }
 
@@ -181,19 +454,19 @@
     font-weight: 600;
     text-transform: uppercase;
     color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &__number {
-    display: block;
     font-size: 69px;
-    line-height: 75px;
-    text-align: center;
+    line-height: 50px;
   }
 
   &__word {
-    display: block;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
   }
 }

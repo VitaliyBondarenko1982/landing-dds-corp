@@ -117,4 +117,26 @@
       width: 254px;
     }
   }
+
+  &__button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    z-index: 1;
+    display: block;
+    transform: translateX(-50%) rotate(45deg);
+    width: 24px;
+    height: 24px;
+    border-bottom: 2px solid $main-blue;
+    border-right: 2px solid $main-blue;
+    transition: opacity 500ms ease;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
