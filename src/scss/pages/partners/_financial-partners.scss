@@ -249,6 +249,10 @@
       fill: #7685A9;
       transition: fill 500ms ease-in-out;
 
+     @media (max-width: 767px) {
+        fill: #000;
+      }
+
       @media (max-width: 600px) {
         width: 137px;
         height: 35px;
@@ -264,6 +268,11 @@
       height: 80px;
       fill: #7685A9;
       transition: fill 500ms ease-in-out;
+
+
+      @media (max-width: 767px) {
+        fill: #061daa;
+      }
 
       @media (max-width: 600px) {
         width: 97px;
@@ -287,8 +296,18 @@
       & svg path {
         fill: #7685A9;
         transition: fill 500ms ease-in-out;
-      }
 
+        @media (max-width: 767px) {
+          fill: #0368B1;
+
+          &:nth-child(29),
+          &:nth-child(30),
+          &:nth-child(31),
+          &:nth-child(32) {
+            fill: #E21D38;
+          }
+        }
+      }
     }
 
     &--bankofamerica:hover .financial-partners__icon svg path {
@@ -314,6 +333,22 @@
       & svg path {
         fill: #7685A9;
         transition: fill 500ms ease-in-out;
+
+        @media (max-width: 767px) {
+          fill: #000;
+
+          &:nth-child(1) {
+            fill: #10786B;
+          }
+
+          &:nth-child(2) {
+            fill: #BF0822;
+          }
+
+          &:last-child {
+            fill: #2E84B8;
+          }
+        }
       }
     }
 
@@ -352,11 +387,36 @@
         &:nth-child(5) {
           fill: #fff;
         }
+
+        @media (max-width: 767px) {
+          fill: #000;
+
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5) {
+            fill: #fff;
+          }
+        }
       }
 
      & svg defs stop {
         stop-color: #7685A9;
         transition: stop-color 500ms ease-in-out;
+
+        @media (max-width: 767px) {
+          &:nth-child(1) {
+            stop-color: #2fc79e;
+          }
+
+          &:nth-child(2) {
+            stop-color: #15965e;
+          }
+
+          &:nth-child(3) {
+            stop-color: #2fc79e;
+          }
+        }
       }
     }
 
@@ -392,6 +452,10 @@
       fill: #7685A9;
       transition: fill 500ms ease-in-out;
 
+      @media (max-width: 767px) {
+        fill: #000;
+      }
+
       @media (max-width: 600px) {
         width: 101px;
         height: 22px;
@@ -414,6 +478,20 @@
       & svg path {
         fill: #7685A9;
         transition: fill 500ms ease-in-out;
+
+        @media (max-width: 767px) {
+          fill: #23D599;
+
+          &:nth-child(8),
+          &:nth-child(9),
+          &:nth-child(10),
+          &:nth-child(11),
+          &:nth-child(12),
+          &:nth-child(13),
+          &:nth-child(14) {
+            fill: #182E57;
+          }
+        }
       }
     }
 
@@ -427,9 +505,8 @@
       &:nth-child(12),
       &:nth-child(13),
       &:nth-child(14) {
-        fill: #182E57
+        fill: #182E57;
       }
-
     }
 
     &--anz .financial-partners__icon {
@@ -437,6 +514,10 @@
       height: 31px;
       fill: #7685A9;
       transition: fill 500ms ease-in-out;
+
+      @media (max-width: 767px) {
+        fill: #1380bc;
+      }
 
       @media (max-width: 600px) {
         width: 86px;

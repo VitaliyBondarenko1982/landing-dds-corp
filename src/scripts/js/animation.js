@@ -125,7 +125,7 @@ window.onscroll = function() {
 
   if (isScrolledIntoView(aboutVideoTriangle, 600)) {
     setTimeout(() => {
-      aboutVideoTriangle.classList.add('about__video-blue-square--visible');
+      aboutVideoTriangle.classList.add('about__video-triangle--visible');
     }, 1000);
   }
 

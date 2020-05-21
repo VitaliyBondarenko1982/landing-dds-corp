@@ -18,6 +18,16 @@
     font-weight: bold;
     text-transform: uppercase;
 
+    &--contacts {
+      font-family: 'Montserrat', sans-serif;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+      outline: none;
+      display: block;
+      margin: auto;
+    }
+
     &--active,
     &:hover,
     &:active {
@@ -117,6 +127,10 @@
         display: block;
         padding: 5px 0;
         @include text($dark-grey, 14px, 17px);
+
+        &--contacts {
+          font-family:'Montserrat', sans-serif;
+        }
 
         &--active,
         &:hover,

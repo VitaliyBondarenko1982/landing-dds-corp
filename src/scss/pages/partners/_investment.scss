@@ -223,21 +223,41 @@
         &:nth-child(6) {
           fill-opacity: 0.3;
         }
+
+        @media (max-width: 767px) {
+          fill: #1c2156;
+
+          &:nth-child(1) {
+             fill: #f7f5f4;
+          }
+
+          &:nth-child(2) {
+            fill: #e52823;
+          }
+
+          &:nth-child(4) {
+            fill: #1ca6df;
+          }
+
+          &:nth-child(6) {
+            fill: #abcae9;
+          }
+        }
       }
     }
 
     &--brain-capital:hover .investment-partners__icon svg path {
-       fill: #1c2156;
+      fill: #1c2156;
 
-       &:nth-child(1) {
-          fill: #f7f5f4;
-       }
+      &:nth-child(1) {
+         fill: #f7f5f4;
+      }
 
-       &:nth-child(2) {
-         fill: #e52823;
-       }
+      &:nth-child(2) {
+        fill: #e52823;
+      }
 
-       &:nth-child(4) {
+      &:nth-child(4) {
         fill: #1ca6df;
       }
 
@@ -251,6 +271,10 @@
       height: 34px;
       fill: #7685A9;
       transition: fill 500ms ease-in-out;
+
+      @media (max-width: 767px) {
+        fill: #48104a;
+      }
 
       @media (max-width: 600px) {
         width: 108px;
@@ -277,6 +301,18 @@
   &__number {
     font-size: 69px;
     line-height: 50px;
+
+    @media (max-width: 1439px) {
+      font-size: 59px;
+    }
+
+    @media (max-width: 1079px) {
+      font-size: 69px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 59px;
+    }
   }
 
   &__word {

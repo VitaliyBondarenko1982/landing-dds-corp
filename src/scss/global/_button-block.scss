@@ -16,6 +16,8 @@
     letter-spacing: 0.2em;
     background-color: $main-blue;
     @include transition(background-color);
+    border: none;
+    cursor: pointer;
 
     &:hover {
       background-color: $hover-blue;

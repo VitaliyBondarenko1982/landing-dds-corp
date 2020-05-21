@@ -103,14 +103,14 @@
               Partners
             </a>
           </li><li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="/pages/career.html" class="nav__link">
               Career
             </a>
           </li>
           <li class="nav__item">
-            <a href="#footer" class="nav__link">
+            <button type="button" class="nav__link nav__link--contacts" id="nav-contacts">
               Contact us
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
@@ -207,7 +207,7 @@
         </li>
         <li class="financial-partners__item financial-partners__item--bnp">
           <div class="financial-partners__icon">
-            <svg width="165" height="34" viewBox="0 0 165 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100%" height="100%" viewBox="0 0 165 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M33.9519 0H0V34H33.9519V0Z" fill = 'url(#paint0_linear)'/>
               <path d="M26.4566 8.92794C24.3527 10.1657 23.7215 10.2711 21.4335 11.6406C22.7485 10.1921 23.2219 9.58635 24.0371 8.37488C21.9332 8.48023 18.8825 8.74359 16.6997 9.21764C18.5933 8.19053 22.354 7.08441 24.3527 6.82105C23.8793 6.18898 20.1712 4.16109 19.2507 3.76605C22.1962 4.00308 25.7992 5.1092 27.5612 6.16264C28.245 5.95195 28.955 5.92562 30.2437 5.82027C29.9281 6.37333 29.9018 6.7157 28.6394 7.53212C28.9813 8.45389 28.1661 13.5894 27.4823 14.9326C27.456 12.8257 27.2719 10.1131 26.4566 8.92794Z"/>
               <path d="M11.1244 27.3106C9.91464 26.8629 9.04678 26.3362 8.10001 25.4407C8.3893 24.6507 8.70489 24.0449 9.23087 23.2548C8.25781 23.4129 7.52144 23.5182 6.67987 23.6762C5.9961 22.4648 5.68051 21.306 5.33863 19.6995C5.15454 21.4113 5.07564 22.6228 5.31233 23.9923C4.54966 24.2029 3.99738 24.3873 3.36621 24.677C4.26037 25.2301 4.97044 25.6514 5.9698 26.0992C6.49578 27.2579 7.04806 28.0217 7.96852 28.9171C7.75813 28.1534 7.70553 27.574 7.78443 26.7576C8.91528 27.0999 9.86204 27.2843 11.1244 27.3106Z"/>
@@ -402,7 +402,7 @@
             src="/src/images/footer/contact-image.png"
             alt="contact"
           >
-          <a href="#" class="button-block__link">Contact us</a>
+          <button type="button" class="button-block__link" id="footer-contacts">Contact us</button>
         </div>
         <ul class="footer__list">
           <li class="footer__item footer__item-nav">
@@ -414,9 +414,9 @@
             </button>
             <h3 class="footer__item-title">Navigation</h3>
             <div class="footer__item-links footer__item-nav-links">
-              <a class="footer__item-link" href="#">Products</a>
-              <a class="footer__item-link" href="#">Our clients</a>
-              <a class="footer__item-link" href="#">Partners</a>
+              <a class="footer__item-link" href="/pages/products.html">Products</a>
+              <a class="footer__item-link" href="/pages/our-clients.html">Our clients</a>
+              <a class="footer__item-link" href="/pages/partners.html">Partners</a>
             </div>
           </li>
           <li class="footer__item footer__item-vac">
@@ -428,9 +428,9 @@
             </button>
             <h3 class="footer__item-title">Vacancies</h3>
             <div class="footer__item-links footer__item-vac-links">
-              <a class="footer__item-link" href="#">Investment Analyst</a>
-              <a class="footer__item-link" href="#">Technical Writer</a>
-              <a class="footer__item-link" href="#">Tech Lead Java</a>
+              <a class="footer__item-link" href="/career/investment-analyst.html">Investment Analyst</a>
+              <a class="footer__item-link" href="/career/technical-writer.html">Technical Writer</a>
+              <a class="footer__item-link" href="/career/tech-lead-java.html">Tech Lead Java</a>
             </div>
           </li>
           <li class="footer__item footer__item-cont contacts">
@@ -474,14 +474,52 @@
     </div>
   </footer>
 
+  <div class="modal modal__contacts">
+    <div class="modal__overlay">
+      <div class="popup popup__empty">
+        <div class="popup__close">
+          <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.3">
+              <path d="M13.5 4.5L4.5 13.5" stroke="#7685A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4.5 4.5L13.5 13.5" stroke="#7685A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="modal__content contacts-popup">
+          <div class="contacts-popup__image">
+            <div class="contacts-popup__logo">
+              <svg width="100%" height="100%">
+                <use href="/src/images/sprite.svg#logo-icon"></use>
+              </svg>
+            </div>
+          </div>
+          <form class="contacts-popup__form form" method="POST" action="#">
+            <h3 class="form__title">Contact <span>us</span></h3>
+            <label class="form__field" for="name">
+              <input class="form__input form__input--name" id="name" type="text" placeholder="Name"/>
+            </label>
+            <label class="form__field" for="email">
+              <input class=" form__input form__input--email" id="email" type="text" placeholder="Email"/>
+            </label>
+            <label class="form__field">
+              <textarea class="form__input form__textarea" type="text" placeholder="Message"></textarea>
+            </label>
+            <button class="form__button">Send a request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="../src/scripts/js/menu.js"></script>
-  <script src="../src/scripts/js/footer.js"></script>
+  <script type = "text/javascript" src="../src/scripts/js/menu.js"></script>
+  <script type = "text/javascript" src="../src/scripts/js/footer.js"></script>
   <script type = "text/javascript" src="../src/scripts/pages/waves.js"></script>
   <script type = "text/javascript" src="../src/scripts/pages/slider.js"></script>
-  <script src="../src/scripts/pages/partnersBuilding.js"></script>
-  <script src="../src/scripts/pages/logoMobile.js"></script>
+  <script type = "text/javascript" src="../src/scripts/pages/partnersBuilding.js"></script>
+  <script type = "text/javascript" src="../src/scripts/pages/logoMobile.js"></script>
+  <script type="text/javascript" src="../src/scripts/js/modal.js"></script>
 </body>
 </html>

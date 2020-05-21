@@ -63,6 +63,8 @@ input[type="radio"].visually-hidden {
 @import "components/product";
 @import "components/footer";
 @import "components/contacts";
+@import "components/modal";
+
 
 @import "sections/products";
 @import "sections/promo";
@@ -83,7 +85,12 @@ input[type="radio"].visually-hidden {
 @import "pages/partners/investment";
 @import "pages/partners/building";
 
+@import "pages/clients/expectations";
+@import "pages/clients/security";
+@import "pages/clients/commercial";
+@import "pages/clients/map";
 
-
+@import "pages/career/map-career";
+@import "pages/career/description-vacancy";
 
 

@@ -1,4 +1,4 @@
-.worldwide {
+.expectations {
   &__container {
     padding: 122px 120px 110px;
     background: url(/src/images/pages/products/blue-layer.svg), url(/src/images/pages/products/worldwide-background.png);
@@ -29,6 +29,7 @@
     @media (max-width: 600px) {
       padding-top: 86px;
       padding-bottom: 240px;
+      background-position: bottom;
     }
 
     @media (max-width: 400px) {

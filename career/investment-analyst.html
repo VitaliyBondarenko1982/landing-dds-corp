@@ -23,8 +23,8 @@
   <meta content="DDS" property="og:site_name" />
   <meta content="en_EN" property="og:locale" />
   <meta content="image/png" property="og:image:type" />
-  <title>DDS Corp</title>
-  <link rel="stylesheet" href="/src/css/main.css">
+  <title>DDS Corp: Investment analyst</title>
+  <link rel="stylesheet" href="../src/css/main.css">
   <link
       rel="icon"
       href="/src/images/favicon.ico"
@@ -32,6 +32,7 @@
     >
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       type="text/css"
@@ -39,7 +40,7 @@
     />
 </head>
 <body>
-  <header class="header">
+  <header class="header header-inner">
     <div class="header__container container">
       <a href="#" class="header__logo">
       <svg class="header__logo-image" >
@@ -83,7 +84,7 @@
         </button>
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--active">
+            <a href="../index.html" class="nav__link">
               Main
             </a>
           </li>
@@ -101,8 +102,9 @@
             <a href="/pages/partners.html" class="nav__link">
               Partners
             </a>
-          </li><li class="nav__item">
-            <a href="/pages/career.html" class="nav__link">
+          </li>
+          <li class="nav__item">
+            <a href="/pages/career.html" class="nav__link nav__link--active">
               Career
             </a>
           </li>
@@ -116,197 +118,165 @@
     </div>
   </header>
 
-  <section class="promo">
-    <div class="promo__container container">
-      <h1 class="promo__title">
-        <span>Professional</span> IT services, training and consulting
-      </h1>
-      <div class="promo__side">
-        <img
-          class="promo__side-image"
-          src="/src/images/promo/building-black-white.png"
-          alt="building-black-white"
-        >
-        <div class="promo__vacancies button-block">
-          <img
-            class="button-block__image"
-            src="/src/images/promo/watch-vacancies.png"
-            alt="vacancies"
-          >
-          <a href="/pages/career.html" class="button-block__link">Watch vacancies</a>
-        </div>
-      </div>
-      <div class="promo__main">
-        <div class="promo__video">
-          <div class="promo__video-gradient"></div>
-          <video
-            class="promo__video-frame"
-            id="video-promo"
-            width="100%"
-            height="100%" autoplay
-          >
-            <source src="/src/images/videos/video.mp4" type="video/mp4">
-          </video>
-          <a class="promo__video-button" href="#promo-description"></a>
-        </div>
-        <div class="promo__description" id="promo-description">
-          <div class="promo__text">We are an Information Technology Services and Solutions Company</div>
-        </div>
-        <div class="promo__partners" id="partners">
-          <div class="promo__logos logos">
-            <div class="logos__item">
-              <svg class="logos__icon logos__icon--jp-morgan">
-                <use href="/src/images/sprite.svg#jp-morgan"></use>
-              </svg>
-            </div>
-            <div class="logos__item">
-              <svg class="logos__icon logos__icon--credit-agricole">
-                <use href="/src/images/sprite.svg#credit-agricole"></use>
-              </svg>
-            </div>
-            <div class="logos__item">
-              <svg class="logos__icon logos__icon--bnp">
-                <use href="/src/images/sprite.svg#bnp"></use>
-              </svg>
-            </div>
-            <div class="logos__item">
-              <svg class="logos__icon logos__icon--anz">
-                <use href="/src/images/sprite.svg#anz"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
+  <section class="banner">
+    <canvas class="banner__waves" id="waves"></canvas>
+    <div class="banner__container container">
+      <div class="banner__planet">
+        <h1 class="banner__title">Career</h1>
+        <p class="banner__description">Professional IT Services, Training & Consulting</p>
       </div>
     </div>
+    <a class="banner__button" href="#map-career"></a>
   </section>
 
-  <div class="building"></div>
+  <section class="description-vacancy">
+    <div class="description-vacancy__container container">
+    <h1 class="description-vacancy__title">Investment Analyst</h1>
+    <a href="/pages/career.html" class="description-vacancy__back">Back  to current openings</a>
+    <p class="description-vacancy__main-text">
+      At DDS, we’re changing how the world invests, and you can be part of it! A trusted authority,
+      internally as well as externally, you’ll provide investment analysis, recommendations, solutions and expertise.
+      In this role, you’ll use your strong analytical and research skills, as well as your essential communication skills
+      to build your own profile alongside ours. Together we’re a powerful force for change, progress and good.
+    </p>
 
-  <section class="products" id="product">
-    <div class="products__container container">
-      <div class="products__image"></div>
-      <ul class="products__list">
-        <li class="products__item product">
-          <div class="product__image">
-            <img
-              class="product__icon"
-              src="/src/images/products/it-services-icon.svg"
-              alt="ie-services"
-            >
-          </div>
-          <div class="product__title">IT services</div>
-          <p class="product__description">
-            Our network technologies and solutions have helped defend U.S. through war and peace for years.
+    <div class="description-vacancy__block">
+      <h2 class="description-vacancy__block-title">IN THIS ROLE, YOU WILL</h2>
+      <ul class="description-vacancy__list">
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Perform research on funds, ETFs and underlying indices to address a range of investment solutions
           </p>
         </li>
-        <li class="products__item product">
-          <div class="product__image">
-            <img
-              class="product__icon"
-              src="/src/images/products/training-icon.svg"
-              alt="training-icon"
-            >
-          </div>
-          <div class="product__title">Training</div>
-          <p class="product__description">
-            Today, we’ve assembled a global infrastructure of IT professionals, facilities, resources,
-            and processes tailored to the network-centric requirements of 21st century defense missions.
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Position active and passive investment exposures in portfolios, against market trends and scenarios,
+            as well as showcasing them against product type vehicles and peer groups
           </p>
         </li>
-        <li class="products__item product">
-          <div class="product__image">
-            <img
-              class="product__icon"
-              src="/src/images/products/consulting-icon.svg"
-              alt="consulting"
-            >
-          </div>
-          <div class="product__title">Consulting</div>
-          <p class="product__description">
-            We deliver via training centers, private facilities, and the Internet, enabling our customers
-            to choose when, where, and how they want to receive training programs and learning services.
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Develop thought leadership and investment content for DDS product line-up
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Presents to clients, internal peer groups and at conferences
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Generate product research ideas and investment solutions that will steer the sales and distribution agenda
           </p>
         </li>
       </ul>
     </div>
-  </section>
 
-  <section class="leader">
-    <div class="leader__container container">
-      <div class="leader__text">
-        <h2 class="leader__title"><span>DDS</span> is the worldwide leader</h2>
-        <p class="leader__description">
-          For over 10 years, we have been developing technology solutions for government and financial organizations.
-          Our developments help to build a strong state and bring a stable profit.
-        </p>
-        <p class="leader__description">
-          Our information and security experts are ready to integrate with your team, providing truly complete IT solutions.
-          Our strength is our “Cradle to Grave” approach towards satisfying customer network and information requirements:
-          Initial Concept, Data Network Engineering, Data Services & Storage Planning, Final Installation, Operation, and Maintenance.
-        </p>
-      </div>
-      <div class="leader__ten">
-        <p class="leader__ten-text">
-          Years <br> of experience
-        </p>
-        <svg class="leader__shadow-1">
-          <use href="/src/images/sprite.svg#ten-shadow-1"></use>
-        </svg>
-        <svg class="leader__shadow-2">
-          <use href="/src/images/sprite.svg#ten-shadow-2"></use>
-        </svg>
-      </div>
-      <div class="leader__one">
-        <div class="leader__blue-square"></div>
-        <div class="leader__blue-rectangle"></div>
-        <div class="leader__grey-triangle"></div>
-        <div class="leader__grey-square"></div>
-      </div>
+    <div class="description-vacancy__block">
+      <h2 class="description-vacancy__block-title">WHAT IT TAKES</h2>
+      <ul class="description-vacancy__list">
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Undergraduate degree in finance-related field or equivalent combination of training and experience
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Minimum of 3 years of investment analysis and/or related experience
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Progress towards a related higher educational or professional designation (e.g., MBA, CFP or CFA) preferred.
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Strong technical skills, knowledge of market data terminals Bloomberg, FactSet and Morningstar highly desirable,
+            as is the ability to automate and code (VBA, python, etc)
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Excellent quantitative and analytical skills related to investment analysis and general financial planning principles
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Outstanding desktop computing skills including Microsoft Office, with particular emphasis on Excel
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Excellent written and verbal communication skills
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Strong presentation skills
+          </p>
+        </li>
+        <li class="description-vacancy__item">
+          <div class="description-vacancy__item-mark"></div>
+          <p class="description-vacancy__block-text">
+            Ability to work independently on multiple assignments simultaneously
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="description-vacancy__block">
+      <h2 class="description-vacancy__block-title">INCLUSION STATEMENT</h2>
+      <p class="description-vacancy__block-text">DDS continued commitment to diversity and inclusion is firmly rooted in our culture.
+        Every decision we make to best serve our clients, crew (internally employees are referred to as crew), and communities is
+        guided by one simple statement: “Do the right thing.” We believe that a critical aspect of doing the right thing requires
+        building diverse, inclusive, and highly effective teams of individuals who are as unique as the clients they serve.
+        We empower our crew to contribute their distinct strengths to achieving DDS core purpose through our values.
+        When all crew members feel valued and included, our ability to collaborate and innovate is amplified, and we are
+        united in delivering on DDS core purpose. Our core purpose: To take a stand for all investors, to treat them fairly,
+        and to give them the best chance for investment success.
+      </p>
+    </div>
+
+    <div class="description-vacancy__block">
+      <h2 class="description-vacancy__block-title">SPECIAL FACTORS</h2>
+      <p class="description-vacancy__block-text">DDS is not offering visa sponsorship for this position.<br>
+        INTERNAL CREW, CONTRACTOR & DIRECT APPLICATIONS ONLY<br>
+        Please note, current suppliers and potential suppliers are not permitted to communicate with or contact or send or
+        otherwise provide any speculative resumes to any department, business unit, subsidiary or affiliate of DDS, or any
+        employee thereof, at any time unless expressly instructed or permitted by a member of DDS HR department.
+        For the avoidance of doubt, DDS will not pay any fees to a supplier or potential supplier in respect of any candidate
+        unless DDS has either requested the referral or given its prior written consent to the referral.
+      </p>
+    </div>
+
+    <button class="description-vacancy__button" id="page-contacts">Contact us</button>
     </div>
   </section>
 
-  <section class="about">
-    <div class="about__container container">
-      <div class="about__video">
-        <div class="about__video-triangle"></div>
-        <div class="about__video-blue-square"></div>
-        <div class="about__video-grey-square"></div>
-        <video
-          class="about__video-frame"
-          id="video-about"
-          width="100%"
-          height="100%"
-          autoplay
-        >
-          <source src="/src/images/videos/video.mp4" type="video/mp4">
-        </video>
-        <svg class="about__mission">
-          <use href="/src/images/sprite.svg#mission"></use>
-        </svg>
-        <svg class="about__mission-full">
-          <use href="/src/images/sprite.svg#mission-full"></use>
-        </svg>
-        <svg class="about__mission-mobile">
-          <use href="/src/images/sprite.svg#mission-mobile"></use>
-        </svg>
-        <svg class="about__mission-mobile-full">
-          <use href="/src/images/sprite.svg#mission-mobile-full"></use>
-        </svg>
-      </div>
-      <div class="about__text">
-        <h2 class="about__title"><span>About</span> company</h2>
-        <div class="about__description">
-          <p class="about__text-column">
-            At DDS Inc our mission is providing critical computer services support and IT solutions
-            to globally deployed government agencies. We are dedicated to building long-term relationships
-            with customers through quality training and support.
-          </p>
-          <p class="about__text-column">
-            DDS provides stability and experience through our collective commercial and technical military backgrounds.
-            From computer networking services to IT Security to training, Deployable Data Solutions will provide
-            industry leading service.
-          </p>
-        </div>
+  <section class="worldwide">
+    <div class="worldwide__container container">
+      <div class="worldwide__text">
+        <div class="worldwide__mark"></div>
+        <h2 class="worldwide__title">Worldwide leader</h2>
+        <p class="worldwide__description">
+          DDS is the worldwide leader in IT and business training.<br>
+          We deliver via training centers, private facilities, and the Internet, enabling our customers to choose when,
+          where, and how they want to receive training programs and learning services.
+        </p>
       </div>
     </div>
   </section>
@@ -430,9 +400,11 @@
   </div>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type = "text/javascript" src="/src/scripts/pages/slider-index.js"></script>
-    <script type = "text/javascript" src="/src/scripts/script.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type = "text/javascript" src="../src/scripts/js/menu.js"></script>
+  <script type = "text/javascript" src="../src/scripts/js/footer.js"></script>
+  <script type = "text/javascript" src="../src/scripts/pages/waves.js"></script>
+  <script type = "text/javascript" src="../src/scripts/pages/logoMobile.js"></script>
+  <script type="text/javascript" src="../src/scripts/js/modal.js"></script>
 </body>
 </html>
