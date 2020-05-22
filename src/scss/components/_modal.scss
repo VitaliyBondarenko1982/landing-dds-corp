@@ -67,6 +67,9 @@
     width: 50%;
     height: auto;
     background-image: url(/src/images/modal-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &:before {
       content: '';
@@ -146,12 +149,20 @@
       font-size: $dark-grey;
       line-height: 29px;
       font-weight: 500;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+      transition: opacity 500ms ease;
     }
   }
 
   &__textarea {
     height: 156px;
     margin-bottom: 40px;
+    resize: none;
   }
 
   &__button {
@@ -168,6 +179,12 @@
     border: none;
     padding: 17px;
     outline: none;
+    transition: background-color 500ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-blue;
+    }
   }
 }
 

@@ -17,6 +17,7 @@
     @include text($dark-grey, 14px, 17px);
     font-weight: bold;
     text-transform: uppercase;
+    transition: color 500ms ease-in-out;
 
     &--contacts {
       font-family: 'Montserrat', sans-serif;

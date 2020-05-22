@@ -25,13 +25,12 @@ const closePopup = (event) => {
   }
 };
 
-const formHandler = (event) => {
-  event.preventDefault();
-  console.log('submit');
+const formHandler = (evt) => {
+  evt.preventDefault();
 
-  inputName = '';
-  inputEmail = '';
-  textarea = '';
+  inputName.value = '';
+  inputEmail.value = '';
+  textarea.value = '';
 }
 
 

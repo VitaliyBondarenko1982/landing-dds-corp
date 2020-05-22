@@ -105,6 +105,46 @@
     transform: translate(-50%, -50%) rotate(90deg);
   }
 
+  &__contact-us {
+    width: 100%;
+    margin: auto;
+
+    &-image {
+      display: block;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    &-link {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    &-blur {
+      position: absolute;
+      width: calc(100% - 50px);
+      bottom: 70px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0.7;
+      filter: blur(10px);
+      z-index: -1;
+
+      @media (min-width: 1080px) {
+        display: none;
+      }
+
+      & .footer__contact-us-image {
+        max-width: 100%;
+      }
+
+      & .footer__contact-us-link {
+        max-width: 100%;
+      }
+    }
+  }
+
   &__copyright {
     position: relative;
     z-index: 1;

@@ -1,6 +1,7 @@
 .description-vacancy {
   &__container {
     padding: 113px 120px;
+    position: relative;
 
     @media (max-width: 1439px) {
       padding: 90px 60px;
@@ -135,7 +136,7 @@
     position: relative;
     width: 32px;
     height: 32px;
-    background-color: $light-grey;
+    background-color: $lightest-grey;
     margin-right: 20px;
 
     &:before {
@@ -157,7 +158,7 @@
       transform: translate(-50%, -50%);
       width: 6px;
       height: 6px;
-      background-color: $light-grey;
+      background-color: $lightest-grey;
       border: 3px solid $main-blue;
     }
   }

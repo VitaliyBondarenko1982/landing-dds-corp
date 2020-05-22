@@ -82,6 +82,8 @@
     @media (max-width: 1079px) {
       max-width: 100%;
       margin-bottom: 70px;
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
@@ -152,7 +154,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 
     @media (max-width: 1439px) {
       width: calc(100% / 2);
