@@ -53,6 +53,15 @@
   &__text {
     width: 100%;
     max-width: 480px;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    transform: translateX(-70px);
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
 
     @media (max-width: 1079px) {
       max-width: 100%;

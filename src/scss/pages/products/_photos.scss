@@ -58,7 +58,7 @@
     }
   }
 
-  &__description {
+  &__title {
     width: 100%;
     max-width: 423px;
     font-family: 'Teko', sans-serif;
@@ -68,6 +68,14 @@
     line-height: 80px;
     text-transform: uppercase;
     color: $main-blue;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    transform: translateX(-70px);
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     & span {
       color: $dark-grey;

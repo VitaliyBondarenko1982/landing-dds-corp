@@ -1,3 +1,12 @@
+function isScrolledIntoView(el, value) {
+  const rect = el.getBoundingClientRect();
+  const elemTop = rect.top;
+
+  const isVisible = (elemTop <= value);
+
+  return isVisible;
+}
+
 const buildingFinancial = document.getElementById('building-financial');
 const buildingHighTech = document.getElementById('building-high-tech');
 const buildingInvestment = document.getElementById('building-investment');
@@ -5,6 +14,10 @@ const buildingInvestment = document.getElementById('building-investment');
 const financialContainer = document.querySelector('.financial-partners__container');
 const highTechContainer = document.querySelector('.high-tech-partners__container');
 const investmentContainer = document.querySelector('.investment-partners__container');
+
+const financialText = document.querySelector('.financial-partners__text');
+const highTechText = document.querySelector('.high-tech-partners__text');
+const investmentText = document.querySelector('.investment-partners__text');
 
 const header = document.querySelector('.header');
 
@@ -26,4 +39,16 @@ window.onscroll = function() {
   scrollHandler(buildingFinancial, financialContainer);
   scrollHandler(buildingHighTech, highTechContainer);
   scrollHandler(buildingInvestment, investmentContainer);
+  
+  if (isScrolledIntoView(financialText, 500)) {
+    financialText.classList.add('financial-partners__text--visible');
+  }
+
+  if (isScrolledIntoView(highTechText, 500)) {
+    highTechText.classList.add('high-tech-partners__text--visible');
+  }
+
+  if (isScrolledIntoView(investmentText, 500)) {
+    investmentText.classList.add('investment-partners__text--visible');
+  }
 }

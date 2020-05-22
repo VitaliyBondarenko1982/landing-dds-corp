@@ -66,14 +66,14 @@
     color: $main-blue;
     width: 100%;
     max-width: 423px;
-    // opacity: 1;
-    // transition: all 1000ms ease-in-out;
-    // transform: translateX(-70px);
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    transform: translateX(-70px);
 
-    // &--visible {
-    //   opacity: 1;
-    //   transform: translateX(0);
-    // }
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     @media (max-width: 768px) {
       font-size: 35px;
@@ -161,6 +161,14 @@
     bottom: 93px;
     width: 100%;
     max-width: 480px;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    transform: translateX(-70px);
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     @media (max-width: 1439px) {
       left: 60px;
