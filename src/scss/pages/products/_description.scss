@@ -162,6 +162,14 @@
     width: calc(100% / 3);
     padding-right: 40px;
     outline: none;
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: all 800ms ease-in-out;
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     @media (max-width: 767px) {
       padding-right: 0;

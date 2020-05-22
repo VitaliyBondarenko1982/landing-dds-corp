@@ -128,7 +128,7 @@
 
     &--2 {
       right: 0;
-      top: 102px;
+      top: 30%;
 
       @media (max-width: 900px) {
         right: 0;
@@ -196,6 +196,11 @@
 
   &__item {
     margin-bottom: 20px;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     &:last-child {
       margin-bottom: 0;
