@@ -8,11 +8,13 @@ const inputEmail = document.querySelector('.form__input--email');
 const textarea = document.querySelector('.form__textarea');
 
 
+
 const openPopup = () => {
   contactsPopup.classList.add('active');
 
   if(navMain.classList.contains('nav--opened')) {
     closeMenu();
+    logoFillHandler();
   }
 }
 

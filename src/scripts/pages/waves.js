@@ -1,4 +1,3 @@
-console.log('waves')
 function SineWaveGenerator(options) {
   $.extend(this, options || {});
 

@@ -6,13 +6,14 @@ const form = document.querySelector('.form');
 const inputName = document.querySelector('.form__input--name');
 const inputEmail = document.querySelector('.form__input--email');
 const textarea = document.querySelector('.form__textarea');
-
+const pageContacts = document.getElementById('page-contacts');
 
 const openPopup = () => {
   contactsPopup.classList.add('active');
 
   if(navMain.classList.contains('nav--opened')) {
     closeMenu();
+    logoFillHandler();
   }
 }
 
@@ -27,7 +28,6 @@ const closePopup = (event) => {
 
 const formHandler = (event) => {
   event.preventDefault();
-  console.log('submit');
 
   inputName = '';
   inputEmail = '';
@@ -37,6 +37,7 @@ const formHandler = (event) => {
 
 navContactsButton.addEventListener('click', openPopup);
 footerContacts.addEventListener('click', openPopup);
+pageContacts.addEventListener('click', openPopup);
 contactsPopup.addEventListener('click', closePopup);
 
 closeButton.addEventListener('click', () => {

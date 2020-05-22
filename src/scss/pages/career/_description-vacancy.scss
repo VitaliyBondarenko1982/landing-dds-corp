@@ -189,6 +189,11 @@
     max-width: 243px;
     border: none;
     padding: 26px;
+    transition: background-color 300ms ease-in-out;
+
+    &:hover {
+      background-color: $hover-blue;
+    }
 
     @media (max-width: 767px) {
       max-width: 325px;
