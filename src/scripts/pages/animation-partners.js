@@ -8,8 +8,6 @@ function isScrolledIntoView(el, value) {
 }
 
 const buildingFinancial = document.getElementById('building-financial');
-const buildingHighTech = document.getElementById('building-high-tech');
-const buildingInvestment = document.getElementById('building-investment');
 
 const financialContainer = document.querySelector('.financial-partners__container');
 const highTechContainer = document.querySelector('.high-tech-partners__container');
@@ -37,9 +35,7 @@ function scrollHandler(building, container) {
 
 window.onscroll = function() {
   scrollHandler(buildingFinancial, financialContainer);
-  scrollHandler(buildingHighTech, highTechContainer);
-  scrollHandler(buildingInvestment, investmentContainer);
-  
+
   if (isScrolledIntoView(financialText, 500)) {
     financialText.classList.add('financial-partners__text--visible');
   }
