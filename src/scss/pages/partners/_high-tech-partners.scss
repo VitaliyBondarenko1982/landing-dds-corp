@@ -74,6 +74,12 @@
     transition: all 1000ms ease-in-out;
     transform: translateX(-70px);
 
+
+    @media (max-width: 600px) {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
     &--visible {
       opacity: 1;
       transform: translateX(0);

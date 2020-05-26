@@ -30,6 +30,11 @@
     transform: translate(-50%, -50%);
     animation: titlePromoMobile 1200ms ease-in-out;
 
+
+    @media (max-width: 600px) {
+      animation: none;
+    }
+
     & span {
       color: $main-blue;
     }

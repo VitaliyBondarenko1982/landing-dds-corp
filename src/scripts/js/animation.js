@@ -75,7 +75,7 @@ window.onscroll = function() {
     leaderTen.classList.add('leader__ten--visible');
   }
 
-  if (isScrolledIntoView(leaderTenText, window.innerHeight) {
+  if (isScrolledIntoView(leaderTenText, window.innerHeight)) {
     leaderTenText.classList.add('leader__ten-text--visible');
   }
 

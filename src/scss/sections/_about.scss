@@ -22,6 +22,12 @@
     transform: translateX(-80px);
     transition: all 1000ms ease-in-out;
 
+
+    @media (max-width: 600px) {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
     &--visible {
       opacity: 1;
       transform: translateX(0);
@@ -54,6 +60,11 @@
     opacity: 0;
     transition: opacity 1000ms ease-in-out;
 
+
+    @media (max-width: 600px) {
+      opacity: 1;
+    }
+
     &--visible {
       opacity: 1;
     }
@@ -75,6 +86,12 @@
     transform: translate(calc(-50% - 70px), -50%);
     transition: all 800ms ease-in-out;
     opacity: 0;
+
+
+    @media (max-width: 600px) {
+      opacity: 1;
+      transform: translate(-50%,-50%);
+    }
 
     &--visible {
       transform: translate(-50%, -50%);

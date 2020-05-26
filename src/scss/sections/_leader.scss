@@ -32,9 +32,14 @@
     transition: all 1000ms ease-in-out;
     transform: translateX(-70px);
 
-    &--visible {
+    @media (max-width: 600px) {
       opacity: 1;
       transform: translateX(0);
+    }
+
+    &--visible {
+      opacity: 1;
+
     }
   }
 
@@ -68,6 +73,11 @@
     height: 300px;
     opacity: 0;
     transition: opacity 800ms ease-in-out 1000ms;
+
+
+    @media (max-width: 600px) {
+      opacity: 1;
+    }
   }
 
   &__shadow-2 {
@@ -79,6 +89,10 @@
     height: 300px;
     opacity: 0;
     transition: opacity 800ms ease-in-out 1500ms;
+
+    @media (max-width: 600px) {
+      opacity: 1;
+    }
   }
 
   &__ten {
@@ -91,6 +105,11 @@
     background-size: contain;
     opacity: 0;
     transition: opacity 1000ms ease-in-out;
+
+
+    @media (max-width: 600px) {
+      opacity: 1;
+    }
 
     &--visible {
       opacity: 1;
@@ -115,6 +134,12 @@
     opacity: 0;
     transform: translateX(-100px);
     transition: all 800ms ease-in-out;
+
+
+    @media (max-width: 600px) {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     &--visible {
       opacity: 1;
