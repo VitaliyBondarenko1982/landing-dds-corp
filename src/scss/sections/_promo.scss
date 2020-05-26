@@ -244,8 +244,8 @@
     &__video {
       position: relative;
       width: 100%;
-      max-width: 720px;
-      height: 531px;
+      max-width: 840px;
+      height: 505px;
 
       &:after {
         content: "";
@@ -282,19 +282,20 @@
 
     &__side {
       position: relative;
-      width: 360px;
-      height: 892px;
+      width: 240px;
+      // height: 892px;
     }
 
     &__side-image {
       display: block;
       opacity: 0.1;
       object-position: bottom;
+      width: 240px;
     }
 
     &__description {
       border-bottom: 1px solid $lightest-grey;
-      padding: 98px 130px;
+      padding: 54px 130px;
       margin-bottom: 0;
 
       &:after {
@@ -303,7 +304,7 @@
         top: 0;
         left: 0;
         width: 91px;
-        height: 182px;
+        height: 181px;
         background-color: $lightest-grey;
       }
     }
@@ -335,7 +336,7 @@
     }
 
     &__partners {
-      padding: 27px 0 26px;
+      padding: 17px 0 14px;
       position: relative;
     }
   }
@@ -355,6 +356,16 @@
       }
     }
 
+    &__side {
+      position: relative;
+      width: 360px;
+      height: 892px;
+    }
+
+    &__side-image {
+      width:360px;
+    }
+
     &__vacancies {
       position: absolute;
       bottom: 0;
@@ -364,6 +375,7 @@
 
     &__video {
       max-width: 1079px;
+      height: 531px;
 
       &:before {
         @include line;
@@ -378,11 +390,11 @@
 
     &__description {
       position: relative;
-      padding: 98px 240px;
+      padding: 99px 240px;
     }
 
     &__partners {
-      padding: 27px 120px 26px 240px ;
+      padding: 27px 120px 25px 240px ;
       position: relative;
     }
   }
