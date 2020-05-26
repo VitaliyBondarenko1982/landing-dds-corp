@@ -48,7 +48,7 @@ window.onscroll = function() {
   if (rectTopProducts <= headerHeight + 20) {
     building.classList.add('is-sticky');
     building.style.top = `${headerHeight}px`;
-    building.style.opacity = '0.2';
+    building.style.opacity = '0.7';
   } else {
     building.classList.add('is-sticky');
     building.style.top = `${rectTopProducts}px`;
