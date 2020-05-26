@@ -67,7 +67,7 @@
     width: 270px;
     height: 300px;
     opacity: 0;
-    transition: opacity 800ms ease-in-out 1500ms;
+    transition: opacity 800ms ease-in-out 1000ms;
   }
 
   &__shadow-2 {
@@ -78,7 +78,7 @@
     width: 270px;
     height: 300px;
     opacity: 0;
-    transition: opacity 800ms ease-in-out 2000ms;
+    transition: opacity 800ms ease-in-out 1500ms;
   }
 
   &__ten {
@@ -90,7 +90,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0;
-    transition: opacity 1500ms ease-in-out;
+    transition: opacity 1000ms ease-in-out;
 
     &--visible {
       opacity: 1;
@@ -248,7 +248,7 @@
       height: 100%;
       background-color: $lightest-grey;
       opacity: 0;
-      transition: opacity 1000ms ease-in-out;
+      transition: opacity 800ms ease-in-out;
 
       &--visible {
         opacity: 1;
@@ -264,7 +264,7 @@
       border-bottom: 91px solid $dark-grey;
       border-left: 91px solid transparent;
       opacity: 0;
-      transition: opacity 1000ms ease-in-out;
+      transition: opacity 500ms ease-in-out;
 
       &--visible {
         opacity: 1;
@@ -279,7 +279,7 @@
       height: 91px;
       background-color: $lightest-grey;
       opacity: 0;
-      transition: opacity 1000ms ease-in-out;
+      transition: opacity 500ms ease-in-out;
 
       &--visible {
         opacity: 1;
@@ -294,7 +294,7 @@
       height: 91px;
       background-color: $main-blue;
       opacity: 0;
-      transition: opacity 1000ms ease-in-out;
+      transition: opacity 500ms ease-in-out;
 
       &--visible {
         opacity: 1;
@@ -310,7 +310,7 @@
       height: 91px;
       background-color: $main-blue;
       opacity: 0;
-      transition: opacity 1000ms ease-in-out;
+      transition: opacity 500ms ease-in-out;
 
       &--visible {
         opacity: 1;

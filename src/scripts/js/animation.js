@@ -79,29 +79,29 @@ window.onscroll = function() {
     leaderTenText.classList.add('leader__ten-text--visible');
   }
 
-  if (isScrolledIntoView(leaderOne, 500)) {
+  if (isScrolledIntoView(leaderOne, 800)) {
     leaderOne.classList.add('leader__one--visible');
   }
 
-  if (isScrolledIntoView(leaderBlueSquare, 500)) {
+  if (isScrolledIntoView(leaderBlueSquare, 800)) {
     setTimeout(() => {
       leaderBlueSquare.classList.add('leader__blue-square--visible');
     }, 500);
   }
 
-  if (isScrolledIntoView(leaderBlueRectangle, 700)) {
+  if (isScrolledIntoView(leaderBlueRectangle, 800)) {
     setTimeout(() => {
       leaderBlueRectangle.classList.add('leader__blue-rectangle--visible');
     }, 500);
   }
 
-  if (isScrolledIntoView(leaderGreySquare, 600)) {
+  if (isScrolledIntoView(leaderGreySquare, 800)) {
     setTimeout(() => {
       leaderGreySquare.classList.add('leader__grey-square--visible');
     }, 1500);
   }
 
-  if (isScrolledIntoView(leaderGreyTriangle, 500)) {
+  if (isScrolledIntoView(leaderGreyTriangle, 800)) {
     setTimeout(() => {
       leaderGreyTriangle.classList.add('leader__grey-triangle--visible');
     }, 1000);
