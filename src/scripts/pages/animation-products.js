@@ -16,11 +16,11 @@ const itImage = document.querySelector('.it__image');
 const itImageText = document.querySelector('.it__image-text');
 
 window.onscroll = function() {
-  if (isScrolledIntoView(photosProdTitle, 500)) {
+  if (isScrolledIntoView(photosProdTitle, window.innerHeight)) {
     photosProdTitle.classList.add('photos__title--visible');
   }
 
-  if (isScrolledIntoView(descriptionList, 500)) {
+  if (isScrolledIntoView(descriptionList, window.innerHeight)) {
     descriptionItem[0].classList.add('description__item--visible');
 
     setTimeout(() => {
@@ -32,7 +32,7 @@ window.onscroll = function() {
     }, 1000);
   }
 
-  if (isScrolledIntoView(itList, 700)) {
+  if (isScrolledIntoView(itList, window.innerHeight)) {
     itItem[0].classList.add('it__item--visible');
 
     setTimeout(() => {
@@ -56,11 +56,11 @@ window.onscroll = function() {
     }, 1500);
   }
 
-  if (isScrolledIntoView(itImage, 500)) {
+  if (isScrolledIntoView(itImage, window.innerHeight)) {
     itImage.classList.add('it__image--visible');
   }
 
-  if (isScrolledIntoView(itImageText, 700)) {
+  if (isScrolledIntoView(itImageText, window.innerHeight)) {
     itImageText.classList.add('it__image-text--visible');
   }
 }

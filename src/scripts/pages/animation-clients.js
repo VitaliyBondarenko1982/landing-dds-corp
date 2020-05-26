@@ -36,55 +36,55 @@ const securityStroke = document.querySelector('.security__icon-stroke');
 const securityFull = document.querySelector('.security__icon-full');
 
 window.onscroll = function() {
-  if (isScrolledIntoView(mapTitle, 500)) {
+  if (isScrolledIntoView(mapTitle, window.innerHeight)) {
     mapTitle.classList.add('map__title--visible');
   }
 
-  if (isScrolledIntoView(securityVideo, 600)) {
+  if (isScrolledIntoView(securityVideo, window.innerHeight)) {
     securityVideo.classList.add('security__video--visible');
   }
 
-  if (isScrolledIntoView(securityVideoBlueSquare, 600)) {
+  if (isScrolledIntoView(securityVideoBlueSquare, window.innerHeight)) {
     setTimeout(() => {
       securityVideoBlueSquare.classList.add('security__video-blue-square--visible');
     }, 1500);
   }
 
-  if (isScrolledIntoView(securityVideoGreySquare, 600)) {
+  if (isScrolledIntoView(securityVideoGreySquare, window.innerHeight)) {
     setTimeout(() => {
       securityVideoGreySquare.classList.add('security__video-grey-square--visible');
     }, 1250);
   }
 
-  if (isScrolledIntoView(securityVideoTriangle, 600)) {
+  if (isScrolledIntoView(securityVideoTriangle, window.innerHeight)) {
     setTimeout(() => {
       securityVideoTriangle.classList.add('security__video-triangle--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(securityText, 600)) {
+  if (isScrolledIntoView(securityText, window.innerHeight)) {
     securityText.classList.add('about__text--visible');
   }
 
-  if (isScrolledIntoView(securityStrokeMobile, 600)) {
+  if (isScrolledIntoView(securityStrokeMobile, window.innerHeight)) {
     setTimeout(() => {
       securityStrokeMobile.classList.add('about__mission-mobile--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(securityFullMobile, 600)) {
+  if (isScrolledIntoView(securityFullMobile, window.innerHeight)) {
     setTimeout(() => {
       securityFullMobile.classList.add('about__mission-mobile-full--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(securityStroke, 600)) {
+  if (isScrolledIntoView(securityStroke, window.innerHeight)) {
     setTimeout(() => {
       securityStroke.classList.add('about__mission--visible');
     }, 1000);
   }
 
-  if(isScrolledIntoView(securityFull, 600)) {
+  if(isScrolledIntoView(securityFull, window.innerHeight)) {
     setTimeout(() => {
       securityFull.classList.add('about__mission-full--visible');
     }, 1000);

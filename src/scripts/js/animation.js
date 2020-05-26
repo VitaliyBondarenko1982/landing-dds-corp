@@ -55,7 +55,7 @@ window.onscroll = function() {
     building.style.opacity = '1';
   }
 
-  if (isScrolledIntoView(products, 800)) {
+  if (isScrolledIntoView(products, window.innerHeight)) {
     productList[0].classList.add('product--visible');
 
     setTimeout(() => {
@@ -67,91 +67,91 @@ window.onscroll = function() {
     }, 1000);
   }
 
-  if (isScrolledIntoView(leaderText, 800)) {
+  if (isScrolledIntoView(leaderText, window.innerHeight)) {
     leaderText.classList.add('leader__text--visible');
   }
 
-  if (isScrolledIntoView(leaderTen, 800)) {
+  if (isScrolledIntoView(leaderTen, window.innerHeight)) {
     leaderTen.classList.add('leader__ten--visible');
   }
 
-  if (isScrolledIntoView(leaderTenText, 800)) {
+  if (isScrolledIntoView(leaderTenText, window.innerHeight) {
     leaderTenText.classList.add('leader__ten-text--visible');
   }
 
-  if (isScrolledIntoView(leaderOne, 800)) {
+  if (isScrolledIntoView(leaderOne, window.innerHeight)) {
     leaderOne.classList.add('leader__one--visible');
   }
 
-  if (isScrolledIntoView(leaderBlueSquare, 800)) {
+  if (isScrolledIntoView(leaderBlueSquare, window.innerHeight)) {
     setTimeout(() => {
       leaderBlueSquare.classList.add('leader__blue-square--visible');
     }, 500);
   }
 
-  if (isScrolledIntoView(leaderBlueRectangle, 800)) {
+  if (isScrolledIntoView(leaderBlueRectangle, window.innerHeight)) {
     setTimeout(() => {
       leaderBlueRectangle.classList.add('leader__blue-rectangle--visible');
     }, 500);
   }
 
-  if (isScrolledIntoView(leaderGreySquare, 800)) {
+  if (isScrolledIntoView(leaderGreySquare, window.innerHeight)) {
     setTimeout(() => {
       leaderGreySquare.classList.add('leader__grey-square--visible');
     }, 1500);
   }
 
-  if (isScrolledIntoView(leaderGreyTriangle, 800)) {
+  if (isScrolledIntoView(leaderGreyTriangle, window.innerHeight)) {
     setTimeout(() => {
       leaderGreyTriangle.classList.add('leader__grey-triangle--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(aboutVideo, 800)) {
+  if (isScrolledIntoView(aboutVideo, window.innerHeight)) {
     aboutVideo.classList.add('about__video--visible');
   }
 
-  if (isScrolledIntoView(aboutVideoBlueSquare, 800)) {
+  if (isScrolledIntoView(aboutVideoBlueSquare, window.innerHeight)) {
     setTimeout(() => {
       aboutVideoBlueSquare.classList.add('about__video-blue-square--visible');
     }, 1500);
   }
 
-  if (isScrolledIntoView(aboutVideoGreySquare, 800)) {
+  if (isScrolledIntoView(aboutVideoGreySquare, window.innerHeight)) {
     setTimeout(() => {
       aboutVideoGreySquare.classList.add('about__video-grey-square--visible');
     }, 1250);
   }
 
-  if (isScrolledIntoView(aboutVideoTriangle, 800)) {
+  if (isScrolledIntoView(aboutVideoTriangle, window.innerHeight)) {
     setTimeout(() => {
       aboutVideoTriangle.classList.add('about__video-triangle--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(aboutText, 800)) {
+  if (isScrolledIntoView(aboutText, window.innerHeight)) {
     aboutText.classList.add('about__text--visible');
   }
 
-  if (isScrolledIntoView(aboutMissionMobile, 800)) {
+  if (isScrolledIntoView(aboutMissionMobile, window.innerHeight)) {
     setTimeout(() => {
       aboutMissionMobile.classList.add('about__mission-mobile--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(aboutMissionMobileFull, 800)) {
+  if (isScrolledIntoView(aboutMissionMobileFull, window.innerHeight)) {
     setTimeout(() => {
       aboutMissionMobileFull.classList.add('about__mission-mobile-full--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(aboutMission, 800)) {
+  if (isScrolledIntoView(aboutMission, window.innerHeight)) {
     setTimeout(() => {
       aboutMission.classList.add('about__mission--visible');
     }, 1000);
   }
 
-  if(isScrolledIntoView(aboutMissionFull, 800)) {
+  if(isScrolledIntoView(aboutMissionFull, window.innerHeight)) {
     setTimeout(() => {
       aboutMissionFull.classList.add('about__mission-full--visible');
     }, 1000);

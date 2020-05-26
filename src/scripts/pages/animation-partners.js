@@ -36,15 +36,15 @@ function scrollHandler(building, container) {
 window.onscroll = function() {
   scrollHandler(buildingFinancial, financialContainer);
 
-  if (isScrolledIntoView(financialText, 500)) {
+  if (isScrolledIntoView(financialText, window.innerHeight)) {
     financialText.classList.add('financial-partners__text--visible');
   }
 
-  if (isScrolledIntoView(highTechText, 500)) {
+  if (isScrolledIntoView(highTechText, window.innerHeight)) {
     highTechText.classList.add('high-tech-partners__text--visible');
   }
 
-  if (isScrolledIntoView(investmentText, 500)) {
+  if (isScrolledIntoView(investmentText, window.innerHeight)) {
     investmentText.classList.add('investment-partners__text--visible');
   }
 }
