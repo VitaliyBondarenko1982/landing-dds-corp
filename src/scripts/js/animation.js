@@ -55,7 +55,7 @@ window.onscroll = function() {
     building.style.opacity = '1';
   }
 
-  if (isScrolledIntoView(products, 500)) {
+  if (isScrolledIntoView(products, 800)) {
     productList[0].classList.add('product--visible');
 
     setTimeout(() => {
@@ -67,91 +67,91 @@ window.onscroll = function() {
     }, 1000);
   }
 
-  if (isScrolledIntoView(leaderText, 500)) {
+  if (isScrolledIntoView(leaderText, 800)) {
     leaderText.classList.add('leader__text--visible');
   }
 
-  if (isScrolledIntoView(leaderTen, 500)) {
+  if (isScrolledIntoView(leaderTen, 800)) {
     leaderTen.classList.add('leader__ten--visible');
   }
 
-  if (isScrolledIntoView(leaderTenText, 700)) {
+  if (isScrolledIntoView(leaderTenText, 800)) {
     leaderTenText.classList.add('leader__ten-text--visible');
   }
 
-  if (isScrolledIntoView(leaderOne, 300)) {
+  if (isScrolledIntoView(leaderOne, 500)) {
     leaderOne.classList.add('leader__one--visible');
   }
 
-  if (isScrolledIntoView(leaderBlueSquare, 300)) {
+  if (isScrolledIntoView(leaderBlueSquare, 500)) {
     setTimeout(() => {
       leaderBlueSquare.classList.add('leader__blue-square--visible');
     }, 500);
   }
 
-  if (isScrolledIntoView(leaderBlueRectangle, 500)) {
+  if (isScrolledIntoView(leaderBlueRectangle, 700)) {
     setTimeout(() => {
       leaderBlueRectangle.classList.add('leader__blue-rectangle--visible');
     }, 500);
   }
 
-  if (isScrolledIntoView(leaderGreySquare, 400)) {
+  if (isScrolledIntoView(leaderGreySquare, 600)) {
     setTimeout(() => {
       leaderGreySquare.classList.add('leader__grey-square--visible');
     }, 1500);
   }
 
-  if (isScrolledIntoView(leaderGreyTriangle, 300)) {
+  if (isScrolledIntoView(leaderGreyTriangle, 500)) {
     setTimeout(() => {
       leaderGreyTriangle.classList.add('leader__grey-triangle--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(aboutVideo, 600)) {
+  if (isScrolledIntoView(aboutVideo, 800)) {
     aboutVideo.classList.add('about__video--visible');
   }
 
-  if (isScrolledIntoView(aboutVideoBlueSquare, 600)) {
+  if (isScrolledIntoView(aboutVideoBlueSquare, 800)) {
     setTimeout(() => {
       aboutVideoBlueSquare.classList.add('about__video-blue-square--visible');
     }, 1500);
   }
 
-  if (isScrolledIntoView(aboutVideoGreySquare, 600)) {
+  if (isScrolledIntoView(aboutVideoGreySquare, 800)) {
     setTimeout(() => {
       aboutVideoGreySquare.classList.add('about__video-grey-square--visible');
     }, 1250);
   }
 
-  if (isScrolledIntoView(aboutVideoTriangle, 600)) {
+  if (isScrolledIntoView(aboutVideoTriangle, 800)) {
     setTimeout(() => {
       aboutVideoTriangle.classList.add('about__video-triangle--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(aboutText, 600)) {
+  if (isScrolledIntoView(aboutText, 800)) {
     aboutText.classList.add('about__text--visible');
   }
 
-  if (isScrolledIntoView(aboutMissionMobile, 600)) {
+  if (isScrolledIntoView(aboutMissionMobile, 800)) {
     setTimeout(() => {
       aboutMissionMobile.classList.add('about__mission-mobile--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(aboutMissionMobileFull, 600)) {
+  if (isScrolledIntoView(aboutMissionMobileFull, 800)) {
     setTimeout(() => {
       aboutMissionMobileFull.classList.add('about__mission-mobile-full--visible');
     }, 1000);
   }
 
-  if (isScrolledIntoView(aboutMission, 600)) {
+  if (isScrolledIntoView(aboutMission, 800)) {
     setTimeout(() => {
       aboutMission.classList.add('about__mission--visible');
     }, 1000);
   }
 
-  if(isScrolledIntoView(aboutMissionFull, 600)) {
+  if(isScrolledIntoView(aboutMissionFull, 800)) {
     setTimeout(() => {
       aboutMissionFull.classList.add('about__mission-full--visible');
     }, 1000);
