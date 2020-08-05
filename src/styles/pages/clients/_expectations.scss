@@ -1,0 +1,150 @@
+.expectations {
+  &__container {
+    padding: 122px 120px 110px;
+    background: url("../../../images/pages/products/blue-layer.svg"), url("../../../images/pages/products/worldwide-background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (max-width: 1439px) {
+      padding: 39px 60px;
+    }
+
+    @media (max-width: 1079px) {
+      padding: 30px 25px;
+      background-size: cover;
+      background-position: right;
+    }
+
+    @media (max-width: 940px) {
+      background: url("../../../images/pages/products/blue-layer-tablet.svg"), url("../../../images/pages/products/worldwide-background-tablet.png");
+      flex-direction: column;
+      background-size: cover;
+      padding-bottom: 400px;
+      background-position: bottom;
+    }
+
+    @media (max-width: 600px) {
+      padding-top: 86px;
+      padding-bottom: 240px;
+      background-position: bottom;
+    }
+
+    @media (max-width: 400px) {
+      padding-bottom: 350px;
+      background: url("../../../images/pages/products/blue-layer-mobile.svg"), url("../../../images/pages/products/worldwide-background-tablet.png");
+      background-position: bottom;
+    }
+
+    position: relative;
+    &:before {
+      @include line;
+      left: 0;
+      opacity: 0.25;
+      z-index: 1;
+      box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+
+      @media (max-width: 1439px) {
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
+
+      @media (max-width: 1079px) {
+        left: 50%;
+        box-shadow: 384px 0 0 $light-grey,
+        -384px 0 0 $light-grey;
+      }
+
+      @media (max-width: 767px) {
+        box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 615px;
+    margin-right: 106px;
+
+    @media (max-width: 1439px) {
+      max-width: 480px;
+      margin: 0;
+    }
+
+    @media (max-width: 1079px) {
+      width: 50%;
+    }
+
+    @media (max-width: 940px) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__mark {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-image: url("../../../images/pages/products/worldwide-rectangle.svg");
+    margin-bottom: 48px;
+
+    @media (max-width: 1439px) {
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 36px;
+      height: 38px;
+      background-image: url("../../../images/pages/products/quotes.svg");
+    }
+  }
+
+  &__title {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 32px;
+
+    @media (max-width: 1439px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+    color: #fff;
+
+    @media (max-width: 1439px) {
+      line-height: 35px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+  }
+}

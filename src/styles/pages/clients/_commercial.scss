@@ -1,0 +1,153 @@
+.commercial {
+  position: relative;
+
+
+
+  &__container {
+    position: relative;
+    padding: 195px 120px;
+    display: flex;
+    justify-content: space-between;
+
+    &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 360px;
+    height: 100%;
+    background-color: $lightest-grey;
+    z-index: -1;
+
+    @media (max-width: 1079px) {
+      width: 100%;
+      height: 237px;
+    }
+
+  }
+
+    @media (max-width: 1439px) {
+      padding: 80px 60px;
+    }
+
+    @media (max-width: 1079px) {
+      padding: 75px 25px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:before {
+      @include line;
+      left: 0;
+      opacity: 0.6;
+      z-index: -1;
+      box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+
+      @media (max-width: 1439px) {
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
+      @media (max-width: 1079px) {
+        left: 50%;
+        box-shadow: 384px 0 0 $light-grey,
+        -384px 0 0 $light-grey;
+      }
+      @media (max-width: 767px) {
+        box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 480px;
+
+    @media (max-width: 1079px) {
+      max-width: 100%;
+      margin-bottom: 75px;
+    }
+  }
+
+  &__title {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 69px;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: $main-blue;
+    margin-bottom: 41px;
+
+    @media (max-width: 400px) {
+      font-size: 35px;
+      line-height: 50px;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+    color: $dark-grey;
+
+    @media (max-width: 400px) {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    margin-left: 60px;
+    width: 420px;
+    height: 470px;
+    background-image: url("../../../images/pages/clients/it-clients.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (max-width: 1439px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: 600px) {
+      width: 284px;
+      height: 316px;
+    }
+
+    @media (max-width: 375px) {
+      margin-left: auto;
+    }
+  }
+
+  &__image-text {
+    position: absolute;
+    top: 258px;
+    left: -60px;
+    width: 386px;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: $main-blue;
+
+    @media (max-width: 600px) {
+      width: 324px;
+      left: calc(50% - 15px);
+      transform: translateX(-50%);
+      top: 124px;
+    }
+  }
+}
+

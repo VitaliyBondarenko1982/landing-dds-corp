@@ -1,63 +1,91 @@
 'use strict';
 
 const gulp = require('gulp');
-const concat = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
+const clean = require('gulp-clean');
+const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-let babel = require('gulp-babel')
-const uglify = require('gulp-uglify');
-const del = require('del');
-const browserSync = require('browser-sync').create();
+const gulpReplacePath = require('gulp-replace-path');
 
-function styles() {
-  return gulp.src('./src/scss/**/*.scss')
+const distDirectory = 'dist';
+const htmlBlob = 'src/*.html';
+const imagesBlob = 'src/images/**';
+const fontsBlob = 'src/fonts/**';
+const stylesBlob = 'src/styles/**';
+const jsBlob = 'src/scripts/**';
+
+const { series, parallel } = gulp;
+
+gulp.task('cleanDist', function() {
+  return gulp.src(distDirectory, { read: false, allowEmpty: true })
+    .pipe(clean());
+});
+
+gulp.task('processHtml', function() {
+  return gulp.src(htmlBlob)
+    .pipe(gulp.dest(distDirectory));
+});
+
+gulp.task('processImages', function() {
+  return gulp.src(imagesBlob)
+    .pipe(gulp.dest(`${distDirectory}/images/`));
+});
+
+gulp.task('processFonts', function() {
+  return gulp.src(fontsBlob)
+    .pipe(gulp.dest(`${distDirectory}/fonts/`));
+});
+
+gulp.task('processStyles', function() {
+  return gulp.src(stylesBlob)
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 version'],
-      cascade: false
-    }))
-    .pipe(cleanCSS({
-      level: 2
-    }))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./src/css'))
-    .pipe(browserSync.stream())
-}
+    .pipe(sass())
+    .pipe(gulpReplacePath(/(?:\.\.\/){2,}images/g, '../images'))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(`${distDirectory}/styles`))
+    .pipe(browserSync.reload({ stream: true }));
+});
 
-function scripts() {
-  return gulp.src('./src/scripts/js/**')
-    .pipe(concat('script.min.js'))
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest('./src/scripts'))
-    .pipe(browserSync.stream())
-}
+gulp.task('processJs', function() {
+  return gulp.src(jsBlob)
+    .pipe(gulp.dest(`${distDirectory}/scripts/`));
+});
 
-function clean() {
-  return del(['src/scripts/*.js'])
-}
+gulp.task('build', series(
+  'cleanDist',
+  parallel(
+    'processStyles',
+    'processHtml',
+    'processImages',
+    'processFonts',
+    'processJs',
+  )
+));
 
-function watch() {
+gulp.task('serve', function() {
   browserSync.init({
+    notify: false,
     server: {
-        baseDir: "./"
-    }
+      baseDir: distDirectory,
+    },
+    port: 8080,
   });
 
-  gulp.watch('./src/scss/**/*.scss', styles)
-  gulp.watch('./src/scripts/js/**/*.js', scripts)
-  gulp.watch('./*.html').on('change', browserSync.reload);
-  gulp.watch('./pages/*.html').on('change', browserSync.reload);
-}
+  gulp.watch(htmlBlob, series('processHtml'))
+    .on('change', browserSync.reload);
 
-gulp.task('styles', styles);
-gulp.task('scripts', scripts);
-gulp.task('clean', clean);
-gulp.task('watch', watch);
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts)));
-gulp.task('start', gulp.series('build', 'watch'));
+  gulp.watch(imagesBlob, series('processImages'))
+    .on('change', browserSync.reload);
+
+  gulp.watch(fontsBlob, series('processFonts'))
+    .on('change', browserSync.reload);
+
+  gulp.watch(stylesBlob, series('processStyles'));
+
+  gulp.watch(jsBlob, series('processJs'))
+    .on('change', browserSync.reload);
+});
+
+gulp.task('default', series('build', 'serve'));

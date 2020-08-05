@@ -1,0 +1,204 @@
+.description-vacancy {
+  &__container {
+    padding: 113px 120px;
+    position: relative;
+
+    @media (max-width: 1439px) {
+      padding: 90px 60px;
+    }
+
+    @media (max-width: 1079px) {
+      padding: 75px 25px;
+    }
+
+    &:before {
+      @include line;
+      left: 0;
+      opacity: 0.6;
+      z-index: -1;
+      box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+
+      @media (max-width: 1439px) {
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
+
+      @media (max-width: 1079px) {
+        left: 50%;
+        box-shadow: 384px 0 0 $light-grey,
+        -384px 0 0 $light-grey;
+      }
+
+      @media (max-width: 767px) {
+        box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 69px;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: $main-blue;
+    margin-bottom: 10px;
+
+    @media (max-width: 767px) {
+      font-size: 35px;
+      line-height: 50px;
+    }
+  }
+
+  &__back {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-blue;
+    padding-left: 37px;
+    position: relative;
+    margin-bottom: 50px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 12px;
+      background-image: url("../../../images/pages/career/arrow-left.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      left: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__main-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+    color: $dark-grey;
+    margin-bottom: 55px;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
+  &__block {
+    margin-bottom: 60px;
+  }
+
+  &__block-title {
+    font-family: "Teko", sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 35px;
+    color: $main-blue;
+  }
+
+  &__block-subtitle {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: $main-blue;
+    margin-bottom: 10px;
+  }
+
+  &__list-skills {
+    margin-bottom: 35px;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-mark {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background-color: $lightest-grey;
+    margin-right: 20px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 5px solid #fff;
+      border-left: 5px solid transparent;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+      background-color: $lightest-grey;
+      border: 3px solid $main-blue;
+    }
+  }
+
+  &__block-text {
+    width: 100%;
+    max-width: calc(100% - 52px);
+    font-size: 16px;
+    line-height: 36px;
+    color: $dark-grey;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
+  &__button {
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    background-color: $main-blue;
+    width: 100%;
+    max-width: 243px;
+    border: none;
+    padding: 26px;
+    transition: background-color 300ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-blue;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 325px;
+    }
+  }
+}

@@ -1,17 +1,22 @@
-const navContactsButton = document.getElementById('nav-contacts');
+'use strict';
+
+const navContactsButton = document
+  .getElementById('nav-contacts');
 const footerContacts = document.getElementById('footer-contacts');
-const contactsPopup = document.querySelector('.modal__contacts .modal__overlay');
+const contactsPopup = document
+  .querySelector('.modal__contacts .modal__overlay');
 const closeButton = document.querySelector('.popup__close');
 const form = document.querySelector('.form');
-const inputName = document.querySelector('.form__input--name');
+const inputName = document
+  .querySelector('.form__input--name');
 const inputEmail = document.querySelector('.form__input--email');
 const textarea = document.querySelector('.form__textarea');
-
+const navMain = document.querySelector('.nav');
 
 const openPopup = () => {
   contactsPopup.classList.add('active');
 
-  if(navMain.classList.contains('nav--opened')) {
+  if (navMain.classList.contains('nav--opened')) {
     closeMenu();
   }
 }
