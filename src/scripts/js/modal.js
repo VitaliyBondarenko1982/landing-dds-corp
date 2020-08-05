@@ -11,7 +11,6 @@ const inputName = document
   .querySelector('.form__input--name');
 const inputEmail = document.querySelector('.form__input--email');
 const textarea = document.querySelector('.form__textarea');
-const navMain = document.querySelector('.nav');
 
 const openPopup = () => {
   contactsPopup.classList.add('active');
