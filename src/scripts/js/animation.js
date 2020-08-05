@@ -151,7 +151,7 @@ window.onscroll = function() {
     }, 1000);
   }
 
-  if(isScrolledIntoView(aboutMissionFull, 600)) {
+  if (isScrolledIntoView(aboutMissionFull, 600)) {
     setTimeout(() => {
       aboutMissionFull.classList.add('about__mission-full--visible');
     }, 1000);

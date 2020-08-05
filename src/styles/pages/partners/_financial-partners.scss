@@ -1,0 +1,578 @@
+.financial-partners {
+  &__container {
+    padding: 131px 120px 131px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1439px) {
+      padding: 63px 60px 63px;
+    }
+
+    @media (max-width: 1079px) {
+      padding: 75px 25px 0px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:before {
+      @include line;
+      left: 0;
+      opacity: 0.6;
+      z-index: -1;
+      box-shadow: 120px 0 0 $light-grey,
+          360px 0 0 $light-grey,
+          600px 0 0 $light-grey,
+          840px 0 0 $light-grey,
+          1080px 0 0 $light-grey,
+          1320px 0 0 $light-grey,
+          1440px 0 0 $light-grey;
+
+
+      @media (max-width: 1439px) {
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
+      @media (max-width: 1079px) {
+        left: 50%;
+        box-shadow: 384px 0 0 $light-grey,
+        -384px 0 0 $light-grey;
+      }
+
+      @media (max-width: 767px) {
+        box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+        calc(-100vw / 2 + 25px) 0 0 $light-grey;
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 480px;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    transform: translateX(-70px);
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+
+    @media (max-width: 1079px) {
+      max-width: 100%;
+      margin-bottom: 70px;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__title {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 69px;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: $main-blue;
+
+    & span {
+     color: $dark-grey;
+    }
+
+    @media (max-width: 1079px) {
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      text-align: left;
+      margin-bottom: 29px;
+      font-size: 35px;
+      line-height: 50px;
+    }
+  }
+
+  &__description {
+    max-width: 426px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+    color: $dark-grey;
+
+    @media (max-width: 1079px) {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      text-align: left;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 1439px) {
+      max-width: 480px;
+    }
+
+    @media (max-width: 1079px) {
+      max-width: 718px;
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+    }
+  }
+
+  &__item {
+    width: calc(100% / 3);
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1439px) {
+      width: calc(100% / 2);
+      height: 120px;
+    }
+
+    @media (max-width: 1079px) {
+      width: calc(100% / 3);
+    }
+
+    @media (max-width: 600px) {
+      width: calc(100% / 2);
+      height: 94px;
+    }
+
+    &:nth-child(odd) {
+      background-color: $lightest-grey;
+    }
+
+    &:last-child {
+      background: linear-gradient(180deg, rgba(60, 113, 233, 0.2) 0%, #3c71e9 100%);
+
+      @media (max-width: 1439px) {
+        width: 100%;
+      }
+
+      @media (max-width: 1079px) {
+        width: calc(100% / 3);
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1439px){
+      &:nth-child(3) {
+        order: 1;
+      }
+
+      &:nth-child(5) {
+        order: 2;
+      }
+
+      &:nth-child(6) {
+        order: 3;
+      }
+
+      &:nth-child(7) {
+        order: 5;
+      }
+
+      &:nth-child(8) {
+        order: 4;
+      }
+
+      &:nth-child(9) {
+        order: 6;
+      }
+    }
+
+    @media (max-width: 1079px){
+      &:nth-child(3) {
+        order: 0;
+      }
+
+      &:nth-child(5) {
+        order: 0;
+      }
+
+      &:nth-child(6) {
+        order: 0;
+      }
+
+      &:nth-child(7) {
+        order: 0;
+      }
+
+      &:nth-child(8) {
+        order: 0;
+      }
+
+      &:nth-child(9) {
+        order: 0;
+      }
+    }
+
+    @media (max-width: 600px){
+      &:nth-child(3) {
+        order: 1;
+      }
+
+      &:nth-child(5) {
+        order: 2;
+      }
+
+      &:nth-child(6) {
+        order: 3;
+      }
+
+      &:nth-child(7) {
+        order: 5;
+      }
+
+      &:nth-child(8) {
+        order: 4;
+      }
+
+      &:nth-child(9) {
+        order: 6;
+      }
+    }
+
+
+
+    &--morganstanley .financial-partners__icon {
+      width: 190px;
+      height: 48px;
+      fill: #7685a9;
+      transition: fill 500ms ease-in-out;
+
+     @media (max-width: 767px) {
+        fill: #000;
+      }
+
+      @media (max-width: 600px) {
+        width: 137px;
+        height: 35px;
+      }
+    }
+
+    &--morganstanley:hover .financial-partners__icon {
+      fill: #000;
+    }
+
+    &--deutschebank .financial-partners__icon {
+      width: 121px;
+      height: 80px;
+      fill: #7685a9;
+      transition: fill 500ms ease-in-out;
+
+
+      @media (max-width: 767px) {
+        fill: #061daa;
+      }
+
+      @media (max-width: 600px) {
+        width: 97px;
+        height: 64px;
+      }
+    }
+
+    &--deutschebank:hover .financial-partners__icon {
+      fill: #061daa;
+    }
+
+    &--bankofamerica .financial-partners__icon {
+      width: 168px;
+      height: 43px;
+
+      @media (max-width: 600px) {
+        width: 116px;
+        height: 30px;
+      }
+
+      & svg path {
+        fill: #7685a9;
+        transition: fill 500ms ease-in-out;
+
+        @media (max-width: 767px) {
+          fill: #0368B1;
+
+          &:nth-child(29),
+          &:nth-child(30),
+          &:nth-child(31),
+          &:nth-child(32) {
+            fill: #E21D38;
+          }
+        }
+      }
+    }
+
+    &--bankofamerica:hover .financial-partners__icon svg path {
+      fill: #0368B1;
+
+      &:nth-child(29),
+      &:nth-child(30),
+      &:nth-child(31),
+      &:nth-child(32) {
+        fill: #E21D38;
+      }
+    }
+
+    &--creditagricole .financial-partners__icon {
+      width: 140px;
+      height: 28px;
+
+      @media (max-width: 600px) {
+        width: 121px;
+        height: 24px;
+      }
+
+      & svg path {
+        fill: #7685a9;
+        transition: fill 500ms ease-in-out;
+
+        @media (max-width: 767px) {
+          fill: #000;
+
+          &:nth-child(1) {
+            fill: #10786B;
+          }
+
+          &:nth-child(2) {
+            fill: #BF0822;
+          }
+
+          &:last-child {
+            fill: #2E84B8;
+          }
+        }
+      }
+    }
+
+    &--creditagricole:hover .financial-partners__icon svg path {
+      fill: #000;
+
+      &:nth-child(1) {
+        fill: #10786B;
+      }
+
+      &:nth-child(2) {
+        fill: #BF0822;
+      }
+
+      &:last-child {
+        fill: #2E84B8;
+      }
+    }
+
+    &--bnp .financial-partners__icon {
+      width: 164px;
+      height: 34px;
+
+      @media (max-width: 600px) {
+        width: 114px;
+        height: 24px;
+      }
+
+      & svg path:not(:nth-child(1)) {
+        fill: #7685a9;
+        transition: fill 500ms ease-in-out;
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+          fill: #fff;
+        }
+
+        @media (max-width: 767px) {
+          fill: #000;
+
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5) {
+            fill: #fff;
+          }
+        }
+      }
+
+     & svg defs stop {
+        stop-color: #7685a9;
+        transition: stop-color 500ms ease-in-out;
+
+        @media (max-width: 767px) {
+          &:nth-child(1) {
+            stop-color: #2fc79e;
+          }
+
+          &:nth-child(2) {
+            stop-color: #15965e;
+          }
+
+          &:nth-child(3) {
+            stop-color: #2fc79e;
+          }
+        }
+      }
+    }
+
+    &--bnp:hover .financial-partners__icon svg path:not(:nth-child(1)) {
+      fill: #000;
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        fill: #fff;
+      }
+    }
+
+
+    &--bnp:hover .financial-partners__icon svg defs stop {
+      &:nth-child(1) {
+        stop-color: #2fc79e;
+      }
+
+      &:nth-child(2) {
+        stop-color: #15965e;
+      }
+
+      &:nth-child(3) {
+        stop-color: #2fc79e;
+      }
+    }
+
+    &--jpmorgan .financial-partners__icon {
+      width: 131px;
+      height: 28px;
+      fill: #7685a9;
+      transition: fill 500ms ease-in-out;
+
+      @media (max-width: 767px) {
+        fill: #000;
+      }
+
+      @media (max-width: 600px) {
+        width: 101px;
+        height: 22px;
+      }
+    }
+
+    &--jpmorgan:hover .financial-partners__icon {
+      fill: #000;
+    }
+
+    &--sinsere .financial-partners__icon {
+      width: 133px;
+      height: 80px;
+
+      @media (max-width: 600px) {
+        width: 101px;
+        height: 61px;
+      }
+
+      & svg path {
+        fill: #7685a9;
+        transition: fill 500ms ease-in-out;
+
+        @media (max-width: 767px) {
+          fill: #23D599;
+
+          &:nth-child(8),
+          &:nth-child(9),
+          &:nth-child(10),
+          &:nth-child(11),
+          &:nth-child(12),
+          &:nth-child(13),
+          &:nth-child(14) {
+            fill: #182E57;
+          }
+        }
+      }
+    }
+
+    &--sinsere:hover .financial-partners__icon svg path {
+      fill: #23D599;
+
+      &:nth-child(8),
+      &:nth-child(9),
+      &:nth-child(10),
+      &:nth-child(11),
+      &:nth-child(12),
+      &:nth-child(13),
+      &:nth-child(14) {
+        fill: #182E57;
+      }
+    }
+
+    &--anz .financial-partners__icon {
+      width: 102px;
+      height: 31px;
+      fill: #7685a9;
+      transition: fill 500ms ease-in-out;
+
+      @media (max-width: 767px) {
+        fill: #1380bc;
+      }
+
+      @media (max-width: 600px) {
+        width: 86px;
+        height: 27px;
+      }
+    }
+
+    &--anz:hover .financial-partners__icon {
+      fill: #1380bc;
+    }
+  }
+
+  &__amount {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__number {
+    display: block;
+    text-align: center;
+    font-size: 69px;
+    line-height: 69px;
+
+    @media (max-width: 1439px) {
+      font-size: 59px;
+      line-height: 59px;
+    }
+
+    @media (max-width: 1079px) {
+      font-size: 69px;
+      line-height: 69px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 59px;
+      line-height: 59px;
+    }
+  }
+
+  &__word {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

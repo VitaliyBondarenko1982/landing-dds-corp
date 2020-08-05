@@ -1,32 +1,41 @@
 {
-  "name": "gulp-config",
+  "name": "gulp-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Frontend boilerplate based on gulp",
   "main": "index.js",
-  "dependencies": {
-    "del": "^5.1.0",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-uglify": "^3.0.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "@mate-academy/eslint-config": "0.0.12",
-    "babel-preset-es2015": "^6.24.1",
-    "browser-sync": "^2.26.7",
-    "eslint": "^6.8.0",
-    "eslint-config-strongloop": "^2.1.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-watch": "^5.0.1"
-  },
   "scripts": {
-    "lint": "eslint"
+    "build": "gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "publish": "npm run deploy",
+    "start": "gulp",
+    "test": "npm run build"
   },
-  "author": "",
-  "license": "ISC"
+  "keywords": [],
+  "author": "Vitalii Bondarenko",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@mate-academy/browsersync-config": "*",
+    "browser-sync": "^2.26.3",
+    "colors": "^1.3.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-node": "^9.0.1",
+    "gh-pages": "2.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-htmllint": "0.0.16",
+    "gulp-replace-path": "^0.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^9.0.0",
+    "htmllint": "^0.7.3",
+    "htmllint-cli": "0.0.7",
+    "lint-staged": "^8.1.6"
+  },
+
+  "browserslist": [
+    "last 2 versions"
+  ]
 }

@@ -1,0 +1,334 @@
+@import "../../utils/vars";
+
+.investment-partners {
+  &__container {
+    padding: 225px 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1439px) {
+      padding: 123px 60px;
+    }
+
+    @media (max-width: 1079px) {
+      padding: 75px 25px 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:after {
+      display: none;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 360px;
+      height: 726px;
+      background-image: url("../../../images/pages/partners/building.png");
+      z-index: -1;
+
+      @media (max-width: 1079px) {
+        display: none;
+      }
+    }
+
+    &:before {
+      @include line;
+      left: 0;
+      opacity: 0.6;
+      z-index: -1;
+      box-shadow: 120px 0 0 $light-grey,
+        360px 0 0 $light-grey,
+        600px 0 0 $light-grey,
+        840px 0 0 $light-grey,
+        1080px 0 0 $light-grey,
+        1320px 0 0 $light-grey,
+        1440px 0 0 $light-grey;
+
+      @media (max-width: 1439px) {
+        box-shadow: 60px 0 0 $light-grey,
+          300px 0 0 $light-grey,
+          540px 0 0 $light-grey,
+          780px 0 0 $light-grey,
+          1020px 0 0 $light-grey,
+          1080px 0 0 $light-grey;
+      }
+      @media (max-width: 1079px) {
+        left: 50%;
+        box-shadow: 384px 0 0 $light-grey,
+          -384px 0 0 $light-grey;
+      }
+
+      @media (max-width: 767px) {
+        box-shadow: calc(100vw / 2 - 25px) 0 0 $light-grey,
+          calc(-100vw / 2 + 25px) 0 0 $light-grey;
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 480px;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    transform: translateX(-70px);
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @media (max-width: 1079px) {
+      max-width: 100%;
+      margin-bottom: 70px;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__title {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 69px;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: $main-blue;
+
+    & span {
+      color: $dark-grey;
+    }
+
+    @media (max-width: 1079px) {
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      text-align: left;
+      margin-bottom: 29px;
+      font-size: 35px;
+      line-height: 50px;
+    }
+  }
+
+  &__description {
+    max-width: 426px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+    color: $dark-grey;
+
+    @media (max-width: 1079px) {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      text-align: left;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 1439px) {
+      max-width: 480px;
+    }
+
+    @media (max-width: 1079px) {
+      max-width: 718px;
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+    }
+  }
+
+  &__item {
+    width: calc(100% / 3);
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1439px) {
+      width: calc(100% / 2);
+      height: 120px;
+    }
+
+    @media (max-width: 1079px) {
+      width: calc(100% / 3);
+    }
+
+    @media (max-width: 600px) {
+      width: calc(100% / 2);
+      height: 94px;
+    }
+
+    &:nth-child(odd) {
+      background-color: $lightest-grey;
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(180deg, $gr, 0%, #3c71e9 100%);
+
+      @media (max-width: 1439px) {
+        width: 100%;
+      }
+
+      @media (max-width: 1079px) {
+        width: calc(100% / 3);
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1439px) {
+      &:nth-child(3) {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 1079px) {
+      &:nth-child(3) {
+        order: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      &:nth-child(3) {
+        order: 1;
+      }
+    }
+
+    &--brain-capital .investment-partners__icon {
+      width: 147px;
+      height: 95px;
+
+      @media (max-width: 600px) {
+        width: 93px;
+        height: 60px;
+      }
+
+      & svg path {
+        fill: #7685a9;
+        transition: fill 500ms ease-in-out;
+
+        &:first-child {
+          fill: #fafbfe;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+          fill-opacity: 0.7;
+        }
+
+        &:nth-child(6) {
+          fill-opacity: 0.3;
+        }
+
+        @media (max-width: 767px) {
+          fill: #1c2156;
+
+          &:nth-child(1) {
+            fill: #f7f5f4;
+          }
+
+          &:nth-child(2) {
+            fill: #e52823;
+          }
+
+          &:nth-child(4) {
+            fill: #1ca6df;
+          }
+
+          &:nth-child(6) {
+            fill: #abcae9;
+          }
+        }
+      }
+    }
+
+    &--brain-capital:hover .investment-partners__icon svg path {
+      fill: #1c2156;
+
+      &:nth-child(1) {
+        fill: #f7f5f4;
+      }
+
+      &:nth-child(2) {
+        fill: #e52823;
+      }
+
+      &:nth-child(4) {
+        fill: #1ca6df;
+      }
+
+      &:nth-child(6) {
+        fill: #abcae9;
+      }
+    }
+
+    &--kkr .investment-partners__icon {
+      width: 142px;
+      height: 34px;
+      fill: #7685a9;
+      transition: fill 500ms ease-in-out;
+
+      @media (max-width: 767px) {
+        fill: #48104a;
+      }
+
+      @media (max-width: 600px) {
+        width: 108px;
+        height: 26px;
+      }
+    }
+
+    &--kkr:hover .investment-partners__icon {
+      fill: #48104a;
+    }
+  }
+
+  &__amount {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__number {
+    display: block;
+    text-align: center;
+    font-size: 69px;
+    line-height: 69px;
+
+    @media (max-width: 1439px) {
+      font-size: 59px;
+      line-height: 59px;
+    }
+
+    @media (max-width: 1079px) {
+      font-size: 69px;
+      line-height: 69px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 59px;
+      line-height: 59px;
+    }
+  }
+
+  &__word {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
